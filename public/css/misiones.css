@@ -913,3 +913,12 @@ a:hover { color: #C8232C !important; }
     color: #fff;
 }
 
+
+/* Service Page Customizations */
+@media (max-width: 991px) {
+  .service-image-container {
+    margin: 20px auto !important;
+    width: 90% !important;
+    height: 250px !important;
+  }
+}

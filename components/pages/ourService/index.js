@@ -166,16 +166,25 @@ function ServiceAccordion({ service, lang }) {
   return (
     <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 8px 48px rgba(27,47,94,0.06)', marginBottom: '32px', border: '1px solid #f0f4fb' }}>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {/* Left: image with better fit to avoid resolution loss */}
-        <div style={{ width: 'min(40%, 420px)', minWidth: '320px', flexShrink: 0, position: 'relative', height: 'auto', minHeight: '320px', alignSelf: 'stretch' }}>
+        {/* Left: Image Container - Fixed Aspect Ratio and Constrained Size */}
+        <div style={{ 
+          width: 'min(100%, 420px)', 
+          height: 'min(100vw, 320px)', 
+          margin: '35px auto 14px', 
+          marginLeft: '40px',
+          borderRadius: '16px', 
+          overflow: 'hidden', 
+          flexShrink: 0,
+          position: 'relative',
+          alignSelf: 'flex-start'
+        }} className="service-image-container">
           <Image
             src={service.image}
             alt={lang === 'en' ? service.titleEn : service.titleTr}
             fill
-            sizes="(max-width: 991px) 100vw, 420px"
-            style={{ objectFit: 'cover', objectPosition: 'center center' }}
+            sizes="420px"
+            style={{ objectFit: 'cover' }}
           />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(27,47,94,0.3) 0%, transparent 80%)', pointerEvents: 'none' }} />
         </div>
         {/* Right: accordion items */}
         <div style={{ flex: 1, minWidth: '320px', padding: '0' }}>

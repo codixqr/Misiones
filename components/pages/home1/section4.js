@@ -61,21 +61,21 @@ export default function Section4() {
 				<div className="row g-4">
 					{steps.map((step, index) => (
 						<div className="col-lg-3 col-md-6" key={step.key}>
-							<div className="process-card-clean" style={{ 
-								background: '#fff', 
-								padding: '40px 30px', 
-								borderRadius: '20px', 
-								height: '100%', 
+							<div className="process-card-clean" style={{
+								background: '#fff',
+								padding: '40px 30px',
+								borderRadius: '20px',
+								height: '100%',
 								boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
 								border: '1px solid #f0f0f0',
 								transition: 'all 0.3s ease',
 								position: 'relative',
 								textAlign: 'center'
 							}}>
-								<div className="step-badge" style={{ 
-									position: 'absolute', 
-									top: '-15px', 
-									left: '50%', 
+								<div className="step-badge" style={{
+									position: 'absolute',
+									top: '-15px',
+									left: '50%',
 									transform: 'translateX(-50%)',
 									padding: '5px 20px',
 									background: step.color,
@@ -87,10 +87,10 @@ export default function Section4() {
 								}}>
 									{step.stepLabel}
 								</div>
-								
-								<div className="icon-wrap mb-25" style={{ 
-									width: '70px', 
-									height: '70px', 
+
+								<div className="icon-wrap mb-25" style={{
+									width: '70px',
+									height: '70px',
 									background: `${step.color}10`,
 									color: step.color,
 									borderRadius: '50%',
@@ -104,16 +104,16 @@ export default function Section4() {
 								</div>
 
 								<h3 className="mb-20" style={{ fontSize: '1.4rem', fontWeight: '700', color: '#1B2F5E' }}>{step.title}</h3>
-								
+
 								<p style={{ color: '#505878', fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '20px' }}>
 									{step.desc}
 								</p>
 
 								<ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
 									{step.items.map((item, idx) => (
-										<li key={idx} style={{ 
-											fontSize: '1.1rem', 
-											color: '#333', 
+										<li key={idx} style={{
+											fontSize: '1.1rem',
+											color: '#333',
 											marginBottom: '8px',
 											display: 'flex',
 											alignItems: 'center',
