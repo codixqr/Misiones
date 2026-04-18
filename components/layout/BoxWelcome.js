@@ -39,8 +39,8 @@ export default function BoxWelcome({ handleWelcomeBox, isWelcomeBox }) {
 							<li>
 								<p>
 									E-posta:{' '}
-									<Link href="mailto:nevzat@misiones.com.tr">
-										nevzat@misiones.com.tr
+									<Link href="mailto:info@misiones.com.tr">
+										info@misiones.com.tr
 									</Link>
 								</p>
 							</li>

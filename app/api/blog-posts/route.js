@@ -196,7 +196,8 @@ export async function GET() {
 			const rawDesc = item.contentSnippet || stripHtml(item['content:encoded'] || item.content || item.summary || '')
 			const shortDesc = rawDesc.slice(0, 200).trim() + (rawDesc.length > 200 ? '…' : '')
 
-			const imgFromFeed = sanitizeImageUrl(extractImageFromItem(item))
+			const imgFromFeed = item.enclosure?.url || item['media:content']?.url || item['content:encoded']?.match(/<img[^>]+src="([^"]+)"/i)?.[1]
+			const safeImg = sanitizeImageUrl(imgFromFeed)
 
 			dynamicArticles.push({
 				id: `dynamic-${source.name}-${item.guid || item.link}`,
@@ -206,7 +207,7 @@ export async function GET() {
 				source: source.name,
 				date: formatDate(item.pubDate || item.isoDate),
 				cat: 'Köşe Yazısı',
-				img: imgFromFeed || FALLBACK_IMAGES[fallbackIndex % FALLBACK_IMAGES.length],
+				img: safeImg || FALLBACK_IMAGES[fallbackIndex % FALLBACK_IMAGES.length],
 			})
 			fallbackIndex++
 		}
@@ -215,7 +216,13 @@ export async function GET() {
 	// Fetch og:images for static articles in parallel
 	const staticWithImages = await Promise.all(
 		STATIC_ARTICLES.map(async (article, idx) => {
-			const ogImg = sanitizeImageUrl(await fetchOgImage(article.url))
+			let ogImg = null
+			try {
+				ogImg = sanitizeImageUrl(await fetchOgImage(article.url))
+			} catch (err) {
+				console.error(`Error fetching OG image for ${article.url}:`, err)
+			}
+			
 			return {
 				...article,
 				img: ogImg || FALLBACK_IMAGES[idx % FALLBACK_IMAGES.length],

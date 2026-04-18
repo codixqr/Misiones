@@ -4,69 +4,156 @@ import { useLanguage } from '@/utils/LanguageContext'
 export default function Section2() {
   const { lang } = useLanguage()
 
-  const values = lang === 'en'
-    ? [
-        { icon: 'flaticon-chart', title: 'Wisdom', desc: 'We talk about measurable realities, not assumptions.' },
-        { icon: 'flaticon-handshake', title: 'Authenticity', desc: 'We put field-tested experience above theory.' },
-        { icon: 'flaticon-leaf', title: 'Sustainability', desc: 'We consider environmental, social, and economic balance.' },
-        { icon: 'flaticon-rocket', title: 'Innovation', desc: 'We lead the market rather than just react to it.' },
-        { icon: 'flaticon-team', title: 'People First', desc: 'We empower teams and put the guest experience at the center.' },
-      ]
-    : [
-        { icon: 'flaticon-chart', title: 'Bilgelik', desc: 'Varsayımları değil, ölçülebilir gerçekleri konuşuruz.' },
-        { icon: 'flaticon-handshake', title: 'Sahicilik', desc: 'Sahadan gelen deneyimi, teoriden üstün tutarız.' },
-        { icon: 'flaticon-leaf', title: 'Sürdürülebilirlik', desc: 'Çevresel, sosyal ve ekonomik dengeleri gözetiriz.' },
-        { icon: 'flaticon-rocket', title: 'Yenilik', desc: 'Pazara tepki vermek yerine pazarı yönlendiririz.' },
-        { icon: 'flaticon-team', title: 'İnsana Değer', desc: 'Ekipleri güçlendirir, misafir deneyimini merkeze alırız.' },
-      ]
+  const values = [
+    {
+      id: 1,
+      svg: (
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
+      ),
+      title: lang === 'en' ? 'Wisdom' : 'Bilgelik',
+      desc: lang === 'en' 
+        ? 'We talk about measurable realities, not assumptions. Data-driven wisdom leads our path.' 
+        : 'Varsayımları değil, ölçülebilir gerçekleri konuşuruz. Veriye dayalı bilgelik yolumuza yön verir.',
+      color: '#1B2F5E'
+    },
+    {
+      id: 2,
+      svg: (
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
+          <line x1="16" y1="8" x2="2" y2="22" />
+          <line x1="17.5" y1="15" x2="9" y2="15" />
+        </svg>
+      ),
+      title: lang === 'en' ? 'Authenticity' : 'Sahicilik',
+      desc: lang === 'en' 
+        ? 'We put field-tested experience above theory. Real solutions for real operation problems.' 
+        : 'Sahadan gelen deneyimi, teoriden üstün tutarız. Operasyonel sorunlara gerçek çözümler.',
+      color: '#C8232C'
+    },
+    {
+      id: 3,
+      svg: (
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12s4-10 10-10z" />
+          <path d="M12 6a6 6 0 0 1 6 6" />
+          <path d="M12 18a6 6 0 0 1-6-6" />
+        </svg>
+      ),
+      title: lang === 'en' ? 'Sustainability' : 'Sürdürülebilirlik',
+      desc: lang === 'en' 
+        ? 'We consider environmental, social, and economic balance in every strategic decision.' 
+        : 'Sürdürülebilir başarı için çevresel, sosyal ve ekonomik tüm dengeleri gözetiriz.',
+      color: '#1B2F5E'
+    },
+    {
+      id: 4,
+      svg: (
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="m13 2-2 2.5h3L12 7" />
+          <path d="m10 11 2-2.5h-3L11 6" />
+          <path d="M6.5 10h11" />
+          <path d="M6 14h12" />
+          <path d="M5.5 18h13" />
+        </svg>
+      ),
+      title: lang === 'en' ? 'Innovation' : 'Yenilik',
+      desc: lang === 'en' 
+        ? 'We lead the market rather than just react to it. Pioneering new concepts in hospitality.' 
+        : 'Pazara tepki vermek yerine pazarı yönlendiririz. Otelcilikte yeni konseptlerin öncüsü.',
+      color: '#C8232C'
+    },
+    {
+      id: 5,
+      svg: (
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      ),
+      title: lang === 'en' ? 'People Value' : 'İnsana Değer',
+      desc: lang === 'en' 
+        ? 'We empower teams and put the guest experience at the heart of our strategy.' 
+        : 'Ekipleri güçlendirir, misafir deneyimini stratejimizin merkezine alırız.',
+      color: '#1B2F5E'
+    }
+  ]
 
   return (
-    <section style={{ background: '#f5f8fd', padding: '80px 0' }}>
+    <section className="s-values" style={{ background: '#fcfdff', padding: '100px 0' }}>
       <div className="tf-container">
-        {/* Values */}
-        <div className="row">
-          <div className="col-12 text-center mb-48">
-            <p style={{ color: '#C8232C', fontWeight: '600', marginBottom: '8px', letterSpacing: '1px', textTransform: 'uppercase', fontSize: '0.85rem' }}>
-              <i className="icon-angles-right moveLeftToRight" style={{ marginRight: '6px' }} />
-              {lang === 'en' ? 'What Drives Us' : 'Bizi Harekete Geçiren'}
-            </p>
-            <h2 style={{ color: '#1B2F5E', fontSize: '2rem', fontWeight: '700' }}>
+        <div className="row justify-content-center mb-60">
+          <div className="col-lg-8 text-center">
+            <span style={{ color: '#C8232C', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '15px' }}>
+              {lang === 'en' ? 'WHAT DRIVES US' : 'BİZİ HAREREKETE GEÇİREN'}
+            </span>
+            <h2 style={{ color: '#1B2F5E', fontSize: '3rem', fontWeight: '900', letterSpacing: '-1px' }}>
               {lang === 'en' ? 'Our Values' : 'Değerlerimiz'}
             </h2>
           </div>
-          {values.map((v, i) => (
-            <div className="col-lg-4 col-md-6 mb-24" key={i}>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+          {values.map((v) => (
+            <div key={v.id} className="value-card-premium" style={{
+              background: '#fff',
+              borderRadius: '24px',
+              padding: '40px',
+              border: '1px solid #eef2fa',
+              boxShadow: '0 8px 32px rgba(27,47,94,0.04)',
+              transition: 'all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '24px',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
               <div style={{
-                background: '#fff', borderRadius: '14px', padding: '32px 28px',
-                display: 'flex', gap: '18px', alignItems: 'flex-start',
-                boxShadow: '0 2px 16px rgba(27,47,94,0.06)',
-                transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-              }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.boxShadow = '0 8px 32px rgba(27,47,94,0.12)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = '0 2px 16px rgba(27,47,94,0.06)'
-                }}
-              >
-                <div style={{
-                  minWidth: '44px', height: '44px', borderRadius: '10px',
-                  background: 'linear-gradient(135deg, #1B2F5E15, #1B2F5E25)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center'
-                }}>
-                  <i className={v.icon} style={{ color: '#1B2F5E', fontSize: '1.3rem' }} />
-                </div>
-                <div>
-                  <h5 style={{ color: '#1B2F5E', fontWeight: '700', marginBottom: '8px' }}>{v.title}</h5>
-                  <p style={{ color: '#606580', lineHeight: '1.7', margin: '0', fontSize: '0.94rem' }}>{v.desc}</p>
-                </div>
+                width: '70px', height: '70px', borderRadius: '18px',
+                background: `${v.color}08`, color: v.color,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                border: `1px solid ${v.color}15`,
+                transition: 'all 0.3s ease'
+              }} className="icon-box">
+                {v.svg}
               </div>
+              <div>
+                <h4 style={{ color: '#1B2F5E', fontSize: '1.6rem', fontWeight: '800', marginBottom: '14px', letterSpacing: '-0.5px' }}>
+                  {v.title}
+                </h4>
+                <p style={{ color: '#505878', lineHeight: '1.8', fontSize: '1.1rem', margin: '0', fontWeight: '500' }}>
+                  {v.desc}
+                </p>
+              </div>
+              <div style={{ 
+                position: 'absolute', bottom: 0, left: 0, width: '100%', height: '4px',
+                background: v.color, opacity: 0, transition: 'opacity 0.3s'
+              }} className="card-accent" />
             </div>
           ))}
         </div>
       </div>
+      <style jsx>{`
+        .value-card-premium:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 20px 48px rgba(27,47,94,0.1);
+          border-color: #C8232C22;
+        }
+        .value-card-premium:hover .icon-box {
+          background: #C8232C;
+          color: #fff;
+          transform: scale(1.1);
+        }
+        .value-card-premium:hover .card-accent {
+          opacity: 1;
+        }
+      `}</style>
     </section>
   )
 }

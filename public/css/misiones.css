@@ -179,8 +179,9 @@
 
 /* Marquee bantları - genel küçültme */
 .tf-marquee {
-    padding: 5px 0 !important;
+    padding: 8px 0 !important;
     min-height: auto !important;
+    margin-top: 5px !important;
 }
 
 .tf-marquee .wrap-marquee {
@@ -220,27 +221,42 @@
 
 /* Danışmanlık süreci — adım metinleri okunaklı */
 .misiones-process-section .tf-accordion-type-3 .accordion-body .text {
-    font-size: 1.0625rem !important;
-    line-height: 1.75 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.85 !important;
     color: #3d4a63 !important;
 }
 .misiones-process-section .tf-accordion-type-3 .accordion-body .title {
-    font-size: 1.375rem !important;
+    font-size: 1.6rem !important;
     line-height: 1.35 !important;
     color: #1B2F5E !important;
 }
 .misiones-process-section .tf-accordion-type-3 .benefit-list p {
-    font-size: 1rem !important;
-    line-height: 1.65 !important;
+    font-size: 1.2rem !important;
+    line-height: 1.8 !important;
     color: #3d4a63 !important;
 }
 
-/* Genel içerik paragrafları (şablon küçük puntoları yumuşatır) */
+/* Genel içerik paragrafları — ENFORCE GROWTH */
 .main-content .text,
 .s-about-company .text,
-.s-service .content .text {
-    font-size: 1.0625rem !important;
-    line-height: 1.75 !important;
+.s-service .content .text,
+.s-about-hero .text,
+p {
+    font-size: 1.45rem !important;
+    line-height: 1.85 !important;
+    font-weight: 500 !important;
+}
+
+h1 { font-size: clamp(3.5rem, 8vw, 6rem) !important; font-weight: 900 !important; }
+h2 { font-size: clamp(2.5rem, 6vw, 4rem) !important; font-weight: 900 !important; }
+h3 { font-size: clamp(1.8rem, 4vw, 2.8rem) !important; font-weight: 800 !important; }
+h4 { font-size: 1.85rem !important; font-weight: 800 !important; }
+h5, h6 { font-size: 1.45rem !important; font-weight: 700 !important; }
+
+/* Remove smallness barrier */
+html, body {
+    font-size: 62.5% !important;
+    -webkit-text-size-adjust: 100% !important;
 }
 
 /* ================================================================
@@ -255,7 +271,7 @@
 /* ================================================================
    GENEL BÖLÜM ARKALARI
    ================================================================ */
-body { background: #ffffff !important; }
+body { background: #ffffff !important; font-size: 19px !important; }
 
 .s-feature       { background: #ffffff !important; }
 .s-about-company { background: #ffffff !important; }

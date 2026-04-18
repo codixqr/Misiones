@@ -15,10 +15,10 @@ export default function Home1() {
 			<Section3 />
 			<Section4 />
 			<Section11 />
+			<Section7 />
 			<Section13 />
 			<Section9 />
 			<Section10 />
-			<Section7 />
 			<Section12 />
 		</>
 	)

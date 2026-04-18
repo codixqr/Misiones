@@ -11,7 +11,7 @@ import "@/public/icons/icomoon/style.css"
 import "@/public/icons/flaticon/font/flaticon_saylo.css"
 import "@/public/css/styles.css"
 import "@/public/css/misiones.css"
-import { Public_Sans } from 'next/font/google'
+import { Public_Sans, Caveat } from 'next/font/google'
 import { LanguageProvider } from '@/utils/LanguageContext'
 
 const publicSans = Public_Sans({
@@ -20,15 +20,25 @@ const publicSans = Public_Sans({
     display: 'swap',
 })
 
+const caveat = Caveat({
+    weight: ['400', '500', '600', '700'],
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-caveat',
+})
+
 export const metadata = {
     title: 'Misiones - Otelcilik İnovasyon & Danışmanlık',
     description: 'Misiones Hospitality Innovation & Consultancy - Profesyonel otelcilik ve iş danışmanlığı hizmetleri',
+    icons: {
+        icon: '/favicon.png',
+    },
 }
 
 export default function RootLayout({ children }) {
     return (
         <html lang="tr">
-            <body className={`${publicSans.className}`}>
+            <body className={`${publicSans.className} ${caveat.variable}`}>
                 <LanguageProvider>
                     {children}
                 </LanguageProvider>

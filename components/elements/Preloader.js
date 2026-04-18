@@ -10,11 +10,11 @@ export default function Preloader() {
 							<div className="loader" style={{ borderTopColor: '#C8232C', borderColor: 'rgba(200,35,44,0.2)', width: '210px', height: '210px' }} />
 					<div className="icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '180px', height: '180px' }}>
 							<Image
-								width="180"
-								height="180"
-								src="/images/section/preloader-badge.png"
+								width="140"
+								height="140"
+								src="/images/logo/misiones-icon-clean.png"
 								alt="Misiones"
-								style={{ width: '180px', height: '180px', objectFit: 'contain', borderRadius: '50%' }}
+								style={{ width: '130px', height: 'auto', objectFit: 'contain' }}
 							/>
 						</div>
 						</div>

@@ -12,7 +12,7 @@ const FALLBACK_ARTICLES = [
 		source: 'Otel Postası',
 		date: '13 Nisan 2026',
 		cat: 'Köşe Yazısı',
-		img: '/images/blog/card-blog-item-1.jpg',
+		img: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800',
 	},
 	{
 		id: 'nevzat-gmtourism-1',
@@ -22,7 +22,7 @@ const FALLBACK_ARTICLES = [
 		source: 'GM Tourism',
 		date: '16 Nisan 2026',
 		cat: 'Turizm Röportajları',
-		img: '/images/blog/card-blog-item-2.jpg',
+		img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800',
 	},
 	{
 		id: 'nevzat-tourismtoday-1',
@@ -32,11 +32,11 @@ const FALLBACK_ARTICLES = [
 		source: 'Tourism Today',
 		date: '9 Nisan 2026',
 		cat: 'Köşe Yazısı',
-		img: '/images/blog/card-blog-item-3.jpg',
+		img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800',
 	},
 ]
 
-const FALLBACK_IMG = '/images/blog/card-blog-item-1.jpg'
+const FALLBACK_IMG = 'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&q=80&w=800'
 
 function normalizeImageUrl(value) {
 	if (!value || typeof value !== 'string') return FALLBACK_IMG

@@ -42,28 +42,40 @@ const FALLBACK_ARTICLES = [
 const FALLBACK_IMG = '/images/blog/card-blog-item-1.jpg'
 
 function ArticleImg({ src, alt }) {
-	const [imgSrc, setImgSrc] = useState(src || FALLBACK_IMG)
-	const isExternal = src && (src.startsWith('http://') || src.startsWith('https://'))
-	useEffect(() => { setImgSrc(src || FALLBACK_IMG) }, [src])
+	const initialSrc = src || FALLBACK_IMG
+	const [imgSrc, setImgSrc] = useState(initialSrc)
+	const [hasError, setHasError] = useState(false)
+	const isExternal = imgSrc && (imgSrc.startsWith('http') || imgSrc.startsWith('//'))
 
-	if (isExternal) {
+	useEffect(() => {
+		setImgSrc(src || FALLBACK_IMG)
+		setHasError(false)
+	}, [src])
+
+	const handleError = () => {
+		if (!hasError) {
+			setImgSrc(FALLBACK_IMG)
+			setHasError(true)
+		}
+	}
+
+	if (isExternal && !hasError) {
 		return (
 			// eslint-disable-next-line @next/next/no-img-element
 			<img
 				src={imgSrc}
 				alt={alt}
-				onError={() => setImgSrc(FALLBACK_IMG)}
-				style={{ width: '100%', height: '220px', objectFit: 'cover', display: 'block' }}
+				onError={handleError}
+				style={{ width: '100%', height: '240px', objectFit: 'cover', display: 'block' }}
 			/>
 		)
 	}
 	return (
 		<Image
-			width={0}
-			height={0}
-			sizes="100vw"
-			style={{ width: '100%', height: 'auto' }}
-			src={imgSrc}
+			width={400}
+			height={240}
+			style={{ width: '100%', height: '240px', objectFit: 'cover' }}
+			src={imgSrc || FALLBACK_IMG}
 			alt={alt}
 			className="lazyload"
 		/>

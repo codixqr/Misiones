@@ -87,101 +87,71 @@ export default function Section7() {
 	}
 
 	const counters = [
-		{ count: 20, suffix: '+', labelTr: 'Yıl Deneyim', labelEn: 'Years Experience', odoClass: 'style-5' },
-		{ count: 50, suffix: '+', labelTr: 'Proje & Otel', labelEn: 'Projects & Hotels', odoClass: 'style-5-2' },
-		{ count: 8, suffix: '', labelTr: 'Ülke', labelEn: 'Countries', odoClass: 'style-5-3' },
+		{ count: 20, suffix: '+', labelTr: 'Yıl Deneyim', labelEn: 'Years Experience' },
+		{ count: 50, suffix: '+', labelTr: 'Proje & Otel', labelEn: 'Projects & Hotels' },
+		{ count: 8, suffix: '', labelTr: 'Ülke', labelEn: 'Countries' },
 	]
 
 	return (
 		<>
-			<section
-				className="s-working-2 tf-spacing-3"
-				style={{
-					background: 'linear-gradient(180deg, #2b427d 0%, #243a73 55%, #1f3367 100%)',
-				}}
-			>
+			<section className="s-faq-redesign tf-spacing-1 bg-white" style={{ background: '#ffffff', position: 'relative', zIndex: 1 }}>
 				<div className="tf-container">
-					<div className="row">
-						{/* Başlık */}
+					<div className="row mb-50">
 						<div className="col-lg-12">
-							<div className="content text-center mb-70">
-								<p className="s-sub-title mb-17 text-white justify-center" style={{ color: 'rgba(255,255,255,0.9)' }}>
+							<div className="content text-center">
+								<p className="s-sub-title justify-center mb-17">
 									<i className="icon-angles-right moveLeftToRight" />
 									{lang === 'tr' ? 'SSS' : 'FAQ'}
 								</p>
-								<p className="s-title text-white letter-space-0 text-anime-wave">
+								<p className="s-title" style={{ color: '#1B2F5E', fontSize: 'clamp(32px, 3.5vw, 48px)', lineHeight: '1.2' }}>
 									{lang === 'tr'
-										? <>Sahadan Gelen Bilgelik,<br /><span>Ölçülebilir Sonuçlar</span></>
-										: <>Field-Tested Wisdom,<br /><span>Measurable Results</span></>
+										? <>Sahadan Gelen Bilgelik,<br /><span style={{ color: '#C8232C' }}>Ölçülebilir Sonuçlar</span></>
+										: <>Field-Tested Wisdom,<br /><span style={{ color: '#C8232C' }}>Measurable Results</span></>
 									}
 								</p>
 							</div>
 						</div>
+					</div>
 
-						{/* Sol: 4 kart neden MISIONES */}
+					<div className="row">
+						{/* Left: Why Us Grid */}
 						<div className="col-lg-6">
 							<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '40px' }}>
 								{WHY_ITEMS.map((item, i) => (
 									<div key={i} style={{
-										background: 'rgba(255,255,255,0.13)',
-										border: '1px solid rgba(255,255,255,0.2)',
-										borderRadius: '14px',
-										padding: '24px 20px',
+										background: '#f8f9fd',
+										border: '1px solid #eef2fa',
+										borderRadius: '16px',
+										padding: '24px',
+										transition: 'all 0.3s ease',
+										boxShadow: '0 4px 15px rgba(27,47,94,0.03)'
 									}}>
 										<div style={{
-											width: '44px', height: '44px', borderRadius: '10px',
-											background: 'rgba(255,255,255,0.2)', border: '1px solid rgba(255,255,255,0.35)',
+											width: '48px', height: '48px', borderRadius: '12px',
+											background: '#1B2F5E',
 											display: 'flex', alignItems: 'center', justifyContent: 'center',
-											marginBottom: '14px',
+											marginBottom: '16px',
 										}}>
-											<i className={item.icon} style={{ fontSize: '20px', color: '#ffffff' }} />
+											<i className={item.icon} style={{ fontSize: '22px', color: '#ffffff' }} />
 										</div>
-										<p style={{ color: '#fff', fontWeight: '700', fontSize: '14px', marginBottom: '8px', lineHeight: '1.4' }}>
+										<p style={{ color: '#1B2F5E', fontWeight: '800', fontSize: '15px', marginBottom: '10px', lineHeight: '1.4' }}>
 											{lang === 'tr' ? item.titleTr : item.titleEn}
 										</p>
-										<p style={{ color: 'rgba(255,255,255,0.88)', fontSize: '14px', lineHeight: '1.62', margin: 0 }}>
+										<p style={{ color: '#606580', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
 											{lang === 'tr' ? item.descTr : item.descEn}
 										</p>
 									</div>
 								))}
 							</div>
 
-							{/* Sayaçlar */}
-							<div className="bot" style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
+							{/* Stats */}
+							<div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', padding: '20px', background: '#1B2F5E', borderRadius: '20px', boxShadow: '0 10px 30px rgba(27,47,94,0.15)' }}>
 								{counters.map((c, i) => (
-									<div key={i} className="counter-wrap style-2">
-										<div className="relative mb-20">
-											<div className="circle-container">
-												<div
-													style={{
-														width: '110px',
-														height: '110px',
-														borderRadius: '50%',
-														background: 'linear-gradient(145deg, #36589f, #2c4b8a)',
-														border: '3px solid rgba(186, 205, 245, 0.75)',
-														boxShadow: '0 8px 18px rgba(15,30,62,0.28)',
-														display: 'flex',
-														alignItems: 'center',
-														justifyContent: 'center',
-													}}
-												>
-													<div
-														style={{
-															color: '#ffffff',
-															fontSize: '34px',
-															fontWeight: 700,
-															lineHeight: 1,
-															fontFamily: '"Public Sans", Arial, sans-serif',
-															letterSpacing: '0.5px',
-														}}
-													>
-														{c.count}
-														<span style={{ color: '#ffd9de', fontSize: '20px', marginLeft: '2px' }}>{c.suffix}</span>
-													</div>
-												</div>
-											</div>
+									<div key={i} style={{ flex: 1, minWidth: '120px', textAlign: 'center' }}>
+										<div style={{ color: '#fff', fontSize: '32px', fontWeight: '800', marginBottom: '4px' }}>
+											{c.count}<span style={{ color: '#C8232C' }}>{c.suffix}</span>
 										</div>
-										<p className="sub-counter" style={{ color: '#f1f5ff', fontSize: '15px', fontWeight: '600' }}>
+										<p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
 											{lang === 'tr' ? c.labelTr : c.labelEn}
 										</p>
 									</div>
@@ -189,25 +159,57 @@ export default function Section7() {
 							</div>
 						</div>
 
-						{/* Sağ: SSS */}
+						{/* Right: Accordion */}
 						<div className="col-lg-6">
-							<div className="content-left tab-links" style={{ background: 'rgba(255,255,255,0.08)', borderRadius: '12px', padding: '8px', border: '1px solid rgba(255,255,255,0.2)' }}>
-								<div className="tf-accordion accordion" id="accordionWhy">
+							<div style={{ background: '#fff', borderRadius: '20px', padding: '10px' }}>
+								<div className="tf-accordion-redesign">
 									{FAQS.map((faq) => (
-										<div key={faq.key} className={`accordion-item${faq.key === FAQS.length ? ' item-last' : ''}`}>
-											<h2
-												className={`accordion-header item-link${isAccordion === faq.key ? ' current' : ''}`}
+										<div key={faq.key} style={{
+											marginBottom: '12px',
+											borderRadius: '12px',
+											overflow: 'hidden',
+											border: '1px solid',
+											borderColor: isAccordion === faq.key ? '#C8232C' : '#eef2fa',
+											background: isAccordion === faq.key ? '#fff' : '#fcfdff',
+											transition: 'all 0.3s ease'
+										}}>
+											<div
 												onClick={() => handleAccordion(faq.key)}
+												style={{
+													padding: '20px 24px',
+													cursor: 'pointer',
+													display: 'flex',
+													alignItems: 'center',
+													justifyContent: 'space-between',
+													gap: '15px'
+												}}
 											>
-												<button
-													className={isAccordion === faq.key ? 'accordion-button' : 'accordion-button collapsed'}
-													type="button"
-												>
+												<span style={{
+													color: isAccordion === faq.key ? '#1B2F5E' : '#606580',
+													fontWeight: '700',
+													fontSize: '17px',
+													transition: 'color 0.3s'
+												}}>
 													{lang === 'tr' ? faq.qTr : faq.qEn}
-												</button>
-											</h2>
-											<div className={isAccordion === faq.key ? 'accordion-collapse collapse show' : 'accordion-collapse collapse'}>
-												<div className="accordion-body">
+												</span>
+												<div style={{
+													width: '24px', height: '24px', borderRadius: '50%',
+													background: isAccordion === faq.key ? '#C8232C' : '#eef2fa',
+													color: isAccordion === faq.key ? '#fff' : '#1B2F5E',
+													display: 'flex', alignItems: 'center', justifyContent: 'center',
+													fontSize: '12px',
+													transition: 'all 0.3s'
+												}}>
+													<i className={isAccordion === faq.key ? 'icon-minus' : 'icon-plus'} />
+												</div>
+											</div>
+											<div style={{
+												maxHeight: isAccordion === faq.key ? '300px' : '0',
+												overflow: 'hidden',
+												transition: 'max-height 0.4s ease',
+												background: '#fff'
+											}}>
+												<div style={{ padding: '0 24px 20px 24px', color: '#606580', fontSize: '15px', lineHeight: '1.7' }}>
 													{lang === 'tr' ? faq.aTr : faq.aEn}
 												</div>
 											</div>

@@ -1,124 +1,146 @@
 'use client'
-import Image from 'next/image'
-import { useState } from 'react'
 import { useLanguage } from '@/utils/LanguageContext'
 
 export default function Section4() {
-	const [isAccordion, setIsAccordion] = useState(1)
 	const { t } = useLanguage()
-
-	const handleAccordion = (key) => {
-		setIsAccordion(prevState => prevState === key ? null : key)
-	}
 
 	const steps = [
 		{
 			key: 1,
-			id: 'collapseOne',
 			stepLabel: t('step1'),
 			title: t('step1Title'),
 			desc: t('step1Desc'),
 			items: [t('step1Item1'), t('step1Item2')],
-			img: '/images/section/working-s2-1.jpg',
+			icon: 'icon-search',
+			color: '#1B2F5E'
 		},
 		{
 			key: 2,
-			id: 'collapseTwo',
 			stepLabel: t('step2'),
 			title: t('step2Title'),
 			desc: t('step2Desc'),
 			items: [t('step2Item1'), t('step2Item2')],
-			img: '/images/section/process.jpg',
+			icon: 'icon-bolt',
+			color: '#C8232C'
 		},
 		{
 			key: 3,
-			id: 'collapseThree',
 			stepLabel: t('step3'),
 			title: t('step3Title'),
 			desc: t('step3Desc'),
 			items: [t('step3Item1'), t('step3Item2')],
-			img: '/images/section/process-2.jpg',
+			icon: 'icon-check-2',
+			color: '#1B2F5E'
 		},
 		{
 			key: 4,
-			id: 'collapseFour',
 			stepLabel: t('step4'),
 			title: t('step4Title'),
 			desc: t('step4Desc'),
 			items: [t('step4Item1'), t('step4Item2')],
-			img: '/images/section/working-s2-2.jpg',
-			last: true,
+			icon: 'icon-star',
+			color: '#C8232C'
 		},
 	]
 
 	return (
-		<>
-			<section className="s-working tf-spacing-1 misiones-process-section">
-				<div className="tf-container">
-					<div className="row">
-						<div className="col-lg-12">
-							<div className="content">
-								<p className="s-sub-title mb-18 justify-center">
-									<i className="icon-angles-right moveLeftToRight" />
-									{t('processSubtitle')}
-								</p>
-								<p className="s-title mb-70 text-center text-anime-wave">
-									{t('processTitle')} <br />
-									<span>{t('processTitleSpan')}</span>
-								</p>
-								<div className="tf-accordion-type-3 accordion" id="accordionExample">
-									{steps.map((step) => (
-										<div
-											key={step.key}
-											className={`accordion-item${step.last ? ' last' : ''}${isAccordion === step.key ? ' active' : ''}`}
-											onClick={() => handleAccordion(step.key)}
-										>
-											<h2 className="accordion-header">
-												<button
-													className={`accordion-button ${isAccordion === step.key ? '' : 'collapsed'}`}
-													type="button"
-												>
-													<span className="step">{step.stepLabel}</span>
-													<span>{step.title}</span>
-												</button>
-											</h2>
-											<div className={`accordion-collapse collapse${isAccordion === step.key ? ' show' : ''}`}>
-												<div className="accordion-body">
-													<p className="title">{step.title}</p>
-													<p className="text mb-25 tf-fade-item fade-1">{step.desc}</p>
-													<ul className="benefit-list">
-														{step.items.map((item, idx) => (
-															<li key={idx} className={`tf-fade-item fade-${idx + 2}`}>
-																<div className="icon">
-																	<i className="flaticon-check-mark" />
-																</div>
-																<p>{item}</p>
-															</li>
-														))}
-													</ul>
-												</div>
-											</div>
-											<div className="image tf-hover">
-												<div className="hover-1">
-													<Image
-														width="0"
-														height="0"
-														sizes="100vw"
-														style={{ width: "100%", height: "auto" }}
-														src={step.img}
-														alt={step.title}
-														className="lazyload"
-													/>
-												</div>
-											</div>
-										</div>
-									))}
-								</div>
-							</div>
-						</div>
+		<section className="s-working misiones-process-clean" style={{ padding: '100px 0', background: '#fdfdfd', borderTop: '1px solid #eee' }}>
+			<div className="tf-container">
+				<div className="row justify-content-center">
+					<div className="col-lg-8 text-center mb-60">
+						<p className="s-sub-title mb-15 justify-center" style={{ color: '#C8232C', letterSpacing: '2px', fontWeight: '700' }}>
+							<i className="icon-angles-right moveLeftToRight" />
+							{t('processSubtitle')}
+						</p>
+						<h2 className="title" style={{ color: '#1B2F5E', fontSize: '2.5rem', fontWeight: '800' }}>
+							{t('processTitle')} <span style={{ color: '#C8232C' }}>{t('processTitleSpan')}</span>
+						</h2>
 					</div>
 				</div>
-			</section>
-		</>
+
+				<div className="row g-4">
+					{steps.map((step, index) => (
+						<div className="col-lg-3 col-md-6" key={step.key}>
+							<div className="process-card-clean" style={{ 
+								background: '#fff', 
+								padding: '40px 30px', 
+								borderRadius: '20px', 
+								height: '100%', 
+								boxShadow: '0 10px 30px rgba(0,0,0,0.02)',
+								border: '1px solid #f0f0f0',
+								transition: 'all 0.3s ease',
+								position: 'relative',
+								textAlign: 'center'
+							}}>
+								<div className="step-badge" style={{ 
+									position: 'absolute', 
+									top: '-15px', 
+									left: '50%', 
+									transform: 'translateX(-50%)',
+									padding: '5px 20px',
+									background: step.color,
+									color: '#fff',
+									borderRadius: '20px',
+									fontSize: '12px',
+									fontWeight: '700',
+									letterSpacing: '1px'
+								}}>
+									{step.stepLabel}
+								</div>
+								
+								<div className="icon-wrap mb-25" style={{ 
+									width: '70px', 
+									height: '70px', 
+									background: `${step.color}10`,
+									color: step.color,
+									borderRadius: '50%',
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									margin: '0 auto',
+									fontSize: '28px'
+								}}>
+									<i className={step.icon} />
+								</div>
+
+								<h3 className="mb-20" style={{ fontSize: '1.4rem', fontWeight: '700', color: '#1B2F5E' }}>{step.title}</h3>
+								
+								<p style={{ color: '#505878', fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '20px' }}>
+									{step.desc}
+								</p>
+
+								<ul style={{ listStyle: 'none', padding: 0, margin: 0, textAlign: 'left' }}>
+									{step.items.map((item, idx) => (
+										<li key={idx} style={{ 
+											fontSize: '1.1rem', 
+											color: '#333', 
+											marginBottom: '8px',
+											display: 'flex',
+											alignItems: 'center',
+											gap: '10px'
+										}}>
+											<i className="icon-check" style={{ color: step.color }} />
+											{item}
+										</li>
+									))}
+								</ul>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+
+			<style jsx>{`
+				.process-card-clean:hover {
+					transform: translateY(-10px);
+					box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+					border-color: transparent;
+				}
+				.process-card-clean:hover .icon-wrap {
+					background: #C8232C !important;
+					color: #fff !important;
+				}
+			`}</style>
+		</section>
 	)
 }

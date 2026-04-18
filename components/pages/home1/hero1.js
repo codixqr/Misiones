@@ -93,10 +93,9 @@ export default function Hero1() {
 										<i className="icon-angles-right moveLeftToRight" style={{ color: '#C8232C' }} />
 										{t('heroSubtitle')}
 									</p>
-									<p className="mb-28 fw-7" style={{ color: '#ffffff', lineHeight: 1.08, fontSize: 'clamp(44px, 5.3vw, 78px)' }}>
-										{t('heroTitle')} <br />
-										{t('heroTitleAnd')}
-										<span style={{ color: '#C8232C', display: 'inline-block', marginLeft: '10px' }}>
+									<h1 className="mb-28 fw-7" style={{ color: '#ffffff', lineHeight: 1.1, fontSize: 'clamp(44px, 5.3vw, 72px)', margin: 0 }}>
+										{t('heroTitle')} {t('heroTitleAnd')}
+										<div style={{ color: '#C8232C', marginTop: '5px' }}>
 											<TypeAnimation
 												sequence={[
 													t('heroWord1'),
@@ -110,26 +109,38 @@ export default function Hero1() {
 												speed={50}
 												repeat={Infinity}
 											/>
-										</span>
-									</p>
+										</div>
+									</h1>
 									<span className="line" style={{ background: '#C8232C', display: 'block', height: '2px', width: '60px', marginBottom: '28px' }} />
 									<p className="fw-5" style={{ color: 'rgba(255,255,255,0.92)', fontSize: 'clamp(19px, 1.45vw, 24px)', lineHeight: '1.65', maxWidth: '640px', marginBottom: 0 }}>
 										{t('heroDesc')}
 									</p>
 									<div className="bot" style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginTop: '40px' }}>
-										<Link href="/our-service" className="tf-btn" style={{ background: '#C8232C', color: '#fff' }}>
-											{t('heroBtn')}
-											<i className="icon-chevron-right" />
-										</Link>
-										<div className="video-wrap">
-											<a onClick={() => setOpen(true)} className="popup-youtube fs-14 fw-7" style={{ color: 'rgba(255,255,255,0.9)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '12px' }}>
-												<span className="icon style-circle" style={{ background: '#C8232C' }}>
-													<span className="bg" />
-													<span className="wave-3" />
-													<i className="icon-play fs-12" style={{ color: '#fff' }} />
-												</span>
-												{t('heroVideo')}
-											</a>
+										<div style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap' }}>
+											<Link href="/our-service" className="tf-btn" style={{ background: '#C8232C', color: '#fff' }}>
+												{t('heroBtn')}
+												<i className="icon-chevron-right" />
+											</Link>
+											<div className="video-wrap">
+												<a onClick={() => setOpen(true)} className="popup-youtube fs-14 fw-7" style={{ color: 'rgba(255,255,255,0.9)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '12px' }}>
+													<span className="icon style-circle" style={{ background: '#C8232C' }}>
+														<span className="bg" />
+														<span className="wave-3" />
+														<i className="icon-play fs-12" style={{ color: '#fff' }} />
+													</span>
+													{t('heroVideo')}
+												</a>
+											</div>
+										</div>
+										<div className="misiones-signature" style={{ 
+											width: '100%', 
+											marginTop: '15px', 
+											fontFamily: 'var(--font-caveat)', 
+											fontSize: '34px', 
+											color: 'rgba(255,255,255,0.85)',
+											fontWeight: '600'
+										}}>
+											{t('handwritingQuote')}
 										</div>
 									</div>
 								</div>

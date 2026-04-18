@@ -101,8 +101,8 @@ export default function Section2() {
 															? 'veya doğrudan yazın: '
 															: 'or write directly: '
 														}
-														<a href="mailto:nevzat@misiones.com.tr" style={{ color: '#C8232C', fontWeight: '600' }}>
-															nevzat@misiones.com.tr
+														<a href="mailto:info@misiones.com.tr" style={{ color: '#C8232C', fontWeight: '600' }}>
+															info@misiones.com.tr
 														</a>
 													</p>
 												</div>

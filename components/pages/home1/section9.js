@@ -33,8 +33,7 @@ export default function Section9() {
 										<li className="wow fadeInUp" data-wow-delay="0.2s">
 											<p className="cap" style={{ fontSize: 'clamp(24px, 1.9vw, 30px)', marginBottom: '12px' }}>{lang === 'tr' ? 'İletişim' : 'Contact Us'}</p>
 											<p className="infor" style={{ fontSize: 'clamp(20px, 1.35vw, 25px)', lineHeight: '1.75' }}>
-												nevzat@misiones.com.tr<br />
-												newzat@misiones.tr<br />
+												info@misiones.com.tr<br />
 												+90 532 323 17 54
 											</p>
 										</li>

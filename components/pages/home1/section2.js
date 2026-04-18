@@ -25,15 +25,15 @@ export default function Section2() {
 											<p className="font-main-2" style={{ fontSize: 'clamp(34px, 3.7vw, 50px)', lineHeight: '1.12', color: '#1B2F5E', marginBottom: '12px' }}>
 												{t('missionTitle')}
 											</p>
-											<p className="text" style={{ fontSize: 'clamp(24px, 1.75vw, 31px)', lineHeight: '1.72', color: '#59617D' }}>
+											<p className="text" style={{ fontSize: '1.35rem', lineHeight: '1.75', color: '#59617D' }}>
 												{t('missionText')}
 											</p>
 										</li>
 										<li>
-											<p className="font-main-2" style={{ fontSize: 'clamp(34px, 3.7vw, 50px)', lineHeight: '1.12', color: '#1B2F5E', marginBottom: '12px' }}>
+											<p className="font-main-2" style={{ fontSize: 'clamp(38px, 4vw, 54px)', lineHeight: '1.12', color: '#1B2F5E', marginBottom: '12px' }}>
 												{t('visionTitle')}
 											</p>
-											<p className="text" style={{ fontSize: 'clamp(24px, 1.75vw, 31px)', lineHeight: '1.72', color: '#59617D' }}>
+											<p className="text" style={{ fontSize: '1.35rem', lineHeight: '1.75', color: '#59617D' }}>
 												{t('visionText')}
 											</p>
 										</li>
@@ -95,7 +95,7 @@ export default function Section2() {
 											height={680}
 											sizes="(max-width: 768px) 100vw, 600px"
 											style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover', objectPosition: 'center top' }}
-											src="/images/section/nevzat-celebi.jpg"
+											src="/images/section/nevzat-ahmet-celebi.jpg"
 											alt="Nevzat Çelebi – Misiones"
 											priority
 										/>

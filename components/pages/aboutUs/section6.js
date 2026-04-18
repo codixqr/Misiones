@@ -10,7 +10,7 @@ export default function Section6() {
 		address: lang === 'tr' ? 'Adres' : 'Address',
 		addressVal: 'Yeşilbahçe Mah. 1456 Sok. No: 26 İ. Özalp Apt. Kat: 4 Daire: 11 07160 Muratpaşa ANTALYA',
 		contact: lang === 'tr' ? 'İletişim' : 'Contact',
-		contactVal: <>nevzat@misiones.com.tr<br />+90 532 323 17 54</>,
+		contactVal: <>info@misiones.com.tr<br />+90 532 323 17 54</>,
 		formTitle: lang === 'tr' ? 'Bize Ulaşın' : 'Send a Message',
 		namePh: lang === 'tr' ? 'Ad Soyad' : 'Full Name',
 		phonePh: lang === 'tr' ? 'Telefon' : 'Phone',

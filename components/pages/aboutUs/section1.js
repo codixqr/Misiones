@@ -8,7 +8,7 @@ export default function Section1() {
   const { lang } = useLanguage()
 
   return (
-    <section className="s-about-hero tf-spacing-7" style={{ background: '#fff' }}>
+    <section className="s-about-hero" style={{ background: '#fff', paddingTop: '20px' }}>
       <div className="tf-container">
         <div className="row align-items-center">
           <div className="col-lg-6">
@@ -17,22 +17,22 @@ export default function Section1() {
                 <i className="icon-angles-right moveLeftToRight" />
                 {lang === 'en' ? 'Who We Are' : 'Biz Kimiz?'}
               </p>
-              <h2 className="s-title mb-30 text-anime-wave" style={{ color: '#1B2F5E', fontSize: '2rem', lineHeight: '1.3' }}>
+              <h2 className="s-title mb-30 text-anime-wave" style={{ color: '#1B2F5E', fontSize: '2.8rem', lineHeight: '1.2', fontWeight: '900' }}>
                 {lang === 'en'
                   ? 'A Transformation Manifesto for the Hospitality Industry'
                   : 'Otelcilik Sektörü İçin Bir Dönüşüm Manifestosu'}
               </h2>
-              <p style={{ color: '#505878', lineHeight: '1.85', marginBottom: '24px', fontSize: '1.02rem' }}>
+              <p style={{ color: '#505878', lineHeight: '1.85', marginBottom: '24px', fontSize: '1.45rem', fontWeight: '500' }}>
                 {lang === 'en'
                   ? 'We are the wise voice shaped by the realities of the hospitality industry – a companion who shapes investment, management, and guest experience not just with numbers, but with meaning. MISIONES Hotel Industry Experience Consulting is a transformation manifesto that strengthens hotels against today\'s competition and tomorrow\'s uncertainty, bringing together data with wisdom, strategy with storytelling, and operations with artistry.'
                   : 'Biz, otelcilik sektörünün sahadan gelen gerçekleriyle yoğrulmuş bilge sesi; yatırımı, yönetimi ve misafir deneyimini yalnızca rakamlarla değil, anlamla şekillendiren bir yol arkadaşıyız. MISIONES Hotel Industry Experience Consulting, otelleri bugünün rekabetinden çıkarıp yarının belirsizliğine karşı güçlendiren; veriyi bilgelikle, stratejiyi hikâyeyle, operasyonu sanatla buluşturan bir dönüşüm manifestosudur.'}
               </p>
-              <p style={{ color: '#505878', lineHeight: '1.85', marginBottom: '36px', fontSize: '1.02rem' }}>
+              <p style={{ color: '#505878', lineHeight: '1.85', marginBottom: '36px', fontSize: '1.45rem', fontWeight: '500' }}>
                 {lang === 'en'
                   ? 'We are not just consultants in hospitality; we are representatives of a vision that unites the spirit of the industry with the dynamics of the times to build the future and leave a lasting mark.'
                   : 'Biz, otelcilikte yalnızca danışman değil; sektörün ruhunu ve zamanın dinamiklerini birleştirerek geleceği inşa eden, kalıcı iz bırakan bir vizyonun temsilcisiyiz.'}
               </p>
-              <div className="row" style={{ gap: '0' }}>
+旋              <div className="row" style={{ gap: '0' }}>
                 {[
                   { count: 20, label: lang === 'en' ? 'Years Experience' : 'Yıl Deneyim' },
                   { count: 150, label: lang === 'en' ? 'Projects Completed' : 'Tamamlanan Proje' },
@@ -55,7 +55,7 @@ export default function Section1() {
               {/* Portrait photo */}
               <div style={{ borderRadius: '20px', overflow: 'hidden', position: 'relative', boxShadow: '0 16px 48px rgba(27,47,94,0.18)' }}>
                 <Image
-                  src="/images/section/nevzat-celebi.jpg"
+                  src="/images/section/nevzat-ahmet-celebi.jpg"
                   alt="Nevzat Çelebi – Misiones"
                   width={700}
                   height={700}

@@ -6,9 +6,66 @@ import { useLanguage } from '@/utils/LanguageContext'
 
 const serviceCategories = [
   {
+    id: 'yonetim',
+    icon: 'flaticon-chart',
+    image: '/images/section/service-yonetim-danis.jpg',
+    titleTr: 'Otel Yönetim Danışmanlığı',
+    titleEn: 'Hotel Management Consulting',
+    descTr: 'Otelin açılışından operasyonel mükemmelliğe, gelir yönetiminden insan kaynaklarına kadar tüm yönetim süreçlerinde stratejik destek sunuyoruz.',
+    descEn: 'We provide strategic support in all management processes from hotel opening to operational excellence, from revenue management to human resources.',
+    items: [
+      { titleTr: 'Açılış Öncesi ve Açılış Hizmetleri', titleEn: 'Pre-Opening & Opening Services', descTr: 'Bir otelin kaderi daha kapıları açılmadan belirlenir. Konsept, konumlandırma, operasyonel hazırlık ve ilk izlenim, uzun vadeli başarı için kritiktir.', descEn: 'The fate of a hotel is determined before its doors open. Concept, positioning, operational readiness and first impression are critical for long-term success.' },
+      { titleTr: 'Otel Gelir Yönetimi Danışmanlığı', titleEn: 'Hotel Revenue Management Consulting', descTr: 'Piyasa koşullarında rekabet avantajı yaratmanın en güçlü aracıdır. Talep tahmini, fiyatlandırma stratejileri ve kanal yönetimi, sürdürülebilir kârlılığın kalbidir.', descEn: 'It is the most powerful tool for creating competitive advantage in market conditions. Demand forecasting, pricing strategies and channel management are the heart of sustainable profitability.' },
+      { titleTr: 'Satış ve Pazarlama Danışmanlığı', titleEn: 'Sales & Marketing Consulting', descTr: 'Doğru hedef kitleye ulaşmak, marka bilinirliği ve satış kanallarının etkin kullanımı, otelin görünürlüğünü ve doluluk oranını belirler.', descEn: 'Reaching the right target audience, brand awareness and effective use of sales channels determines the hotel\'s visibility and occupancy rate.' },
+      { titleTr: 'Finansal Bütçeleme Danışmanlığı', titleEn: 'Financial Budgeting Consulting', descTr: 'Stratejk planlamanın omurgasıdır. Kaynakların doğru dağıtımı, yatırım geri dönüşü ve krizlere karşı dayanıklılık için vazgeçilmezdir.', descEn: 'It is the backbone of strategic planning. Essential for proper allocation of resources, return on investment and resilience against crises.' },
+      { titleTr: 'Operasyon İyileştirme ve Geliştirme', titleEn: 'Operations Improvement & Development', descTr: 'Günlük işleyişin verimliliği, misafir memnuniyetini ve maliyet kontrolünü doğrudan etkiler. Küçük iyileştirmeler bile büyük fark yaratır.', descEn: 'The efficiency of daily operations directly affects guest satisfaction and cost control. Even small improvements make a big difference.' },
+      { titleTr: 'Kalite Oluşturma ve Geliştirme Danışmanlığı', titleEn: 'Quality Creation & Development Consulting', descTr: 'Misafir deneyimini standardize eder ve markanın uzun vadeli itibarı için temel oluşturur. Kalite, sadakat ve tekrar eden misafir demektir.', descEn: 'Standardizes the guest experience and forms the foundation for the long-term reputation of the brand. Quality means loyalty and repeat guests.' },
+      { titleTr: 'İnsan Kaynakları Eğitim Danışmanlığı', titleEn: 'HR Training Consulting', descTr: 'Otelin ruhunu oluşturan ekiptir. Doğru eğitim, motivasyon ve kültür, operasyonel mükemmelliğin sürdürülebilirliğini sağlar.', descEn: 'It is the team that forms the soul of the hotel. Proper training, motivation and culture ensures the sustainability of operational excellence.' },
+      { titleTr: 'Otel Yönetimi Danışmanlığı', titleEn: 'Hotel Management Consulting', descTr: 'Genel stratejik yönlendirmedir. Yönetim ekibine rehberlik ederek tüm fonksiyonların uyum içinde çalışmasını sağlar.', descEn: 'General strategic direction. Guides the management team and ensures all functions work in harmony.' },
+      { titleTr: 'Otel Varlık Yönetimi Danışmanlığı', titleEn: 'Hotel Asset Management Consulting', descTr: 'Yatırımcı perspektifinden bakıldığında, varlığın değerini korumak ve artırmak için kritiktir. Uzun vadeli sürdürülebilirlik ve Return on Investment - Yatırım Getirisi odaklıdır.', descEn: 'From an investor perspective, it is critical to preserve and increase the value of the asset. Focused on long-term sustainability and Return on Investment.' },
+      { titleTr: 'Otel Yeniden Yapılandırma Yönetimi Danışmanlığı', titleEn: 'Hotel Restructuring Management Consulting', descTr: 'Kriz veya başarısızlık durumunda devreye girer. Yeniden konumlandırma, finansal ve operasyonel rehabilitasyon ile oteli ikinci bir hayata taşır.', descEn: 'It comes into play in case of crisis or failure. Repositioning, financial and operational rehabilitation brings the hotel to a second life.' },
+      { titleTr: 'Ürün Geliştirme Danışmanlığı', titleEn: 'Product Development Consulting', descTr: 'Yenilikçi hizmetler ve konseptler ile rekabet avantajı sağlar. Temel yapı oturduktan sonra öncelik kazanır.', descEn: 'Provides competitive advantage with innovative services and concepts. Gains priority after the basic structure is established.' },
+    ],
+  },
+  {
+    id: 'marka',
+    icon: 'flaticon-market',
+    image: '/images/section/service-marka-integ.jpg',
+    titleTr: 'Otel Marka Entegrasyonu Danışmanlığı',
+    titleEn: 'Hotel Brand Integration Consulting',
+    descTr: 'Markanın kimliği, ruhu ve geleceğini doğru şekillendirmek; rekabette farklılaşmayı ve sürdürülebilir büyümeyi sağlamak için stratejik marka yönetimi hizmetleri sunuyoruz.',
+    descEn: 'We provide strategic brand management services to correctly shape the identity, soul and future of the brand; to ensure differentiation in competition and sustainable growth.',
+    items: [
+      {
+        titleTr: 'Marka Belirleme',
+        titleEn: 'Brand Definition',
+        descTr: 'Marka bir otelin kimliği, ruhu ve gelecekteki tüm stratejilerinin temelini oluşturur. Rekabetin yoğun olduğu turizm sektöründe, farklılaşma ve özgünlük markanın belirlenmesiyle başlar.',
+        descEn: 'Brand forms the foundation of a hotel\'s identity, soul and all future strategies. In the highly competitive tourism sector, differentiation and authenticity begin with brand definition.',
+      },
+      {
+        titleTr: 'Marka Alma',
+        titleEn: 'Brand Acquisition',
+        descTr: 'Belirlenen markanın hukuki olarak korunması, sürdürülebilirlik ve yatırım güvenliği açısından kritik önem arz eder. Markanın tescili rekabet avantajını korur ve olası taklitleri engeller.',
+        descEn: 'Legal protection of the determined brand is critically important for sustainability and investment security. Brand registration protects competitive advantage and prevents possible imitations.',
+      },
+      {
+        titleTr: 'Uluslararası Marka Franchising Alımı',
+        titleEn: 'International Brand Franchising',
+        descTr: 'Eğer otel global bir zincirin gücünü kullanmak istiyorsa, franchising alımı marka belirlemenin hemen ardından gelir. Global zincirlerin tanınırlığı, dağıtım kanalları ve sadakat programları sayesinde otel hızla uluslararası görünürlük kazanır.',
+        descEn: 'If the hotel wants to use the power of a global chain, franchising acquisition comes immediately after brand definition. Thanks to global chain recognition, distribution channels and loyalty programs, the hotel quickly gains international visibility.',
+      },
+      {
+        titleTr: 'Marka İçin Stratejik İlişkiler Danışmanlığı',
+        titleEn: 'Strategic Relations Consulting for Brand',
+        descTr: 'Marka kimliği ve hukuki güvence sağlandıktan sonra, onu büyütecek ve güçlendirecek olan şey stratejik ilişkilerdir (uluslararası zincirlerle işbirliği, OTA\'lar, tur operatörleri, yatırımcılar, medya).',
+        descEn: 'After brand identity and legal security are established, what will grow and strengthen it are strategic relationships (partnerships with international chains, OTAs, tour operators, investors, media).',
+      },
+    ],
+  },
+  {
     id: 'yatirim',
     icon: 'flaticon-building',
-    image: '/images/section/misiones-consulting-meeting.png',
+    image: '/images/section/service-yatirim-analiz.jpg',
     titleTr: 'Otel Yatırım Danışmanlığı',
     titleEn: 'Hotel Investment Consulting',
     descTr: 'Doğru yatırım kararları, projenin başından itibaren sahadan gelen veriler ve deneyimle şekillendirilmelidir. Fizibilite analizinden proje yönetimine, teşvik belgelerinden mimari danışmanlığa kadar yatırımın her aşamasında yanınızdayız.',
@@ -56,63 +113,6 @@ const serviceCategories = [
         descTr: 'Sertifikasyon (sürdürülebilirlik, kalite, güvenlik belgeleri) yatırımın değerini artırır, pazarlama gücünü yükseltir. Yatırımın prestij ve güven damgasıdır.',
         descEn: 'Certification (sustainability, quality, security certificates) increases the value of the investment and increases marketing power. It is the prestige and trust stamp of the investment.',
       },
-    ],
-  },
-  {
-    id: 'marka',
-    icon: 'flaticon-market',
-    image: '/images/section/service-marka.jpg',
-    titleTr: 'Otel Marka Entegrasyonu Danışmanlığı',
-    titleEn: 'Hotel Brand Integration Consulting',
-    descTr: 'Markanın kimliği, ruhu ve geleceğini doğru şekillendirmek; rekabette farklılaşmayı ve sürdürülebilir büyümeyi sağlamak için stratejik marka yönetimi hizmetleri sunuyoruz.',
-    descEn: 'We provide strategic brand management services to correctly shape the identity, soul and future of the brand; to ensure differentiation in competition and sustainable growth.',
-    items: [
-      {
-        titleTr: 'Marka Belirleme',
-        titleEn: 'Brand Definition',
-        descTr: 'Marka bir otelin kimliği, ruhu ve gelecekteki tüm stratejilerinin temelini oluşturur. Rekabetin yoğun olduğu turizm sektöründe, farklılaşma ve özgünlük markanın belirlenmesiyle başlar.',
-        descEn: 'Brand forms the foundation of a hotel\'s identity, soul and all future strategies. In the highly competitive tourism sector, differentiation and authenticity begin with brand definition.',
-      },
-      {
-        titleTr: 'Marka Alma',
-        titleEn: 'Brand Acquisition',
-        descTr: 'Belirlenen markanın hukuki olarak korunması, sürdürülebilirlik ve yatırım güvenliği açısından kritik önem arz eder. Markanın tescili rekabet avantajını korur ve olası taklitleri engeller.',
-        descEn: 'Legal protection of the determined brand is critically important for sustainability and investment security. Brand registration protects competitive advantage and prevents possible imitations.',
-      },
-      {
-        titleTr: 'Uluslararası Marka Franchising Alımı',
-        titleEn: 'International Brand Franchising',
-        descTr: 'Eğer otel global bir zincirin gücünü kullanmak istiyorsa, franchising alımı marka belirlemenin hemen ardından gelir. Global zincirlerin tanınırlığı, dağıtım kanalları ve sadakat programları sayesinde otel hızla uluslararası görünürlük kazanır.',
-        descEn: 'If the hotel wants to use the power of a global chain, franchising acquisition comes immediately after brand definition. Thanks to global chain recognition, distribution channels and loyalty programs, the hotel quickly gains international visibility.',
-      },
-      {
-        titleTr: 'Marka İçin Stratejik İlişkiler Danışmanlığı',
-        titleEn: 'Strategic Relations Consulting for Brand',
-        descTr: 'Marka kimliği ve hukuki güvence sağlandıktan sonra, onu büyütecek ve güçlendirecek olan şey stratejik ilişkilerdir (uluslararası zincirlerle işbirliği, OTA\'lar, tur operatörleri, yatırımcılar, medya).',
-        descEn: 'After brand identity and legal security are established, what will grow and strengthen it are strategic relationships (partnerships with international chains, OTAs, tour operators, investors, media).',
-      },
-    ],
-  },
-  {
-    id: 'yonetim',
-    icon: 'flaticon-chart',
-    image: '/images/section/service-yonetim.jpg',
-    titleTr: 'Otel Yönetim Danışmanlığı',
-    titleEn: 'Hotel Management Consulting',
-    descTr: 'Otelin açılışından operasyonel mükemmelliğe, gelir yönetiminden insan kaynaklarına kadar tüm yönetim süreçlerinde stratejik destek sunuyoruz.',
-    descEn: 'We provide strategic support in all management processes from hotel opening to operational excellence, from revenue management to human resources.',
-    items: [
-      { titleTr: 'Açılış Öncesi ve Açılış Hizmetleri', titleEn: 'Pre-Opening & Opening Services', descTr: 'Bir otelin kaderi daha kapıları açılmadan belirlenir. Konsept, konumlandırma, operasyonel hazırlık ve ilk izlenim, uzun vadeli başarı için kritiktir.', descEn: 'The fate of a hotel is determined before its doors open. Concept, positioning, operational readiness and first impression are critical for long-term success.' },
-      { titleTr: 'Otel Gelir Yönetimi Danışmanlığı', titleEn: 'Hotel Revenue Management Consulting', descTr: 'Piyasa koşullarında rekabet avantajı yaratmanın en güçlü aracıdır. Talep tahmini, fiyatlandırma stratejileri ve kanal yönetimi, sürdürülebilir kârlılığın kalbidir.', descEn: 'It is the most powerful tool for creating competitive advantage in market conditions. Demand forecasting, pricing strategies and channel management are the heart of sustainable profitability.' },
-      { titleTr: 'Satış ve Pazarlama Danışmanlığı', titleEn: 'Sales & Marketing Consulting', descTr: 'Doğru hedef kitleye ulaşmak, marka bilinirliği ve satış kanallarının etkin kullanımı, otelin görünürlüğünü ve doluluk oranını belirler.', descEn: 'Reaching the right target audience, brand awareness and effective use of sales channels determines the hotel\'s visibility and occupancy rate.' },
-      { titleTr: 'Finansal Bütçeleme Danışmanlığı', titleEn: 'Financial Budgeting Consulting', descTr: 'Stratejik planlamanın omurgasıdır. Kaynakların doğru dağıtımı, yatırım geri dönüşü ve krizlere karşı dayanıklılık için vazgeçilmezdir.', descEn: 'It is the backbone of strategic planning. Essential for proper allocation of resources, return on investment and resilience against crises.' },
-      { titleTr: 'Operasyon İyileştirme ve Geliştirme', titleEn: 'Operations Improvement & Development', descTr: 'Günlük işleyişin verimliliği, misafir memnuniyetini ve maliyet kontrolünü doğrudan etkiler. Küçük iyileştirmeler bile büyük fark yaratır.', descEn: 'The efficiency of daily operations directly affects guest satisfaction and cost control. Even small improvements make a big difference.' },
-      { titleTr: 'Kalite Oluşturma ve Geliştirme Danışmanlığı', titleEn: 'Quality Creation & Development Consulting', descTr: 'Misafir deneyimini standardize eder ve markanın uzun vadeli itibarı için temel oluşturur. Kalite, sadakat ve tekrar eden müşteri demektir.', descEn: 'Standardizes the guest experience and forms the foundation for the long-term reputation of the brand. Quality means loyalty and repeat customers.' },
-      { titleTr: 'İnsan Kaynakları Eğitim Danışmanlığı', titleEn: 'HR Training Consulting', descTr: 'Otelin ruhunu oluşturan ekiptir. Doğru eğitim, motivasyon ve kültür, operasyonel mükemmelliğin sürdürülebilirliğini sağlar.', descEn: 'It is the team that forms the soul of the hotel. Proper training, motivation and culture ensures the sustainability of operational excellence.' },
-      { titleTr: 'Otel Yönetimi Danışmanlığı', titleEn: 'Hotel Management Consulting', descTr: 'Genel stratejik yönlendirmedir. Yönetim ekibine rehberlik ederek tüm fonksiyonların uyum içinde çalışmasını sağlar.', descEn: 'General strategic direction. Guides the management team and ensures all functions work in harmony.' },
-      { titleTr: 'Otel Varlık Yönetimi Danışmanlığı', titleEn: 'Hotel Asset Management Consulting', descTr: 'Yatırımcı perspektifinden bakıldığında, varlığın değerini korumak ve artırmak için kritiktir. Uzun vadeli sürdürülebilirlik ve ROI odaklıdır.', descEn: 'From an investor perspective, it is critical to preserve and increase the value of the asset. Focused on long-term sustainability and ROI.' },
-      { titleTr: 'Otel Yeniden Yapılandırma Yönetimi Danışmanlığı', titleEn: 'Hotel Restructuring Management Consulting', descTr: 'Kriz veya başarısızlık durumunda devreye girer. Yeniden konumlandırma, finansal ve operasyonel rehabilitasyon ile oteli ikinci bir hayata taşır.', descEn: 'It comes into play in case of crisis or failure. Repositioning, financial and operational rehabilitation brings the hotel to a second life.' },
-      { titleTr: 'Ürün Geliştirme Danışmanlığı', titleEn: 'Product Development Consulting', descTr: 'Yenilikçi hizmetler ve konseptler ile rekabet avantajı sağlar. Temel yapı oturduktan sonra öncelik kazanır.', descEn: 'Provides competitive advantage with innovative services and concepts. Gains priority after the basic structure is established.' },
     ],
   },
   {
@@ -164,58 +164,61 @@ function ServiceAccordion({ service, lang }) {
   const [openItem, setOpenItem] = useState(null)
 
   return (
-    <div style={{ background: '#fff', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 4px 24px rgba(27,47,94,0.08)', marginBottom: '16px' }}>
-      <div style={{ display: 'flex', flexWrap: 'wrap', minHeight: '0' }}>
-        {/* Left: image */}
-        <div style={{ width: 'min(42%, 420px)', minWidth: '280px', flexShrink: 0, position: 'relative', minHeight: '280px', alignSelf: 'stretch' }}>
+    <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 8px 48px rgba(27,47,94,0.06)', marginBottom: '32px', border: '1px solid #f0f4fb' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div style={{ width: 'min(45%, 480px)', minWidth: '320px', flexShrink: 0, position: 'relative', minHeight: '400px', alignSelf: 'stretch' }}>
           <Image
             src={service.image}
             alt={lang === 'en' ? service.titleEn : service.titleTr}
             fill
-            sizes="(max-width: 991px) 100vw, 420px"
-            style={{ objectFit: 'cover', objectPosition: 'center top' }}
+            sizes="(max-width: 991px) 100vw, 480px"
+            style={{ objectFit: 'cover', objectPosition: 'center center' }}
           />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(27,47,94,0.35) 0%, transparent 65%)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(27,47,94,0.3) 0%, transparent 80%)', pointerEvents: 'none' }} />
         </div>
-        {/* Right: accordion items */}
-        <div style={{ flex: 1, minWidth: '280px', padding: '0' }}>
-          <div style={{ padding: '28px 32px 20px', borderBottom: '1px solid #f0f4fb' }}>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px' }}>
-              <div style={{ width: '48px', height: '48px', borderRadius: '10px', background: 'linear-gradient(135deg,#1B2F5E,#2a4a8a)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <i className={service.icon} style={{ color: '#fff', fontSize: '1.35rem' }} />
-              </div>
+        <div style={{ flex: 1, minWidth: '320px', padding: '0' }}>
+          <div style={{ padding: '40px 45px 30px', borderBottom: '1px solid #f0f4fb' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '24px' }}>
+              <div style={{ width: '6px', alignSelf: 'stretch', background: '#C8232C', borderRadius: '4px', flexShrink: 0 }} />
               <div>
-                <h3 style={{ color: '#1B2F5E', fontSize: '1.6rem', fontWeight: '700', margin: 0, lineHeight: 1.3 }}>
+                <h3 style={{ color: '#1B2F5E', fontSize: '2.8rem', fontWeight: '900', margin: 0, lineHeight: 1.1, letterSpacing: '-1.2px' }}>
                   {lang === 'en' ? service.titleEn : service.titleTr}
                 </h3>
-                <p style={{ color: '#4a5568', fontSize: '1.22rem', margin: '10px 0 0', lineHeight: 1.72 }}>
+                <p style={{ color: '#505878', fontSize: '1.4rem', margin: '18px 0 0', lineHeight: 1.7, fontWeight: '500', opacity: 0.9 }}>
                   {lang === 'en' ? service.descEn : service.descTr}
                 </p>
               </div>
             </div>
           </div>
-          <div>
+          <div style={{ maxHeight: '600px', overflowY: 'auto', padding: '10px 0' }}>
             {service.items.map((item, idx) => (
-              <div key={idx} style={{ borderBottom: idx < service.items.length - 1 ? '1px solid #f5f7fc' : 'none' }}>
+              <div key={idx} style={{ borderBottom: idx < service.items.length - 1 ? '1px solid #f8fafc' : 'none' }}>
                 <button
                   onClick={() => setOpenItem(openItem === idx ? null : idx)}
                   style={{
                     width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    padding: '16px 32px', background: 'none', border: 'none', cursor: 'pointer',
-                    textAlign: 'left', gap: '12px',
-                    background: openItem === idx ? '#f5f8fd' : 'transparent',
-                    transition: 'background 0.2s',
+                    padding: '20px 45px', background: 'none', border: 'none', cursor: 'pointer',
+                    textAlign: 'left', gap: '16px',
+                    background: openItem === idx ? '#fcfdff' : 'transparent',
+                    transition: 'all 0.3s ease',
                   }}
                 >
-                  <span style={{ color: openItem === idx ? '#C8232C' : '#1B2F5E', fontWeight: '600', fontSize: '1.2rem', lineHeight: 1.48 }}>
-                    <span style={{ color: '#C8232C', marginRight: '8px', fontSize: '0.85rem' }}>{String(idx + 1).padStart(2, '0')}</span>
+                  <span style={{ color: openItem === idx ? '#C8232C' : '#1B2F5E', fontWeight: '800', fontSize: '1.4rem', lineHeight: 1.4, display: 'flex', alignItems: 'center' }}>
+                    <span style={{ color: '#C8232C', minWidth: '32px', fontSize: '0.9rem', fontWeight: '900', opacity: 0.8 }}>{String(idx + 1).padStart(2, '0')}</span>
                     {lang === 'en' ? item.titleEn : item.titleTr}
                   </span>
-                  <span style={{ color: openItem === idx ? '#C8232C' : '#8a94b2', fontSize: '1rem', transition: 'transform 0.25s', transform: openItem === idx ? 'rotate(45deg)' : 'rotate(0deg)', flexShrink: 0 }}>+</span>
+                  <div style={{ 
+                    width: '28px', height: '28px', borderRadius: '50%', border: '1.5px solid',
+                    borderColor: openItem === idx ? '#C8232C' : '#e2e8f0',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                    transition: 'all 0.3s'
+                  }}>
+                    <span style={{ color: openItem === idx ? '#C8232C' : '#8a94b2', fontSize: '1.1rem', fontWeight: '700', transform: openItem === idx ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}>+</span>
+                  </div>
                 </button>
                 {openItem === idx && (
-                  <div style={{ padding: '0 32px 22px', borderTop: '1px solid #eef2fa' }}>
-                    <p style={{ color: '#3d4a63', lineHeight: '1.82', fontSize: '1.16rem', margin: '14px 0 0' }}>
+                  <div style={{ padding: '0 45px 28px 77px' }}>
+                    <p style={{ color: '#64748b', lineHeight: '1.85', fontSize: '1.2rem', margin: '0', fontWeight: '500' }}>
                       {lang === 'en' ? item.descEn : item.descTr}
                     </p>
                   </div>
@@ -228,6 +231,8 @@ function ServiceAccordion({ service, lang }) {
     </div>
   )
 }
+
+
 
 function HipSection({ lang }) {
   const [activeLevel, setActiveLevel] = useState('tam')
@@ -388,10 +393,10 @@ export default function OurService() {
                 <i className="icon-angles-right moveLeftToRight" style={{ marginRight: '6px' }} />
                 {lang === 'en' ? 'Our Services' : 'Hizmetlerimiz'}
               </p>
-              <h1 style={{ color: '#1B2F5E', fontSize: 'clamp(2.25rem, 4.8vw, 3.5rem)', fontWeight: '800', marginBottom: '16px', lineHeight: 1.2 }}>
+              <h1 style={{ color: '#1B2F5E', fontSize: 'clamp(2.5rem, 5.5vw, 4rem)', fontWeight: '900', marginBottom: '20px', lineHeight: 1.1 }}>
                 {lang === 'en' ? 'Hotel Investment & Management Consulting' : 'Otel Yatırım ve Yönetim Danışmanlığı'}
               </h1>
-              <p style={{ color: '#3d4a63', maxWidth: '820px', margin: '0 auto', lineHeight: '1.8', fontSize: '1.3rem' }}>
+              <p style={{ color: '#3d4a63', maxWidth: '900px', margin: '0 auto', lineHeight: '1.8', fontSize: '1.45rem', fontWeight: '500' }}>
                 {lang === 'en'
                   ? 'From investment feasibility to brand integration, management to audit — comprehensive consulting services for the hospitality industry.'
                   : 'Yatırım fizibilitesinden marka entegrasyonuna, yönetimden denetime — otelcilik sektörü için kapsamlı danışmanlık hizmetleri.'}

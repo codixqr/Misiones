@@ -34,7 +34,7 @@ export const translations = {
         navBlogStandard: 'Blog',
         navBlogDetails: 'Blog Detayı',
         // Hero
-        heroSubtitle: 'danışmanlık firması',
+        heroSubtitle: 'hospitality danışmanlık firması',
         heroTitle: 'Modern İş',
         heroTitleAnd: 'Danışmanlığı',
         heroWord1: 'Hizmetleri',
@@ -43,6 +43,7 @@ export const translations = {
         heroDesc: 'Otel yatırımı, marka entegrasyonu, gelir yönetimi ve HIP ile turizm ve otelcilikte sahadan gelen stratejik danışmanlık sunuyoruz.',
         heroBtn: 'Hizmetleri Keşfet',
         heroVideo: 'Videoyu İzle',
+        handwritingQuote: '"Başarınız için elimizden gelenin en iyisini sağlıyoruz"',
         marqueeText: 'Hospitality Global Experience Works & Green Horizon Hotels EcoSphere Consultance',
         // Section 1 - Features
         feat1Title: 'Otel Yatırım & Fizibilite',
@@ -212,15 +213,16 @@ export const translations = {
         navBlogStandard: 'Blog Standard',
         navBlogDetails: 'Blog Details',
         // Hero
-        heroSubtitle: 'consulting agency',
+        heroSubtitle: 'hospitality consulting agency',
         heroTitle: 'Modern Business',
         heroTitleAnd: 'Consulting',
-        heroWord1: 'Service',
-        heroWord2: 'Firm',
-        heroWord3: 'Office',
+        heroWord1: 'Services',
+        heroWord2: 'Solutions',
+        heroWord3: 'Strategy',
         heroDesc: 'Strategic hospitality consulting across investment, brand integration, revenue management and HIP — grounded in field experience.',
         heroBtn: 'Explore Services',
         heroVideo: 'Watch Video',
+        handwritingQuote: '"We provide our best for your success"',
         marqueeText: 'Hospitality Global Experience Works & Green Horizon Hotels EcoSphere Consultance',
         // Section 1 - Features
         feat1Title: 'Hotel Investment & Feasibility',

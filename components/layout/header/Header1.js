@@ -27,8 +27,8 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
 											<div className="icon">
 												<i className="flaticon-open-mail" />
 											</div>
-										<Link href="mailto:nevzat@misiones.com.tr">
-											nevzat@misiones.com.tr
+										<Link href="mailto:contact@misiones.com.tr">
+											contact@misiones.com.tr
 										</Link>
 									</li>
 									<li>
@@ -147,8 +147,8 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, handle
 												</li>
 												<li>
 													<p>
-														{t('email')}: <Link href="mailto:nevzat@misiones.com.tr">
-															nevzat@misiones.com.tr
+														{t('email')}: <Link href="mailto:info@misiones.com.tr">
+															info@misiones.com.tr
 														</Link>
 													</p>
 												</li>

@@ -27,13 +27,15 @@ export default function Section11() {
 
 	return (
 		<section className="s-partner" style={{ background: '#f8f9fc', padding: '50px 0', overflow: 'hidden' }}>
-			<div style={{ textAlign: 'center', marginBottom: '30px' }}>
-				<p style={{ color: '#C8232C', fontWeight: '600', fontSize: '13px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '8px' }}>
-					{lang === 'tr' ? 'Referanslarımız' : 'Our References'}
+			<div style={{ textAlign: 'center', marginBottom: '40px' }}>
+				<p style={{ color: '#C8232C', fontWeight: '700', fontSize: '14px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '10px' }}>
+					<i className="icon-angles-right moveLeftToRight" style={{ marginRight: '8px' }} />
+					{lang === 'tr' ? 'İz Bıraktığımız Yerler' : 'Our Footprint'}
 				</p>
-				<p style={{ color: '#1B2F5E', fontWeight: '700', fontSize: '22px' }}>
-					{lang === 'tr' ? 'Hizmet Verdiğimiz Markalar' : 'Brands We Served'}
-				</p>
+				<h2 style={{ color: '#1B2F5E', fontWeight: '800', fontSize: '2.5rem' }}>
+					{lang === 'tr' ? 'Hizmet Verdiğimiz Seçkin Markalar' : 'Elite Brands We Have Served'}
+				</h2>
+				<div style={{ width: '60px', height: '3px', background: '#C8232C', margin: '20px auto' }} />
 			</div>
 			<div className="misiones-hotel-ticker">
 				<div className="misiones-hotel-ticker-inner">
