@@ -161,7 +161,7 @@ const serviceCategories = [
   {
     id: 'broker',
     icon: 'flaticon-rocket',
-    image: '/images/section/service-strateji.jpg',
+    image: '/images/section/our-service-01.jpg',
     titleTr: 'Hotel Broker',
     titleEn: 'Hotel Broker',
     descTr: 'Otelcilik sektöründe yatırımcı ile otel sahibi arasındaki kritik köprüyü kuruyoruz. Otel satışları, kiralamaları ve işletme devri gibi tüm süreçlerde uzman aracılık hizmeti sunarak taraflar için en uygun zemini hazırlıyoruz.',

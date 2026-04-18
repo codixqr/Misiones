@@ -3,16 +3,19 @@ import { useState } from 'react'
 import CounterUp from '@/components/elements/CounterUp'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLanguage } from '@/utils/LanguageContext'
+
 export default function Section1() {
 	const [isAccordion, setIsAccordion] = useState(1)
+	const { lang, t } = useLanguage()
 
 	const handleAccordion = (key) => {
 		setIsAccordion(prevState => prevState === key ? null : key)
 	}
+
 	return (
 		<>
-
-			<section className="s-service-detail">
+			<section className="s-service-detail tf-spacing-1">
 				<div className="tf-container">
 					<div className="row">
 						<div className="col-lg-8">
@@ -20,225 +23,144 @@ export default function Section1() {
 								<div className="entry-image tf-hover mb-40">
 									<div className="hover-1">
 										<Image
-											width="0"
-											height="0"
-											sizes="100vw"
-											style={{ width: "100%", height: "auto" }}
-											src="/images/section/service-detail.jpg" data-src="/images/section/service-detail.jpg" alt="" className="lazyload" />
+											width="1200"
+											height="600"
+											src="/images/section/service-detail.jpg" 
+											alt="Misiones Hizmet Detayı" 
+											className="lazyload" 
+											style={{ width: "100%", height: "auto", borderRadius: '20px' }}
+										/>
 									</div>
 								</div>
-								<p className="title s1 mb-10 text-anime-wave">
-									Unlocking Growth the Strategic Marketing
+								<p className="title s1 mb-20 text-anime-wave" style={{ color: '#1B2F5E', fontWeight: '800', fontSize: '2.5rem' }}>
+									{lang === 'tr' ? 'Otel Yatırım ve Yönetiminde Stratejik Bilgelik' : 'Strategic Wisdom in Hotel Investment & Management'}
 								</p>
-								<p className="text s1 mb-25">
-									We specialize in providing comprehensive marketing consulting services designed to
-									elevate your brand, enhance customer
-									engagement, and drive measurable business growth. Our tailored solutions help
-									navigate
-									the complexities of today’s marketing landscape by developing strategies that are
-									data-driven, innovative,
-									and aligned with your business objectives.
+								<p className="text s1 mb-25" style={{ fontSize: '1.2rem', lineHeight: '1.7' }}>
+									{lang === 'tr' 
+										? 'Misiones olarak, markanızı yükseltmek, misafir bağlılığını artırmak ve ölçülebilir iş büyümesi sağlamak için tasarlanmış kapsamlı danışmanlık hizmetleri sunuyoruz.' 
+										: 'At Misiones, we offer comprehensive consulting services designed to elevate your brand, enhance guest loyalty, and drive measurable business growth.'}
 								</p>
-								<p className="text s2 mb-40">Understand your target market, industry trends, and customer
-									behaviors. This helps in identifying growth opportunities,
-									consumer pain points, and competitive positioning to craft more effective marketing
-									strategies
+								<p className="text s2 mb-40">
+									{lang === 'tr'
+										? 'Hedef pazarınızı, endüstri trendlerini ve misafir davranışlarını anlıyoruz. Bu, büyüme fırsatlarını, piyasadaki boşlukları ve rekabetçi konumlandırmayı belirleyerek daha etkili stratejiler geliştirmemize yardımcı olur.'
+										: 'We understand your target market, industry trends, and guest behavior. This helps us identify growth opportunities and competitive positioning to craft more effective strategies.'}
 								</p>
-								<h3 className="title-2 s1 text-anime-wave">
-									Our Key Marketing Consulting Services Include:
+								
+								<h3 className="title-2 s1 text-anime-wave" style={{ color: '#C8232C' }}>
+									{lang === 'tr' ? 'Temel Uzmanlık Alanlarımız:' : 'Our Core Areas of Expertise:'}
 								</h3>
-								<p className="text s3">We focus on long-term success by developing strategies that not only
-									solve immediate challenges but also position
-									businesses for sustainable growth and continuous improvement.
-								</p>
-								<ul className="list-1">
+								<ul className="list-1 mb-40">
 									<li>
-										<div className="number">
-											<p>
-												1
-											</p>
-										</div>
-										<div >
-											<h6>
-												<Link href="/#">Market Research &amp; Competitor Analysis</Link>
+										<div className="number" style={{ background: '#1B2F5E' }}><p>1</p></div>
+										<div>
+											<h6 className="fw-7">
+												{lang === 'tr' ? 'Pazar Araştırması ve Rakip Analizi' : 'Market Research & Competitor Analysis'}
 											</h6>
 											<p>
-												Gain a deeper understanding of your industry landscape and target
-												audience through in-depth market research. We analyze competitor
-												strategies, identify market gaps.
+												{lang === 'tr' 
+													? 'Sektörel ortamı ve hedef kitlenizi derinlemesine analizlerle anlıyoruz. Rakiplerinizi inceliyoruz.' 
+													: 'We understand the industry environment and your target audience through in-depth analysis.'}
 											</p>
 										</div>
 									</li>
 									<li>
-										<div className="number">
-											<p>
-												2
-											</p>
-										</div>
-										<div >
-											<h6>
-												<Link href="/#">Brand Strategy Development</Link>
+										<div className="number" style={{ background: '#1B2F5E' }}><p>2</p></div>
+										<div>
+											<h6 className="fw-7">
+												{lang === 'tr' ? 'Marka Stratejisi Geliştirme' : 'Brand Strategy Development'}
 											</h6>
 											<p>
-												We help you build or refine your brand identity to ensure consistency
-												and relevance. From defining your brand’s mission and values to creating
-												a compelling
+												{lang === 'tr'
+													? 'Global zincirlerle entegrasyon veya özgün marka kimliği oluşturma süreçlerinde rehberlik ediyoruz.'
+													: 'We guide integration with global chains or creation of unique brand identities.'}
 											</p>
 										</div>
 									</li>
 									<li>
-										<div className="number">
-											<p>
-												3
-											</p>
-										</div>
-										<div >
-											<h6>
-												<Link href="/#">Digital Marketing Strategy</Link>
+										<div className="number" style={{ background: '#1B2F5E' }}><p>3</p></div>
+										<div>
+											<h6 className="fw-7">
+												{lang === 'tr' ? 'Gelir Yönetimi & Dijital Satış' : 'Revenue Management & Digital Sales'}
 											</h6>
 											<p>
-												Reach your customers where they are. Our digital marketing solutions
-												cover SEO, social media marketing, email marketing, and PPC
-												(pay-per-click) campaigns.
+												{lang === 'tr'
+													? 'Fiyatlandırma stratejileri, kanal yönetimi ve doğrudan satış kanallarınızı optimize ediyoruz.'
+													: 'We optimize pricing strategies, channel management, and direct sales channels.'}
 											</p>
 										</div>
 									</li>
 								</ul>
-								<div className="entry-image-2 mb-40">
-									<div className="image"><Image
-										width="0"
-										height="0"
-										sizes="100vw"
-										style={{ width: "100%", height: "auto" }}
-										src="/images/section/service-detail-2.jpg" data-src="/images/section/service-detail-2.jpg" alt="" className="lazyload" />
+
+								<div className="entry-image-2 mb-40" style={{ position: 'relative' }}>
+									<div className="image">
+										<Image
+											width="800"
+											height="500"
+											src="/images/section/service-detail-2.jpg" 
+											alt="Misiones Ekip" 
+											className="lazyload" 
+											style={{ width: "100%", height: "auto", borderRadius: '20px' }}
+										/>
 									</div>
-									<div className="experience">
+									<div className="experience" style={{ background: '#C8232C' }}>
 										<div className="wg-counter style-9">
-											<div className="odometer style-9"><CounterUp count={10} /></div>
+											<div className="odometer style-9"><CounterUp count={20} /></div>
 											<span className="sub-odo">+</span>
 										</div>
 										<h4 className="sub-exp">
-											Our Experience <br />
-											Team Members
+											{lang === 'tr' ? 'Yıllık Sektörel' : 'Years of Sector'} <br />
+											{lang === 'tr' ? 'Tecrübe' : 'Experience'}
 										</h4>
 									</div>
 								</div>
-								<h3 className="title-2 s2 mb-15 text-anime-wave">
-									Our Easy Working Process
+
+								<h3 className="title-2 s2 mb-15 text-anime-wave" style={{ color: '#1B2F5E' }}>
+									{lang === 'tr' ? 'Çalışma Sürecimiz' : 'Our Working Process'}
 								</h3>
 								<p className="text s4 mb-50">
-									This approach provides clear, detailed information about your marketing consulting
-									services in a way that is
-									client-focused and actionable for potential businesses looking to grow their
-									marketing efforts.
+									{lang === 'tr'
+										? 'Veriye dayalı, şeffaf ve sonuç odaklı bir yaklaşımla projelerinizi hayata geçiriyoruz.'
+										: 'We implement your projects with a data-driven, transparent, and results-oriented approach.'}
 								</p>
 								<ul className="list-2 mb-70">
 									<li>
-										<p className="step-number">Step 01</p>
-										<h6 className="caption">
-											Discovery &amp; Research
-										</h6>
-										<div className="icon">
-											<i className="icon-check-2" />
-										</div>
-										<p className="text">
-											We begin by understanding your business, target audience
-											and current marketing efforts.
-										</p>
+										<p className="step-number" style={{ color: '#C8232C' }}>01</p>
+										<h6 className="caption">{lang === 'tr' ? 'Keşif' : 'Discovery'}</h6>
+										<div className="icon"><i className="icon-check-2" style={{ color: '#C8232C' }} /></div>
+										<p className="text">{lang === 'tr' ? 'Mevcut durumu analiz ediyoruz.' : 'We analyze the current situation.'}</p>
 									</li>
 									<li>
-										<p className="step-number"> Step 02</p>
-										<h6 className="caption">
-											Strategy Development
-										</h6>
-										<div className="icon">
-											<i className="icon-check-2" />
-										</div>
-										<p className="text">
-											Based on our research, we customized market strategy tailored to your goals.
-										</p>
+										<p className="step-number" style={{ color: '#C8232C' }}>02</p>
+										<h6 className="caption">{lang === 'tr' ? 'Strateji' : 'Strategy'}</h6>
+										<div className="icon"><i className="icon-check-2" style={{ color: '#C8232C' }} /></div>
+										<p className="text">{lang === 'tr' ? 'Size özel kâr odaklı planlar.' : 'Custom profit-oriented plans.'}</p>
 									</li>
 									<li>
-										<p className="step-number">Step 03</p>
-										<h6 className="caption">
-											Implementation
-										</h6>
-										<div className="icon">
-											<i className="icon-check-2" />
-										</div>
-										<p className="text">
-											We execute to the marketing strategy to selected channels, continuously
-											performance.
-										</p>
+										<p className="step-number" style={{ color: '#C8232C' }}>03</p>
+										<h6 className="caption">{lang === 'tr' ? 'Uygulama' : 'Execution'}</h6>
+										<div className="icon"><i className="icon-check-2" style={{ color: '#C8232C' }} /></div>
+										<p className="text">{lang === 'tr' ? 'Sürekli takip ve optimizasyon.' : 'Continuous monitoring and optimization.'}</p>
 									</li>
 								</ul>
+
 								<h3 className="title-2 s3 mb-15 text-anime-wave">
-									Frequently Asked Questions
+									{lang === 'tr' ? 'Sıkça Sorulan Sorular' : 'Frequently Asked Questions'}
 								</h3>
-								<p className="text s5 mb-40">
-									We offer a wide range of services, including strategic planning, operations
-									management, financial consulting, marketing
-									strategy, digital transformation, market research, and organizational development.
-									Our goal is to provide tailored
-									solutions that help businesses grow, streamline.
-								</p>
 								<div className="tf-accordion style-4 style-2 accordion" id="accordionExample">
-									<div className="accordion-item">
-										<h2 className="accordion-header"onClick={() => handleAccordion(1)}>
-											<button className={`accordion-button ${isAccordion === 1 ? 'collapsed' : ''}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-												What is business consulting?
-											</button>
-										</h2>
-										<div id="collapseOne" className={`accordion-collapse collapse ${isAccordion === 1 ? 'show' : ''}`} data-bs-parent="#accordionExample">
-											<div className="accordion-body">
-												Our process typically starts with a discovery phase, where we assess
-												your business needs and goals, we develop a customized strategy,
-												followed by implementation and continuous monitoring.
+									{[1, 2, 3, 4].map((i) => (
+										<div className="accordion-item" key={i}>
+											<h2 className="accordion-header" onClick={() => handleAccordion(i)}>
+												<button className={`accordion-button ${isAccordion === i ? '' : 'collapsed'}`} type="button">
+													{t(`s2Faq${i}Q`)}
+												</button>
+											</h2>
+											<div className={`accordion-collapse collapse ${isAccordion === i ? 'show' : ''}`}>
+												<div className="accordion-body">
+													{t(`s2Faq${i}A`)}
+												</div>
 											</div>
 										</div>
-									</div>
-									<div className="accordion-item">
-										<h2 className="accordion-header"onClick={() => handleAccordion(2)}>
-											<button className={`accordion-button ${isAccordion === 2 ? 'collapsed' : ''}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-												How does the consulting process work?
-											</button>
-										</h2>
-										<div id="collapseTwo" className={`accordion-collapse collapse ${isAccordion === 2 ? 'show' : ''}`} data-bs-parent="#accordionExample">
-											<div className="accordion-body">
-												Our process typically starts with a discovery phase, where we assess
-												your business needs and goals, we develop a customized strategy,
-												followed by implementation and continuous monitoring.
-											</div>
-										</div>
-									</div>
-									<div className="accordion-item">
-										<h2 className="accordion-header"onClick={() => handleAccordion(3)}>
-											<button className={`accordion-button ${isAccordion === 3 ? 'collapsed' : ''}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-												What types of businesses do you work with?
-											</button>
-										</h2>
-										<div id="collapseThree" className={`accordion-collapse collapse ${isAccordion === 3 ? 'show' : ''}`} data-bs-parent="#accordionExample">
-											<div className="accordion-body">
-												Our process typically starts with a discovery phase, where we assess
-												your business needs and goals, we develop a customized strategy,
-												followed by implementation and continuous monitoring.
-											</div>
-										</div>
-									</div>
-									<div className="accordion-item last">
-										<h2 className="accordion-header"onClick={() => handleAccordion(4)}>
-											<button className={`accordion-button ${isAccordion === 4 ? 'collapsed' : ''}`} type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-												How much do your consulting services cost?
-											</button>
-										</h2>
-										<div id="collapseFour" className={`accordion-collapse collapse ${isAccordion === 4 ? 'show' : ''}`} data-bs-parent="#accordionExample">
-											<div className="accordion-body">
-												Our process typically starts with a discovery phase, where we assess
-												your business needs and goals, we develop a customized strategy,
-												followed by implementation and continuous monitoring.
-											</div>
-										</div>
-									</div>
+									))}
 								</div>
 							</div>
 						</div>
@@ -247,107 +169,62 @@ export default function Section1() {
 								<div className="sb-item mb-20">
 									<div className="sb-title">
 										<i className="icon-repair fs-20 color-main-black" />
-										<h5 className="title">Popular Services</h5>
+										<h5 className="title">{lang === 'tr' ? 'Hizmetlerimiz' : 'Our Services'}</h5>
 									</div>
 									<div className="sb-content sb-category">
 										<ul className="category-list">
-											<li>
-												<Link href="/#">
-													Marketing Consulting
+											<li style={{ borderLeft: '4px solid #C8232C', paddingLeft: '15px' }}>
+												<Link href="/our-service" style={{ color: '#1B2F5E', fontWeight: '800' }}>
+													{lang === 'tr' ? 'Otel Yatırım Danışmanlığı' : 'Hotel Investment Consulting'}
 													<i className="icon-chevron-right" />
 												</Link>
 											</li>
 											<li>
-												<Link href="/#">
-													Resources Consulting
+												<Link href="/our-service">
+													{lang === 'tr' ? 'Marka Entegrasyonu' : 'Brand Integration'}
 													<i className="icon-chevron-right" />
 												</Link>
 											</li>
 											<li>
-												<Link href="/#">
-													Management Consulting
+												<Link href="/our-service">
+													{lang === 'tr' ? 'Gelir Yönetimi' : 'Revenue Management'}
 													<i className="icon-chevron-right" />
 												</Link>
 											</li>
 											<li>
-												<Link href="/#">
-													Financial Consulting
+												<Link href="/our-service">
+													{lang === 'tr' ? 'Hotel Improvement Plan' : 'Hotel Improvement Plan'}
 													<i className="icon-chevron-right" />
 												</Link>
 											</li>
 											<li>
-												<Link href="/#">
-													Operations Management
-													<i className="icon-chevron-right" />
-												</Link>
-											</li>
-											<li>
-												<Link href="/#">
-													Management Consulting
+												<Link href="/our-service">
+													{lang === 'tr' ? 'Hotel Broker' : 'Hotel Broker'}
 													<i className="icon-chevron-right" />
 												</Link>
 											</li>
 										</ul>
 									</div>
 								</div>
-								<div className="sb-item mb-20">
-									<div className="sb-title">
-										<i className="icon-house fs-20 color-main-black" />
-										<h5 className="title">Company Information</h5>
-									</div>
-									<div className="sb-content sb-download">
-										<ul className="btn-down-list">
-											<li>
-												<Link href="/#" className="btn-download">Download pdf
-													<div className="icon">
-														<i className="icon-file-pdf">
-														</i>
-													</div>
-												</Link>
-											</li>
-											<li>
-												<Link href="/#" className="btn-download style-2">
-													Download Doc
-													<div className="icon">
-														<i className="icon-file">
-														</i>
-													</div>
-												</Link>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div className="sb-item sb-contact">
+								
+								<div className="sb-item sb-contact" style={{ background: '#1B2F5E' }}>
 									<div className="sb-content">
-										<p className="s-title style-2 mb-30 text-anime-wave">
-											Ready to Get Free <br />
-											<span>
-												Consultation ?
-											</span>
+										<p className="s-title style-2 mb-30 text-white">
+											{lang === 'tr' ? 'Ücretsiz Danışmanlık' : 'Free Consultation'} <br />
+											<span style={{ color: '#C8232C' }}>{lang === 'tr' ? 'Almaya Hazır mısınız?' : 'Ready to Start?'}</span>
 										</p>
-										<form action="#" className="form-contact bg-transparent style-3">
+										<form className="form-contact bg-transparent style-3">
 											<div className="cols mb-10">
-												<fieldset>
-													<input type="text" placeholder="Full Name" required />
-												</fieldset>
+												<fieldset><input type="text" placeholder={lang === 'tr' ? 'Ad Soyad' : 'Full Name'} required style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }} /></fieldset>
 											</div>
 											<div className="cols mb-10">
-												<fieldset>
-													<input type="email" placeholder="Email" required />
-												</fieldset>
+												<fieldset><input type="email" placeholder="Email" required style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }} /></fieldset>
 											</div>
 											<div className="cols mb-10">
-												<fieldset>
-													<input type="text" placeholder="Subject" required />
-												</fieldset>
+												<fieldset><textarea className="h-100px" placeholder={lang === 'tr' ? 'Mesajınız' : 'Message'} style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }} /></fieldset>
 											</div>
-											<div className="cols mb-10">
-												<fieldset>
-													<textarea className="h-100px" placeholder="Write message" />
-												</fieldset>
-											</div>
-											<button type="submit" className="tf-btn full text-anime-style-1">
-												Get Consultation
+											<button type="submit" className="tf-btn full" style={{ background: '#C8232C', border: 'none' }}>
+												{lang === 'tr' ? 'Gönder' : 'Send'}
 												<i className="icon-chevron-right" />
 											</button>
 										</form>
@@ -358,7 +235,6 @@ export default function Section1() {
 					</div>
 				</div>
 			</section>
-
 		</>
 	)
 }

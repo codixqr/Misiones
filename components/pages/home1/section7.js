@@ -28,8 +28,8 @@ const WHY_ITEMS = [
 		icon: 'flaticon-data-management',
 		titleTr: 'Global & Yerel Perspektif',
 		titleEn: 'Global & Local Perspective',
-		descTr: 'Avrupa\'dan Orta Asya\'ya, butik otellerden uluslararası zincirlere kadar çok katmanlı bir deneyim perspektifi sunuyoruz.',
-		descEn: 'From Europe to Central Asia, boutique hotels to international chains — we offer a multi-layered experience perspective.',
+		descTr: 'Avrupa\'dan Orta Asya\'ya, Marriot, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med ve Club Aldiana gibi dev markalarla doğrudan çalışma deneyimine sahibiz.',
+		descEn: 'From Europe to Central Asia, we have direct working experience with major brands like Marriott, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med and Club Aldiana.',
 	},
 ]
 
@@ -38,8 +38,8 @@ const FAQS = [
 		key: 1,
 		qTr: 'MISIONES kiminle çalışır?',
 		qEn: 'Who does MISIONES work with?',
-		aTr: 'Otel yatırımcıları, girişimciler, mevcut otel işletmecileri ve uluslararası marka almak isteyen tüm paydaşlarla çalışıyoruz. Yeni yatırımdan mevcut otelin dönüşümüne kadar her aşamada destek veriyoruz.',
-		aEn: 'We work with hotel investors, entrepreneurs, existing hotel operators and all stakeholders seeking international brands. We provide support at every stage from new investment to transformation of existing hotels.',
+		aTr: 'Otel yatırımcıları, girişimciler, mevcut otel işletmecileri ve uluslararası marka almak isteyen tüm paydaşlarla çalışıyoruz. Marriott, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med ve Club Aldiana gibi dev markalarla doğrudan çalışma deneyimine sahibiz.',
+		aEn: 'We work with hotel investors, entrepreneurs, existing hotel operators and all stakeholders seeking international brands. We have direct experience with major brands like Marriott, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med and Club Aldiana.',
 	},
 	{
 		key: 2,

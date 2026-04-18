@@ -53,7 +53,7 @@ export default function Section1() {
 							<Image
 								width="600"
 								height="500"
-								src="/images/section/why-1.jpg" 
+								src="/images/section/our-service-01.jpg" 
 								alt="Misiones Strategy" 
 								style={{ width: "100%", height: "auto", objectFit: 'cover' }}
 							/>
@@ -66,7 +66,7 @@ export default function Section1() {
 							<Image
 								width="600"
 								height="500"
-								src="/images/section/why-2.jpg" 
+								src="/images/section/our-service-02.jpg" 
 								alt="Misiones Excellence" 
 								style={{ width: "100%", height: "auto", objectFit: 'cover' }}
 							/>

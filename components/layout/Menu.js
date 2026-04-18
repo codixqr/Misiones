@@ -28,6 +28,9 @@ export default function Menu() {
 			<li className={`item ${isActive("/blog-standard")}`}>
 				<Link href="/blog-standard"><span>{t('navBlog')}</span></Link>
 			</li>
+			<li className={`item ${isActive("/service-details")}`}>
+				<Link href="/service-details"><span>{t('navServiceDetails')}</span></Link>
+			</li>
 			<li className={`item ${isActive("/contact")}`}>
 				<Link href="/contact"><span>{t('navContact')}</span></Link>
 			</li>
