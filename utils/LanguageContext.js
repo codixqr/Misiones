@@ -26,7 +26,7 @@ export const translations = {
         navMissionVision: 'Misyon & Vizyon',
         navFaqs: 'SSS',
         navOurService: 'Hizmetlerimiz',
-        navOurService2: 'Hizmetlerimiz 02',
+        navOurService2: 'Danışmanlık Hizmetleri',
         navServiceDetails: 'Hizmet Detayı',
         navCaseStudy1: 'Proje Çalışması 01',
         navCaseStudy2: 'Proje Çalışması 02',
@@ -85,7 +85,7 @@ export const translations = {
         service3Desc: 'Fiyatlandırma, kanal karması, RMS/CRM uyumu ve doğrudan satışlarla sürdürülebilir kârlılık.',
         service4Title: 'HIP, Denetim & Sürdürülebilirlik',
         service4Desc: 'Hotel Improvement Plan, operasyonel ve mali denetim ile kalite ve risk yönetimi.',
-        service5Title: 'Hotel Broker',
+        service5Title: 'Otel Alım/Satım/Kiralama Aracılık Danışmanlığı',
         service5Desc: 'Otelcilik sektöründe yatırımcı ile otel sahibi arasındaki kritik köprüyü kuruyoruz. Otel satışları, kiralamaları ve işletme devri gibi tüm süreçlerde uzman aracılık hizmeti sunarak taraflar için en uygun zemini hazırlıyoruz.',
         readMore: 'Devamını Oku',
         // Section 4 - Process
@@ -328,8 +328,8 @@ export const translations = {
         service3Desc: 'Pricing, channel mix, RMS/CRM alignment and direct booking growth for sustainable profit.',
         service4Title: 'HIP, Audit & Sustainability',
         service4Desc: 'Hotel Improvement Plan plus operational and financial audits, quality and risk control.',
-        service5Title: 'Hotel Broker',
-        service5Desc: 'Establishing a critical bridge between investors and hotel owners. Expert brokerage in hotel sales, leases and business transfers.',
+        service5Title: 'Hotel Acquisition / Sale / Lease Brokerage',
+        service5Desc: 'Establishing a critical bridge between investors and hotel owners in the hospitality sector. We provide expert brokerage services in hotel sales, leases and management transfers.',
         readMore: 'Read More',
         // Section 4 - Process
         processSubtitle: 'working process',

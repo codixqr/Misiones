@@ -19,8 +19,15 @@ export default function MobileMenu() {
 	const menuItems = [
 		{ title: t('navHome'), path: "/" },
 		{ title: t('navAbout'), path: "/about-us" },
-		{ title: t('navOurService'), path: "/our-service" },
-		{ title: t('navOurService2'), path: "/our-service-02" },
+		{
+			title: t('navOurService'),
+			path: "/our-service",
+			subMenu: [
+				{ title: t('navOurService'), path: "/our-service" },
+				{ title: t('navOurService2'), path: "/our-service-02" },
+				{ title: t('navServiceDetails'), path: "/service-details" },
+			]
+		},
 		{
 			title: t('navBlog'),
 			path: "/blog-standard",

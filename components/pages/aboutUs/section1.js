@@ -55,7 +55,7 @@ export default function Section1() {
               {/* Portrait photo */}
               <div style={{ borderRadius: '20px', overflow: 'hidden', position: 'relative', boxShadow: '0 16px 48px rgba(27,47,94,0.18)' }}>
                 <Image
-                  src="/images/section/nevzat-ahmet-celebi.jpg"
+                  src="/images/section/nevzat-celebi.jpg"
                   alt="Nevzat Çelebi – Misiones"
                   width={700}
                   height={700}

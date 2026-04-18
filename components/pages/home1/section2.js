@@ -95,8 +95,8 @@ export default function Section2() {
 											height={680}
 											sizes="(max-width: 768px) 100vw, 600px"
 											style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover', objectPosition: 'center top' }}
-											src="/images/section/nevzat-ahmet-celebi.jpg"
-											alt="Nevzat Çelebi – Misiones"
+											src="/images/section/nevzat-celebi.jpg"
+											alt="Nevzat Ahmet Çelebi – Misiones"
 											priority
 										/>
 										{/* İsim overlay */}
