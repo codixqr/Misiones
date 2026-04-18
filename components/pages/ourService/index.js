@@ -166,59 +166,61 @@ function ServiceAccordion({ service, lang }) {
   return (
     <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 8px 48px rgba(27,47,94,0.06)', marginBottom: '32px', border: '1px solid #f0f4fb' }}>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        <div style={{ width: 'min(45%, 480px)', minWidth: '320px', flexShrink: 0, position: 'relative', minHeight: '400px', alignSelf: 'stretch' }}>
+        {/* Left: image with better fit to avoid resolution loss */}
+        <div style={{ width: 'min(40%, 420px)', minWidth: '320px', flexShrink: 0, position: 'relative', height: 'auto', minHeight: '320px', alignSelf: 'stretch' }}>
           <Image
             src={service.image}
             alt={lang === 'en' ? service.titleEn : service.titleTr}
             fill
-            sizes="(max-width: 991px) 100vw, 480px"
+            sizes="(max-width: 991px) 100vw, 420px"
             style={{ objectFit: 'cover', objectPosition: 'center center' }}
           />
           <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(27,47,94,0.3) 0%, transparent 80%)', pointerEvents: 'none' }} />
         </div>
+        {/* Right: accordion items */}
         <div style={{ flex: 1, minWidth: '320px', padding: '0' }}>
-          <div style={{ padding: '40px 45px 30px', borderBottom: '1px solid #f0f4fb' }}>
+          <div style={{ padding: '35px 40px 25px', borderBottom: '1px solid #f0f4fb' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '24px' }}>
               <div style={{ width: '6px', alignSelf: 'stretch', background: '#C8232C', borderRadius: '4px', flexShrink: 0 }} />
               <div>
-                <h3 style={{ color: '#1B2F5E', fontSize: '2.8rem', fontWeight: '900', margin: 0, lineHeight: 1.1, letterSpacing: '-1.2px' }}>
+                <h3 style={{ color: '#1B2F5E', fontSize: '2.5rem', fontWeight: '900', margin: 0, lineHeight: 1.1, letterSpacing: '-1px' }}>
                   {lang === 'en' ? service.titleEn : service.titleTr}
                 </h3>
-                <p style={{ color: '#505878', fontSize: '1.4rem', margin: '18px 0 0', lineHeight: 1.7, fontWeight: '500', opacity: 0.9 }}>
+                <p style={{ color: '#505878', fontSize: '1.3rem', margin: '15px 0 0', lineHeight: 1.6, fontWeight: '500', opacity: 0.9 }}>
                   {lang === 'en' ? service.descEn : service.descTr}
                 </p>
               </div>
             </div>
           </div>
-          <div style={{ maxHeight: '600px', overflowY: 'auto', padding: '10px 0' }}>
+          <div style={{ maxHeight: '550px', overflowY: 'auto', padding: '5px 0' }}>
             {service.items.map((item, idx) => (
               <div key={idx} style={{ borderBottom: idx < service.items.length - 1 ? '1px solid #f8fafc' : 'none' }}>
                 <button
                   onClick={() => setOpenItem(openItem === idx ? null : idx)}
                   style={{
                     width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    padding: '20px 45px', background: 'none', border: 'none', cursor: 'pointer',
+                    padding: '18px 40px', background: 'none', border: 'none', cursor: 'pointer',
                     textAlign: 'left', gap: '16px',
                     background: openItem === idx ? '#fcfdff' : 'transparent',
                     transition: 'all 0.3s ease',
                   }}
                 >
-                  <span style={{ color: openItem === idx ? '#C8232C' : '#1B2F5E', fontWeight: '800', fontSize: '1.4rem', lineHeight: 1.4, display: 'flex', alignItems: 'center' }}>
-                    <span style={{ color: '#C8232C', minWidth: '32px', fontSize: '0.9rem', fontWeight: '900', opacity: 0.8 }}>{String(idx + 1).padStart(2, '0')}</span>
+                  <span style={{ color: openItem === idx ? '#C8232C' : '#1B2F5E', fontWeight: '800', fontSize: '1.35rem', lineHeight: 1.4, display: 'flex', alignItems: 'center' }}>
+                    <span style={{ color: '#C8232C', minWidth: '32px', fontSize: '0.85rem', fontWeight: '900', opacity: 0.8 }}>{String(idx + 1).padStart(2, '0')}</span>
                     {lang === 'en' ? item.titleEn : item.titleTr}
                   </span>
                   <div style={{ 
-                    width: '28px', height: '28px', borderRadius: '50%', border: '1.5px solid',
+                    width: '24px', height: '24px', borderRadius: '50%', border: '1.2px solid',
                     borderColor: openItem === idx ? '#C8232C' : '#e2e8f0',
                     display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
                     transition: 'all 0.3s'
                   }}>
-                    <span style={{ color: openItem === idx ? '#C8232C' : '#8a94b2', fontSize: '1.1rem', fontWeight: '700', transform: openItem === idx ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}>+</span>
+                    <span style={{ color: openItem === idx ? '#C8232C' : '#8a94b2', fontSize: '1rem', fontWeight: '700', transform: openItem === idx ? 'rotate(45deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}>+</span>
                   </div>
                 </button>
                 {openItem === idx && (
-                  <div style={{ padding: '0 45px 28px 77px' }}>
-                    <p style={{ color: '#64748b', lineHeight: '1.85', fontSize: '1.2rem', margin: '0', fontWeight: '500' }}>
+                  <div style={{ padding: '0 40px 24px 72px' }}>
+                    <p style={{ color: '#64748b', lineHeight: '1.75', fontSize: '1.15rem', margin: '0', fontWeight: '500' }}>
                       {lang === 'en' ? item.descEn : item.descTr}
                     </p>
                   </div>
