@@ -7,16 +7,16 @@ export default function Preloader() {
 				<div id="loading-center">
 					<div className="loader-container">
 						<div className="wrap-loader">
-							<div className="loader" style={{ borderTopColor: '#C8232C', borderColor: 'rgba(200,35,44,0.2)', width: '210px', height: '210px' }} />
-					<div className="icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '180px', height: '180px' }}>
-							<Image
-								width="140"
-								height="140"
-								src="/images/logo/misiones-icon-clean.png"
-								alt="Misiones"
-								style={{ width: '130px', height: 'auto', objectFit: 'contain' }}
-							/>
-						</div>
+							<div className="loader" style={{ borderTopColor: '#C8232C', borderRightColor: 'rgba(200,35,44,0.1)', borderBottomColor: 'rgba(200,35,44,0.1)', borderLeftColor: 'rgba(200,35,44,0.1)', borderWidth: '4px', width: '90px', height: '90px', animationDuration: '0.8s' }} />
+							<div className="icon" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '90px', height: '90px', position: 'absolute', top: 0, left: 0 }}>
+								<Image
+									width="50"
+									height="50"
+									src="/images/logo/misiones-icon-clean.png"
+									alt="Misiones"
+									style={{ width: '45px', height: 'auto', objectFit: 'contain' }}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
