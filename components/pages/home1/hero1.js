@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation"
 import { useLanguage } from '@/utils/LanguageContext'
 
 function CircularBadge() {
-	const text = 'HOSPITALITY INNOVATION & CONSULTANCY • '
+	const text = 'KONAKLAMA SEKTÖRÜ DANIŞMANLIK FİRMASI • '
 	const chars = text.split('')
 	const numChars = chars.length
 	const radius = 76
@@ -103,6 +103,8 @@ export default function Hero1() {
 													t('heroWord2'),
 													1200,
 													t('heroWord3'),
+													1200,
+													t('heroWord4'),
 													1200,
 												]}
 												wrapper="span"

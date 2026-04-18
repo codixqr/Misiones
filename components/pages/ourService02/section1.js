@@ -1,128 +1,118 @@
 
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useLanguage } from '@/utils/LanguageContext'
+
 export default function Section1() {
+	const { t } = useLanguage()
+
 	return (
 		<>
-
-			<section className="s-why-choose-4 tf-spacing-3">
+			<section className="s-why-choose-4 tf-spacing-3" style={{ background: '#fff' }}>
 				<div className="content-wrap tf-spacing-3">
 					<div className="content-left">
-						<p className="s-sub-title mb-15">
+						<p className="s-sub-title mb-15" style={{ color: '#C8232C' }}>
 							<i className="icon-angles-right moveLeftToRight" />
-							Why choose us
+							{t('s2Subtitle')}
 						</p>
-						<p className="s-title mb-40 text-anime-wave">
-							Unmatched Expertise for Your
-							<span>
-								Business Success
+						<p className="s-title mb-40 text-anime-wave" style={{ color: '#1B2F5E' }}>
+							{t('s2Title')}
+							<span style={{ color: '#C8232C', marginLeft: '10px' }}>
+								{t('s2TitleSpan')}
 							</span>
 						</p>
-						<p className="text">
-							We are committed to delivering exceptional service and personalized strategies
-							that
-							help our clients succeed in a rapidly evolving marketplace. Through
-							collaboration,
-							integrity, and a relentless focus on results, we aim to be a trusted partner
+						<p className="text" style={{ color: '#505878' }}>
+							{t('s2Desc')}
 						</p>
 						<ul className="benefit-list style-2">
 							<li>
-								<div className="icon">
+								<div className="icon" style={{ background: '#1B2F5E10', color: '#1B2F5E' }}>
 									<i className="icon-check-2" />
 								</div>
-								<p>
-									Experience, Expertise, Results to Choose Us
+								<p style={{ color: '#333' }}>
+									{t('s2Item1')}
 								</p>
 							</li>
 							<li>
-								<div className="icon">
+								<div className="icon" style={{ background: '#C8232C10', color: '#C8232C' }}>
 									<i className="icon-check-2" />
 								</div>
-								<p>
-									Smart Choice for Business Consulting Excellence
+								<p style={{ color: '#333' }}>
+									{t('s2Item2')}
 								</p>
 							</li>
 						</ul>
-						<Link href="/service-details" className="tf-btn style-3 text-anime-style-1">
-							Explore Our Services
+						<Link href="/our-service" className="tf-btn style-3 text-anime-style-1" style={{ background: '#1B2F5E', color: '#fff' }}>
+							{t('s2Explore')}
 							<i className="icon-chevron-right" />
 						</Link>
 					</div>
 					<div className="image-right">
-						<div className="image">
+						<div className="image" style={{ borderRadius: '20px', overflow: 'hidden' }}>
 							<Image
-								width="0"
-								height="0"
-								sizes="100vw"
-								style={{ width: "100%", height: "auto" }}
-								src="/images/section/why-1.jpg" data-src="/images/section/why-1.jpg" alt="" className="lazyload" />
+								width="600"
+								height="500"
+								src="/images/section/why-1.jpg" 
+								alt="Misiones Strategy" 
+								style={{ width: "100%", height: "auto", objectFit: 'cover' }}
+							/>
 						</div>
 					</div>
 				</div>
 				<div className="content-wrap wrap-2">
 					<div className="image-left relative">
-						<div className="image ">
+						<div className="image" style={{ borderRadius: '20px', overflow: 'hidden' }}>
 							<Image
-								width="0"
-								height="0"
-								sizes="100vw"
-								style={{ width: "100%", height: "auto" }}
-								src="/images/section/why-2.jpg" data-src="/images/section/why-2.jpg" alt="" className="lazyload" />
+								width="600"
+								height="500"
+								src="/images/section/why-2.jpg" 
+								alt="Misiones Excellence" 
+								style={{ width: "100%", height: "auto", objectFit: 'cover' }}
+							/>
 						</div>
 					</div>
 					<div className="content-right">
-						<p className="s-title text-anime-wave">
-							Smart Choice for Business Consulting
-							<span>
-								Excellence
-							</span>
+						<p className="s-title text-anime-wave" style={{ color: '#1B2F5E' }}>
+							{t('s2SmartChoice')}
 						</p>
 						<ul className="list">
 							<li className="wow fadeInUp" data-wow-delay="0s">
-								<div className="number">
-									<p>
-										1
-									</p>
+								<div className="number" style={{ background: '#1B2F5E', color: '#fff' }}>
+									<p>1</p>
 								</div>
-								<div >
-									<Link href="/#" className="title">
-										Customized Solutions
-									</Link>
-									<p>
-										We provide tailored strategies that address the unique challenges and
-										goals of each client, ensuring personalized approaches
+								<div>
+									<h4 className="title" style={{ color: '#1B2F5E', fontWeight: '700' }}>
+										{t('s2Solution1Title')}
+									</h4>
+									<p style={{ color: '#505878' }}>
+										{t('s2Solution1Desc')}
 									</p>
 								</div>
 							</li>
-							<li className="wow fadeInUp" data-wow-delay="0s">
-								<div className="number">
-									<p>
-										2
-									</p>
+							<li className="wow fadeInUp" data-wow-delay="0.1s">
+								<div className="number" style={{ background: '#C8232C', color: '#fff' }}>
+									<p>2</p>
 								</div>
-								<div >
-									<Link href="/#" className="title">
-										Data-Driven Approach
-									</Link>
-									<p>
-										We leverage data analytics and market research to create actionable strategies,
-										helping businesses make informed, evidence-based
+								<div>
+									<h4 className="title" style={{ color: '#1B2F5E', fontWeight: '700' }}>
+										{t('s2Solution2Title')}
+									</h4>
+									<p style={{ color: '#505878' }}>
+										{t('s2Solution2Desc')}
 									</p>
 								</div>
 							</li>
-							<li className="wow fadeInUp" data-wow-delay="0s">
-								<div className="number">
-									<p>
-										3
-									</p>
+							<li className="wow fadeInUp" data-wow-delay="0.2s">
+								<div className="number" style={{ background: '#1B2F5E', color: '#fff' }}>
+									<p>3</p>
 								</div>
-								<div >
-									<Link href="/#" className="title">
-										Sustainable Results
-									</Link>
-									<p>
-										We focus on long-term success by developing strategies that not only solve
-										immediate challenges but also position businesses
+								<div>
+									<h4 className="title" style={{ color: '#1B2F5E', fontWeight: '700' }}>
+										{t('s2Solution3Title')}
+									</h4>
+									<p style={{ color: '#505878' }}>
+										{t('s2Solution3Desc')}
 									</p>
 								</div>
 							</li>
@@ -130,7 +120,6 @@ export default function Section1() {
 					</div>
 				</div>
 			</section>
-
 		</>
 	)
 }

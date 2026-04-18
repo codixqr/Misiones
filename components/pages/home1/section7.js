@@ -7,7 +7,7 @@ const WHY_ITEMS = [
 		icon: 'flaticon-target',
 		titleTr: 'Sahadaki Gerçek Deneyim',
 		titleEn: 'Real Field Experience',
-		descTr: 'Yalnızca teoriden değil; 20+ yıllık gerçek otel yönetimi ve yatırım süreçlerinden süzülmüş bilgelikle danışmanlık yapıyoruz.',
+		descTr: 'Yalnızca teoriden değil; 40 yıllık sektörel deneyim, 20 yıllık profesyonel otel yönetimi ve yatırım süreçlerinden süzülmüş bilgelikle danışmanlık yapıyoruz.',
 		descEn: 'Consulting from 20+ years of real hotel management and investment processes — not just theory.',
 	},
 	{
@@ -59,15 +59,15 @@ const FAQS = [
 		key: 4,
 		qTr: 'Uluslararası otel markalarıyla çalışma deneyiminiz var mı?',
 		qEn: 'Do you have experience with international hotel brands?',
-		aTr: 'Evet. Radisson Blu, Marriott, Steigenberger, Wyndham gibi uluslararası zincirlerle ve Avrupa, Orta Asya\'daki seçkin otellerle doğrudan çalışma deneyimlerimiz bulunmaktadır.',
-		aEn: 'Yes. We have direct working experience with international chains such as Radisson Blu, Marriott, Steigenberger, Wyndham and distinguished hotels in Europe and Central Asia.',
+		aTr: 'Evet. Marriot, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med, Club Aldiana ve Avrupa, Orta Asya\'daki seçkin otellerle doğrudan çalışma deneyimlerimiz bulunmaktadır.',
+		aEn: 'Yes. We have direct working experience with international brands such as Marriott, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med, Club Aldiana and distinguished hotels in Europe and Central Asia.',
 	},
 	{
 		key: 5,
 		qTr: 'Yalnızca otellerle mi çalışıyorsunuz?',
 		qEn: 'Do you work only with hotels?',
-		aTr: 'Ana uzmanlığımız otelcilik ve konaklama sektörüdür. Ancak resort, apart, tatil köyü ve konaklama odaklı karma projelerde de stratejik danışmanlık veriyoruz.',
-		aEn: 'Our core expertise is hospitality and accommodation. We also provide strategic consulting for resorts, serviced apartments and mixed-use accommodation projects.',
+		aTr: 'Ana uzmanlığımız şehir otelleri, resort oteller ve tatil köyleri olmak üzere konaklama sektörüdür. Ancak, apart ve butik oteller için de satış, pazarlama, yönetim, denetim ve markalama odaklı karma projelerde de stratejik danışmanlık veriyoruz.',
+		aEn: 'Our core expertise is the hospitality sector, specifically city hotels, resorts and holiday villages. However, we also provide strategic consulting for apart and boutique hotels in mixed-use projects focused on sales, marketing, management, auditing and branding.',
 	},
 	{
 		key: 6,

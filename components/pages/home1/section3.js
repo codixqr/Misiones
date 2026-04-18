@@ -114,6 +114,21 @@ export default function Section3() {
 									<i className="icon-chevron-right" />
 								</Link>
 							</div>
+							<div className="box-icon default tf-hover-icon mb-20 wow fadeInUp" data-wow-delay="0.4s">
+								<div className="icon hover-icon-2">
+									<i className="flaticon-rocket-1" />
+								</div>
+								<Link href="/#" className="title fw-7" style={{ fontSize: 'clamp(23px, 1.65vw, 30px)', lineHeight: '1.3' }}>
+									{t('service5Title')}
+								</Link>
+								<p className="text" style={{ fontSize: '18px', lineHeight: '1.7' }}>
+									{t('service5Desc')}
+								</p>
+								<Link href="/our-service" className="tf-btn-readmore style-3">
+									{t('readMore')}
+									<i className="icon-chevron-right" />
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>

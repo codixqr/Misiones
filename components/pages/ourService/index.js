@@ -158,6 +158,20 @@ const serviceCategories = [
       { titleTr: 'Sosyal Sorumluluk Programları', titleEn: 'Social Responsibility Programs', descTr: 'Yerel topluma katkı, çalışan refahı ve kültürel mirasın korunması konularında sürdürülebilir programlar tasarlanır ve uygulanır.', descEn: 'Sustainable programs are designed and implemented in areas of contribution to the local community, employee welfare and cultural heritage preservation.' },
     ],
   },
+  {
+    id: 'broker',
+    icon: 'flaticon-rocket',
+    image: '/images/section/service-strateji.jpg',
+    titleTr: 'Hotel Broker',
+    titleEn: 'Hotel Broker',
+    descTr: 'Otelcilik sektöründe yatırımcı ile otel sahibi arasındaki kritik köprüyü kuruyoruz. Otel satışları, kiralamaları ve işletme devri gibi tüm süreçlerde uzman aracılık hizmeti sunarak taraflar için en uygun zemini hazırlıyoruz.',
+    descEn: 'Establishing a critical bridge between investors and hotel owners. Expert brokerage in hotel sales, leases and business transfers.',
+    items: [
+      { titleTr: 'Otel Satış Aracılığı', titleEn: 'Hotel Sales Brokerage', descTr: 'Doğru alıcı ve satıcıyı buluşturarak mülkün gerçek değerinde el değiştirmesini sağlarız.', descEn: 'Matching the right buyers and sellers to ensure property changes hands at its true value.' },
+      { titleTr: 'Kiralama & İşletme Devri', titleEn: 'Lease & Management Transfer', descTr: 'Kiralama ve işletme haklarının devri süreçlerinde hukuki ve stratejik danışmanlık.', descEn: 'Legal and strategic consulting during the transfer of leasing and management rights.' },
+      { titleTr: 'Yatırımcı Buluşmaları', titleEn: 'Investor Matchmaking', descTr: 'Yeni projeler için sermaye ve vizyon sahibi yatırımcılarla mülk sahiplerini bir araya getiriyoruz.', descEn: 'Bringing together property owners with capital-ready and visionary investors for new projects.' },
+    ],
+  },
 ]
 
 function ServiceAccordion({ service, lang }) {

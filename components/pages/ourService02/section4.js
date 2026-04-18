@@ -3,143 +3,93 @@ import CounterUp from '@/components/elements/CounterUp'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useLanguage } from '@/utils/LanguageContext'
+
 export default function Section4() {
+	const { t } = useLanguage()
 	const [isAccordion, setIsAccordion] = useState(1)
 
 	const handleAccordion = (key) => {
 		setIsAccordion(prevState => prevState === key ? null : key)
 	}
+
+	const faqs = [
+		{ id: 1, q: t('s2Faq1Q'), a: t('s2Faq1A') },
+		{ id: 2, q: t('s2Faq2Q'), a: t('s2Faq2A') },
+		{ id: 3, q: t('s2Faq3Q'), a: t('s2Faq3A') },
+		{ id: 4, q: t('s2Faq4Q'), a: t('s2Faq4A') },
+	]
+
 	return (
 		<>
-
-			<section className="s-faq-2 tf-spacing-1">
+			<section className="s-faq-2 tf-spacing-1" style={{ background: '#fdfdfd' }}>
 				<div className="tf-container">
-					<div className="row">
+					<div className="row align-items-center">
 						<div className="col-lg-5">
 							<div className="content">
-								<p className="s-sub-title">
+								<p className="s-sub-title" style={{ color: '#C8232C' }}>
 									<i className="icon-angles-right moveLeftToRight" />
-									FAQs
+									{t('s2FaqSubtitle')}
 								</p>
-								<p className="s-title mb-40 text-anime-wave">
-									Asked
-									<span>
-										Questions
+								<p className="s-title mb-40 text-anime-wave" style={{ color: '#1B2F5E' }}>
+									{t('s2FaqTitle')}
+									<span style={{ color: '#C8232C', marginLeft: '10px' }}>
+										{t('s2FaqTitleSpan')}
 									</span>
 								</p>
 								<div className="tf-accordion style-3 accordion" id="accordionExample">
-									<div className="accordion-item">
-										<h2 className="accordion-header" onClick={() => handleAccordion(1)}>
-											<button className={isAccordion == 1 ? "accordion-button collapsed" : "accordion-button"} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-												What is business consulting?
-											</button>
-										</h2>
-										<div id="collapseOne" className={isAccordion == 1 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} data-bs-parent="#accordionExample">
-											<div className="accordion-body">
-												Our process typically starts with a discovery phase, where we assess
-												your business needs and goals, we develop a customized strategy,
-												followed by implementation and continuous monitoring.
+									{faqs.map((faq) => (
+										<div className="accordion-item" key={faq.id} style={{ border: 'none', marginBottom: '15px', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 5px 20px rgba(0,0,0,0.03)' }}>
+											<h2 className="accordion-header" onClick={() => handleAccordion(faq.id)}>
+												<button 
+													className={isAccordion === faq.id ? "accordion-button" : "accordion-button collapsed"} 
+													type="button" 
+													style={{ 
+														background: isAccordion === faq.id ? '#1B2F5E' : '#fff',
+														color: isAccordion === faq.id ? '#fff' : '#1B2F5E',
+														fontWeight: '700',
+														padding: '20px 25px'
+													}}
+												>
+													{faq.q}
+												</button>
+											</h2>
+											<div className={isAccordion === faq.id ? "accordion-collapse collapse show" : "accordion-collapse collapse"}>
+												<div className="accordion-body" style={{ background: '#fff', color: '#505878', padding: '20px 25px', lineHeight: '1.8' }}>
+													{faq.a}
+												</div>
 											</div>
 										</div>
-									</div>
-									<div className="accordion-item">
-										<h2 className="accordion-header" onClick={() => handleAccordion(2)}>
-										<button className={isAccordion == 2 ? "accordion-button collapsed" : "accordion-button"} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-												How does the consulting process work?
-											</button>
-										</h2>
-										<div id="collapseTwo" className={isAccordion == 2 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} data-bs-parent="#accordionExample">
-											<div className="accordion-body">
-												Our process typically starts with a discovery phase, where we assess
-												your business needs and goals, we develop a customized strategy,
-												followed by implementation and continuous monitoring.
-											</div>
-										</div>
-									</div>
-									<div className="accordion-item">
-										<h2 className="accordion-header" onClick={() => handleAccordion(3)}>
-										<button className={isAccordion == 3 ? "accordion-button collapsed" : "accordion-button"}  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-												What types of businesses do you work with?
-											</button>
-										</h2>
-										<div id="collapseThree" className={isAccordion == 3 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} data-bs-parent="#accordionExample">
-											<div className="accordion-body">
-												Our process typically starts with a discovery phase, where we assess
-												your business needs and goals, we develop a customized strategy,
-												followed by implementation and continuous monitoring.
-											</div>
-										</div>
-									</div>
-									<div className="accordion-item ">
-										<h2 className="accordion-header" onClick={() => handleAccordion(4)}>
-										<button className={isAccordion == 4 ? "accordion-button collapsed last" : "accordion-button last"} type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-												How much do your consulting services cost?
-											</button>
-										</h2>
-										<div id="collapseFour" className={isAccordion == 4 ? "accordion-collapse collapse show" : "accordion-collapse collapse"} data-bs-parent="#accordionExample">
-											<div className="accordion-body">
-												Our process typically starts with a discovery phase, where we assess
-												your business needs and goals, we develop a customized strategy,
-												followed by implementation and continuous monitoring.
-											</div>
-										</div>
-									</div>
+									))}
 								</div>
 							</div>
 						</div>
 						<div className="col-lg-6 offset-lg-1">
-							<div className="image-wrap">
-								<div className="image">
+							<div className="image-wrap" style={{ position: 'relative' }}>
+								<div className="image" style={{ borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.1)' }}>
 									<Image
-										width="0"
-										height="0"
-										sizes="100vw"
+										width="600"
+										height="700"
+										src="/images/section/faq-2.jpg" 
+										alt="Misiones FAQ" 
 										style={{ width: "100%", height: "auto" }}
-										src="/images/section/faq-2.jpg" data-src="/images/section/faq-2.jpg" alt="" className="lazyload" />
+									/>
 								</div>
-								<div className="item-customer style-3 rellax default" data-rellax-speed="0.3">
-									<Link href="/#" className="mb-15">10m+ Customer</Link>
+								<div className="item-customer style-3 rellax default" data-rellax-speed="0.3" style={{ background: '#fff', borderRadius: '20px', padding: '30px', boxShadow: '0 15px 40px rgba(0,0,0,0.1)' }}>
+									<h5 className="mb-15" style={{ color: '#1B2F5E', fontWeight: '800' }}>{t('s2SatisfiedCustomer')}</h5>
 									<ul className="list-author mb-40">
-										<li>
-											<Image
-												width="0"
-												height="0"
-												sizes="100vw"
-												style={{ width: "100%", height: "auto" }}
-												src="/images/avatar/testimonial-author-1.jpg" alt="" />
-										</li>
-										<li>
-											<Image
-												width="0"
-												height="0"
-												sizes="100vw"
-												style={{ width: "100%", height: "auto" }}
-												src="/images/avatar/customer-1.jpg" alt="" />
-										</li>
-										<li>
-											<Image
-												width="0"
-												height="0"
-												sizes="100vw"
-												style={{ width: "100%", height: "auto" }}
-												src="/images/avatar/customer-3.jpg" alt="" />
-										</li>
-										<li>
-											<Image
-												width="0"
-												height="0"
-												sizes="100vw"
-												style={{ width: "100%", height: "auto" }}
-												src="/images/avatar/customer-4.jpg" alt="" />
-										</li>
+										<li><Image width="50" height="50" src="/images/avatar/testimonial-author-1.jpg" alt="" style={{ borderRadius: '50%' }} /></li>
+										<li><Image width="50" height="50" src="/images/avatar/customer-1.jpg" alt="" style={{ borderRadius: '50%' }} /></li>
+										<li><Image width="50" height="50" src="/images/avatar/customer-3.jpg" alt="" style={{ borderRadius: '50%' }} /></li>
+										<li><Image width="50" height="50" src="/images/avatar/customer-4.jpg" alt="" style={{ borderRadius: '50%' }} /></li>
 									</ul>
-									<span className="line mb-30" />
+									<span className="line mb-30" style={{ background: '#eee' }} />
 									<div className="wg-counter style-6">
-										<div className="odometer style-6"><CounterUp count={10} /></div>
-										<span className="sub-odo">%</span>
+										<div className="odometer style-6" style={{ color: '#C8232C' }}><CounterUp count={99} /></div>
+										<span className="sub-odo" style={{ color: '#C8232C' }}>%</span>
 									</div>
-									<p>
-										Customers are Satisfied with the Services
+									<p style={{ color: '#505878', fontSize: '1rem', fontWeight: '600' }}>
+										{t('s2SatisfiedDesc')}
 									</p>
 								</div>
 							</div>
@@ -147,7 +97,6 @@ export default function Section4() {
 					</div>
 				</div>
 			</section>
-
 		</>
 	)
 }

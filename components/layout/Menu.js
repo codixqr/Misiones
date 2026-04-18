@@ -20,7 +20,10 @@ export default function Menu() {
 				<Link href="/about-us"><span>{t('navAbout')}</span></Link>
 			</li>
 			<li className={`item ${isActive("/our-service")}`}>
-				<Link href="/our-service"><span>{t('navServices')}</span></Link>
+				<Link href="/our-service"><span>{t('navOurService')}</span></Link>
+			</li>
+			<li className={`item ${isActive("/our-service-02")}`}>
+				<Link href="/our-service-02"><span>{t('navOurService2')}</span></Link>
 			</li>
 			<li className={`item ${isActive("/blog-standard")}`}>
 				<Link href="/blog-standard"><span>{t('navBlog')}</span></Link>
