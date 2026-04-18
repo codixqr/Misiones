@@ -21,20 +21,20 @@ export default function Menu() {
 			<li className={`item ${isActive("/about-us")}`}>
 				<Link href="/about-us"><span>{t('navAbout')}</span></Link>
 			</li>
-			<li className={`item menu-item-has-children ${isServicesActive()}`}
-				onMouseEnter={() => setServicesOpen(true)}
-				onMouseLeave={() => setServicesOpen(false)}
-			>
-				<Link href="/our-service"><span>{t('navOurService')}</span></Link>
-				<ul className="sub-menu" style={{ display: servicesOpen ? 'block' : '' }}>
+			<li className={`item menu-item-has-children ${isServicesActive()}`}>
+				<a href="#!" onClick={(e) => { e.preventDefault(); setServicesOpen(!servicesOpen); }}>
+					<span>{t('navOurService')}</span>
+					<i className="icon-chevron-down" style={{fontSize: '11px', marginLeft: '6px', opacity: 0.8}} />
+				</a>
+				<ul className="sub-menu" style={{ display: servicesOpen ? 'block' : 'none' }}>
 					<li className={isActive("/our-service")}>
-						<Link href="/our-service">{t('navOurService')}</Link>
+						<Link href="/our-service" onClick={() => setServicesOpen(false)}>{t('navOurService')}</Link>
 					</li>
 					<li className={isActive("/our-service-02")}>
-						<Link href="/our-service-02">{t('navOurService2')}</Link>
+						<Link href="/our-service-02" onClick={() => setServicesOpen(false)}>{t('navOurService2')}</Link>
 					</li>
 					<li className={isActive("/service-details")}>
-						<Link href="/service-details">{t('navServiceDetails')}</Link>
+						<Link href="/service-details" onClick={() => setServicesOpen(false)}>{t('navServiceDetails')}</Link>
 					</li>
 				</ul>
 			</li>

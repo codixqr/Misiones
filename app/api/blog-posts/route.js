@@ -4,16 +4,7 @@ import Parser from 'rss-parser'
 const AUTHOR_NAME = 'Nevzat'
 
 const STATIC_ARTICLES = [
-	{
-		id: 'nevzat-otelpostasi-1',
-		title: 'Yerli Otel Markaları Neden Fark Yaratamıyor?',
-		description: 'Türk otelcilik sektöründe yerli markaların fark yaratamamasının ardındaki zihinsel model eksikliği ve 3F Modeli (Farklı Düşün, Farklı Konuş, Farklı Görün) ile geleceğe bakış.',
-		url: 'https://otelpostasi.com/kose-yazisi/yerli-otel-markalari-neden-fark-yaratamiyor',
-		source: 'Otel Postası',
-		date: '13 Nisan 2026',
-		cat: 'Köşe Yazısı',
-		img: null,
-	},
+
 	{
 		id: 'nevzat-gmtourism-1',
 		title: 'Oda Değil, Erişilebilirlik Satıyoruz',
@@ -31,6 +22,16 @@ const STATIC_ARTICLES = [
 		url: 'https://www.tourismtoday.net/TR/2025/3940/Otelcilik-sektorunde-uygulanan-stratejilere-derin-bir-bakis',
 		source: 'Tourism Today',
 		date: '9 Nisan 2026',
+		cat: 'Köşe Yazısı',
+		img: null,
+	},
+	{
+		id: 'nevzat-otelpostasi-1',
+		title: 'Yerli Otel Markaları Neden Fark Yaratamıyor?',
+		description: 'Türk otelcilik sektöründe yerli markaların fark yaratamamasının ardındaki zihinsel model eksikliği ve 3F Modeli (Farklı Düşün, Farklı Konuş, Farklı Görün) ile geleceğe bakış.',
+		url: 'https://otelpostasi.com/kose-yazisi/yerli-otel-markalari-neden-fark-yaratamiyor',
+		source: 'Otel Postası',
+		date: '13 Nisan 2026',
 		cat: 'Köşe Yazısı',
 		img: null,
 	},

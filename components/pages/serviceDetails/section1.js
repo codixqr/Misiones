@@ -25,7 +25,7 @@ export default function Section1() {
 										<Image
 											width="1200"
 											height="600"
-											src="/images/section/service-detail.jpg" 
+											src="/images/section/service-strateji.jpg" 
 											alt="Misiones Hizmet Detayı" 
 											className="lazyload" 
 											style={{ width: "100%", height: "auto", borderRadius: '20px' }}
@@ -96,7 +96,7 @@ export default function Section1() {
 										<Image
 											width="800"
 											height="500"
-											src="/images/section/service-detail-2.jpg" 
+											src="/images/section/service-yonetim-danis.jpg" 
 											alt="Misiones Ekip" 
 											className="lazyload" 
 											style={{ width: "100%", height: "auto", borderRadius: '20px' }}

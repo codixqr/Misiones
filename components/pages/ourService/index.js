@@ -6,63 +6,6 @@ import { useLanguage } from '@/utils/LanguageContext'
 
 const serviceCategories = [
   {
-    id: 'yonetim',
-    icon: 'flaticon-chart',
-    image: '/images/section/service-yonetim-danis.jpg',
-    titleTr: 'Otel Yönetim Danışmanlığı',
-    titleEn: 'Hotel Management Consulting',
-    descTr: 'Otelin açılışından operasyonel mükemmelliğe, gelir yönetiminden insan kaynaklarına kadar tüm yönetim süreçlerinde stratejik destek sunuyoruz.',
-    descEn: 'We provide strategic support in all management processes from hotel opening to operational excellence, from revenue management to human resources.',
-    items: [
-      { titleTr: 'Açılış Öncesi ve Açılış Hizmetleri', titleEn: 'Pre-Opening & Opening Services', descTr: 'Bir otelin kaderi daha kapıları açılmadan belirlenir. Konsept, konumlandırma, operasyonel hazırlık ve ilk izlenim, uzun vadeli başarı için kritiktir.', descEn: 'The fate of a hotel is determined before its doors open. Concept, positioning, operational readiness and first impression are critical for long-term success.' },
-      { titleTr: 'Otel Gelir Yönetimi Danışmanlığı', titleEn: 'Hotel Revenue Management Consulting', descTr: 'Piyasa koşullarında rekabet avantajı yaratmanın en güçlü aracıdır. Talep tahmini, fiyatlandırma stratejileri ve kanal yönetimi, sürdürülebilir kârlılığın kalbidir.', descEn: 'It is the most powerful tool for creating competitive advantage in market conditions. Demand forecasting, pricing strategies and channel management are the heart of sustainable profitability.' },
-      { titleTr: 'Satış ve Pazarlama Danışmanlığı', titleEn: 'Sales & Marketing Consulting', descTr: 'Doğru hedef kitleye ulaşmak, marka bilinirliği ve satış kanallarının etkin kullanımı, otelin görünürlüğünü ve doluluk oranını belirler.', descEn: 'Reaching the right target audience, brand awareness and effective use of sales channels determines the hotel\'s visibility and occupancy rate.' },
-      { titleTr: 'Finansal Bütçeleme Danışmanlığı', titleEn: 'Financial Budgeting Consulting', descTr: 'Stratejk planlamanın omurgasıdır. Kaynakların doğru dağıtımı, yatırım geri dönüşü ve krizlere karşı dayanıklılık için vazgeçilmezdir.', descEn: 'It is the backbone of strategic planning. Essential for proper allocation of resources, return on investment and resilience against crises.' },
-      { titleTr: 'Operasyon İyileştirme ve Geliştirme', titleEn: 'Operations Improvement & Development', descTr: 'Günlük işleyişin verimliliği, misafir memnuniyetini ve maliyet kontrolünü doğrudan etkiler. Küçük iyileştirmeler bile büyük fark yaratır.', descEn: 'The efficiency of daily operations directly affects guest satisfaction and cost control. Even small improvements make a big difference.' },
-      { titleTr: 'Kalite Oluşturma ve Geliştirme Danışmanlığı', titleEn: 'Quality Creation & Development Consulting', descTr: 'Misafir deneyimini standardize eder ve markanın uzun vadeli itibarı için temel oluşturur. Kalite, sadakat ve tekrar eden misafir demektir.', descEn: 'Standardizes the guest experience and forms the foundation for the long-term reputation of the brand. Quality means loyalty and repeat guests.' },
-      { titleTr: 'İnsan Kaynakları Eğitim Danışmanlığı', titleEn: 'HR Training Consulting', descTr: 'Otelin ruhunu oluşturan ekiptir. Doğru eğitim, motivasyon ve kültür, operasyonel mükemmelliğin sürdürülebilirliğini sağlar.', descEn: 'It is the team that forms the soul of the hotel. Proper training, motivation and culture ensures the sustainability of operational excellence.' },
-      { titleTr: 'Otel Yönetimi Danışmanlığı', titleEn: 'Hotel Management Consulting', descTr: 'Genel stratejik yönlendirmedir. Yönetim ekibine rehberlik ederek tüm fonksiyonların uyum içinde çalışmasını sağlar.', descEn: 'General strategic direction. Guides the management team and ensures all functions work in harmony.' },
-      { titleTr: 'Otel Varlık Yönetimi Danışmanlığı', titleEn: 'Hotel Asset Management Consulting', descTr: 'Yatırımcı perspektifinden bakıldığında, varlığın değerini korumak ve artırmak için kritiktir. Uzun vadeli sürdürülebilirlik ve Return on Investment - Yatırım Getirisi odaklıdır.', descEn: 'From an investor perspective, it is critical to preserve and increase the value of the asset. Focused on long-term sustainability and Return on Investment.' },
-      { titleTr: 'Otel Yeniden Yapılandırma Yönetimi Danışmanlığı', titleEn: 'Hotel Restructuring Management Consulting', descTr: 'Kriz veya başarısızlık durumunda devreye girer. Yeniden konumlandırma, finansal ve operasyonel rehabilitasyon ile oteli ikinci bir hayata taşır.', descEn: 'It comes into play in case of crisis or failure. Repositioning, financial and operational rehabilitation brings the hotel to a second life.' },
-      { titleTr: 'Ürün Geliştirme Danışmanlığı', titleEn: 'Product Development Consulting', descTr: 'Yenilikçi hizmetler ve konseptler ile rekabet avantajı sağlar. Temel yapı oturduktan sonra öncelik kazanır.', descEn: 'Provides competitive advantage with innovative services and concepts. Gains priority after the basic structure is established.' },
-    ],
-  },
-  {
-    id: 'marka',
-    icon: 'flaticon-market',
-    image: '/images/section/service-marka-integ.jpg',
-    titleTr: 'Otel Marka Entegrasyonu Danışmanlığı',
-    titleEn: 'Hotel Brand Integration Consulting',
-    descTr: 'Markanın kimliği, ruhu ve geleceğini doğru şekillendirmek; rekabette farklılaşmayı ve sürdürülebilir büyümeyi sağlamak için stratejik marka yönetimi hizmetleri sunuyoruz.',
-    descEn: 'We provide strategic brand management services to correctly shape the identity, soul and future of the brand; to ensure differentiation in competition and sustainable growth.',
-    items: [
-      {
-        titleTr: 'Marka Belirleme',
-        titleEn: 'Brand Definition',
-        descTr: 'Marka bir otelin kimliği, ruhu ve gelecekteki tüm stratejilerinin temelini oluşturur. Rekabetin yoğun olduğu turizm sektöründe, farklılaşma ve özgünlük markanın belirlenmesiyle başlar.',
-        descEn: 'Brand forms the foundation of a hotel\'s identity, soul and all future strategies. In the highly competitive tourism sector, differentiation and authenticity begin with brand definition.',
-      },
-      {
-        titleTr: 'Marka Alma',
-        titleEn: 'Brand Acquisition',
-        descTr: 'Belirlenen markanın hukuki olarak korunması, sürdürülebilirlik ve yatırım güvenliği açısından kritik önem arz eder. Markanın tescili rekabet avantajını korur ve olası taklitleri engeller.',
-        descEn: 'Legal protection of the determined brand is critically important for sustainability and investment security. Brand registration protects competitive advantage and prevents possible imitations.',
-      },
-      {
-        titleTr: 'Uluslararası Marka Franchising Alımı',
-        titleEn: 'International Brand Franchising',
-        descTr: 'Eğer otel global bir zincirin gücünü kullanmak istiyorsa, franchising alımı marka belirlemenin hemen ardından gelir. Global zincirlerin tanınırlığı, dağıtım kanalları ve sadakat programları sayesinde otel hızla uluslararası görünürlük kazanır.',
-        descEn: 'If the hotel wants to use the power of a global chain, franchising acquisition comes immediately after brand definition. Thanks to global chain recognition, distribution channels and loyalty programs, the hotel quickly gains international visibility.',
-      },
-      {
-        titleTr: 'Marka İçin Stratejik İlişkiler Danışmanlığı',
-        titleEn: 'Strategic Relations Consulting for Brand',
-        descTr: 'Marka kimliği ve hukuki güvence sağlandıktan sonra, onu büyütecek ve güçlendirecek olan şey stratejik ilişkilerdir (uluslararası zincirlerle işbirliği, OTA\'lar, tur operatörleri, yatırımcılar, medya).',
-        descEn: 'After brand identity and legal security are established, what will grow and strengthen it are strategic relationships (partnerships with international chains, OTAs, tour operators, investors, media).',
-      },
-    ],
-  },
-  {
     id: 'yatirim',
     icon: 'flaticon-building',
     image: '/images/section/service-yatirim-analiz.jpg',
@@ -113,6 +56,63 @@ const serviceCategories = [
         descTr: 'Sertifikasyon (sürdürülebilirlik, kalite, güvenlik belgeleri) yatırımın değerini artırır, pazarlama gücünü yükseltir. Yatırımın prestij ve güven damgasıdır.',
         descEn: 'Certification (sustainability, quality, security certificates) increases the value of the investment and increases marketing power. It is the prestige and trust stamp of the investment.',
       },
+    ],
+  },
+  {
+    id: 'marka',
+    icon: 'flaticon-market',
+    image: '/images/section/service-marka-integ.jpg',
+    titleTr: 'Otel Marka Entegrasyonu Danışmanlığı',
+    titleEn: 'Hotel Brand Integration Consulting',
+    descTr: 'Markanın kimliği, ruhu ve geleceğini doğru şekillendirmek; rekabette farklılaşmayı ve sürdürülebilir büyümeyi sağlamak için stratejik marka yönetimi hizmetleri sunuyoruz.',
+    descEn: 'We provide strategic brand management services to correctly shape the identity, soul and future of the brand; to ensure differentiation in competition and sustainable growth.',
+    items: [
+      {
+        titleTr: 'Marka Belirleme',
+        titleEn: 'Brand Definition',
+        descTr: 'Marka bir otelin kimliği, ruhu ve gelecekteki tüm stratejilerinin temelini oluşturur. Rekabetin yoğun olduğu turizm sektöründe, farklılaşma ve özgünlük markanın belirlenmesiyle başlar.',
+        descEn: 'Brand forms the foundation of a hotel\'s identity, soul and all future strategies. In the highly competitive tourism sector, differentiation and authenticity begin with brand definition.',
+      },
+      {
+        titleTr: 'Marka Alma',
+        titleEn: 'Brand Acquisition',
+        descTr: 'Belirlenen markanın hukuki olarak korunması, sürdürülebilirlik ve yatırım güvenliği açısından kritik önem arz eder. Markanın tescili rekabet avantajını korur ve olası taklitleri engeller.',
+        descEn: 'Legal protection of the determined brand is critically important for sustainability and investment security. Brand registration protects competitive advantage and prevents possible imitations.',
+      },
+      {
+        titleTr: 'Uluslararası Marka Franchising Alımı',
+        titleEn: 'International Brand Franchising',
+        descTr: 'Eğer otel global bir zincirin gücünü kullanmak istiyorsa, franchising alımı marka belirlemenin hemen ardından gelir. Global zincirlerin tanınırlığı, dağıtım kanalları ve sadakat programları sayesinde otel hızla uluslararası görünürlük kazanır.',
+        descEn: 'If the hotel wants to use the power of a global chain, franchising acquisition comes immediately after brand definition. Thanks to global chain recognition, distribution channels and loyalty programs, the hotel quickly gains international visibility.',
+      },
+      {
+        titleTr: 'Marka İçin Stratejik İlişkiler Danışmanlığı',
+        titleEn: 'Strategic Relations Consulting for Brand',
+        descTr: 'Marka kimliği ve hukuki güvence sağlandıktan sonra, onu büyütecek ve güçlendirecek olan şey stratejik ilişkilerdir (uluslararası zincirlerle işbirliği, OTA\'lar, tur operatörleri, yatırımcılar, medya).',
+        descEn: 'After brand identity and legal security are established, what will grow and strengthen it are strategic relationships (partnerships with international chains, OTAs, tour operators, investors, media).',
+      },
+    ],
+  },
+  {
+    id: 'yonetim',
+    icon: 'flaticon-chart',
+    image: '/images/section/service-yonetim-danis.jpg',
+    titleTr: 'Otel Yönetim Danışmanlığı',
+    titleEn: 'Hotel Management Consulting',
+    descTr: 'Otelin açılışından operasyonel mükemmelliğe, gelir yönetiminden insan kaynaklarına kadar tüm yönetim süreçlerinde stratejik destek sunuyoruz.',
+    descEn: 'We provide strategic support in all management processes from hotel opening to operational excellence, from revenue management to human resources.',
+    items: [
+      { titleTr: 'Açılış Öncesi ve Açılış Hizmetleri', titleEn: 'Pre-Opening & Opening Services', descTr: 'Bir otelin kaderi daha kapıları açılmadan belirlenir. Konsept, konumlandırma, operasyonel hazırlık ve ilk izlenim, uzun vadeli başarı için kritiktir.', descEn: 'The fate of a hotel is determined before its doors open. Concept, positioning, operational readiness and first impression are critical for long-term success.' },
+      { titleTr: 'Otel Gelir Yönetimi Danışmanlığı', titleEn: 'Hotel Revenue Management Consulting', descTr: 'Piyasa koşullarında rekabet avantajı yaratmanın en güçlü aracıdır. Talep tahmini, fiyatlandırma stratejileri ve kanal yönetimi, sürdürülebilir kârlılığın kalbidir.', descEn: 'It is the most powerful tool for creating competitive advantage in market conditions. Demand forecasting, pricing strategies and channel management are the heart of sustainable profitability.' },
+      { titleTr: 'Satış ve Pazarlama Danışmanlığı', titleEn: 'Sales & Marketing Consulting', descTr: 'Doğru hedef kitleye ulaşmak, marka bilinirliği ve satış kanallarının etkin kullanımı, otelin görünürlüğünü ve doluluk oranını belirler.', descEn: 'Reaching the right target audience, brand awareness and effective use of sales channels determines the hotel\'s visibility and occupancy rate.' },
+      { titleTr: 'Finansal Bütçeleme Danışmanlığı', titleEn: 'Financial Budgeting Consulting', descTr: 'Stratejk planlamanın omurgasıdır. Kaynakların doğru dağıtımı, yatırım geri dönüşü ve krizlere karşı dayanıklılık için vazgeçilmezdir.', descEn: 'It is the backbone of strategic planning. Essential for proper allocation of resources, return on investment and resilience against crises.' },
+      { titleTr: 'Operasyon İyileştirme ve Geliştirme', titleEn: 'Operations Improvement & Development', descTr: 'Günlük işleyişin verimliliği, misafir memnuniyetini ve maliyet kontrolünü doğrudan etkiler. Küçük iyileştirmeler bile büyük fark yaratır.', descEn: 'The efficiency of daily operations directly affects guest satisfaction and cost control. Even small improvements make a big difference.' },
+      { titleTr: 'Kalite Oluşturma ve Geliştirme Danışmanlığı', titleEn: 'Quality Creation & Development Consulting', descTr: 'Misafir deneyimini standardize eder ve markanın uzun vadeli itibarı için temel oluşturur. Kalite, sadakat ve tekrar eden misafir demektir.', descEn: 'Standardizes the guest experience and forms the foundation for the long-term reputation of the brand. Quality means loyalty and repeat guests.' },
+      { titleTr: 'İnsan Kaynakları Eğitim Danışmanlığı', titleEn: 'HR Training Consulting', descTr: 'Otelin ruhunu oluşturan ekiptir. Doğru eğitim, motivasyon ve kültür, operasyonel mükemmelliğin sürdürülebilirliğini sağlar.', descEn: 'It is the team that forms the soul of the hotel. Proper training, motivation and culture ensures the sustainability of operational excellence.' },
+      { titleTr: 'Otel Yönetimi Danışmanlığı', titleEn: 'Hotel Management Consulting', descTr: 'Genel stratejik yönlendirmedir. Yönetim ekibine rehberlik ederek tüm fonksiyonların uyum içinde çalışmasını sağlar.', descEn: 'General strategic direction. Guides the management team and ensures all functions work in harmony.' },
+      { titleTr: 'Otel Varlık Yönetimi Danışmanlığı', titleEn: 'Hotel Asset Management Consulting', descTr: 'Yatırımcı perspektifinden bakıldığında, varlığın değerini korumak ve artırmak için kritiktir. Uzun vadeli sürdürülebilirlik ve Return on Investment - Yatırım Getirisi odaklıdır.', descEn: 'From an investor perspective, it is critical to preserve and increase the value of the asset. Focused on long-term sustainability and Return on Investment.' },
+      { titleTr: 'Otel Yeniden Yapılandırma Yönetimi Danışmanlığı', titleEn: 'Hotel Restructuring Management Consulting', descTr: 'Kriz veya başarısızlık durumunda devreye girer. Yeniden konumlandırma, finansal ve operasyonel rehabilitasyon ile oteli ikinci bir hayata taşır.', descEn: 'It comes into play in case of crisis or failure. Repositioning, financial and operational rehabilitation brings the hotel to a second life.' },
+      { titleTr: 'Ürün Geliştirme Danışmanlığı', titleEn: 'Product Development Consulting', descTr: 'Yenilikçi hizmetler ve konseptler ile rekabet avantajı sağlar. Temel yapı oturduktan sonra öncelik kazanır.', descEn: 'Provides competitive advantage with innovative services and concepts. Gains priority after the basic structure is established.' },
     ],
   },
   {
@@ -172,7 +172,7 @@ const serviceCategories = [
       { titleTr: 'Yatırımcı-Sahip Buluşturma', titleEn: 'Investor-Owner Matchmaking', descTr: 'Yeni projeler için sermaye ve vizyon sahibi yatırımcılarla mülk sahiplerini bir araya getiriyoruz. Bölgesel piyasa analizleri ve yatırım potansiyeli değerlendirmeleriyle en uygun eşleşmeyi sağlıyoruz.', descEn: 'Bringing together property owners with capital-ready and visionary investors for new projects. Regional market analyses and investment potential assessments ensure the ideal match.' },
       { titleTr: 'Değerleme & Piyasa Analizi', titleEn: 'Valuation & Market Analysis', descTr: 'Otel varlıklarının gerçek piyasa değerini belirliyoruz. Rekabet analizi, gelir potansiyeli ve fiziksel durum değerlendirmeleriyle kapsamlı bir değerleme raporu sunuyoruz.', descEn: 'We determine the true market value of hotel assets through competitive analysis, revenue potential assessment and physical condition evaluation.' },
     ],
-  },
+  }
 ]
 
 function ServiceAccordion({ service, lang }) {
