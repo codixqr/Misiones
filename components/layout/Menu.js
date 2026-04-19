@@ -21,22 +21,10 @@ export default function Menu() {
 			<li className={`item ${isActive("/about-us")}`}>
 				<Link href="/about-us"><span>{t('navAbout')}</span></Link>
 			</li>
-			<li className={`item menu-item-has-children ${isServicesActive()}`}>
-				<a href="#!" onClick={(e) => { e.preventDefault(); setServicesOpen(!servicesOpen); }}>
+			<li className={`item ${isActive("/our-service")}`}>
+				<Link href="/our-service">
 					<span>{t('navOurService')}</span>
-					<i className="icon-chevron-down" style={{fontSize: '11px', marginLeft: '6px', opacity: 0.8}} />
-				</a>
-				<ul className="sub-menu" style={{ display: servicesOpen ? 'block' : 'none' }}>
-					<li className={isActive("/our-service")}>
-						<Link href="/our-service" onClick={() => setServicesOpen(false)}>{t('navOurService')}</Link>
-					</li>
-					<li className={isActive("/our-service-02")}>
-						<Link href="/our-service-02" onClick={() => setServicesOpen(false)}>{t('navOurService2')}</Link>
-					</li>
-					<li className={isActive("/service-details")}>
-						<Link href="/service-details" onClick={() => setServicesOpen(false)}>{t('navServiceDetails')}</Link>
-					</li>
-				</ul>
+				</Link>
 			</li>
 			<li className={`item ${isActive("/blog-standard")}`}>
 				<Link href="/blog-standard"><span>{t('navBlog')}</span></Link>

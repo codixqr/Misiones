@@ -38,8 +38,8 @@ const FAQS = [
 		key: 1,
 		qTr: 'MISIONES kiminle çalışır?',
 		qEn: 'Who does MISIONES work with?',
-		aTr: 'Otel yatırımcıları, girişimciler, mevcut otel işletmecileri ve uluslararası marka almak isteyen tüm paydaşlarla çalışıyoruz. Marriott, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med ve Club Aldiana gibi dev markalarla doğrudan çalışma deneyimine sahibiz.',
-		aEn: 'We work with hotel investors, entrepreneurs, existing hotel operators and all stakeholders seeking international brands. We have direct experience with major brands like Marriott, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med and Club Aldiana.',
+		aTr: 'Otel yatırımcıları, girişimciler, mevcut otel işletmecileri ve uluslararası marka almak isteyen tüm paydaşlarla çalışıyoruz. Uluslararası dev markalarla doğrudan çalışma deneyimine sahibiz.',
+		aEn: 'We work with hotel investors, entrepreneurs, existing hotel operators and all stakeholders seeking international brands. We have direct experience with major international brands.',
 	},
 	{
 		key: 2,

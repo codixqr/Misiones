@@ -28,7 +28,7 @@ const WORKED_CITIES = [
 	},
 	{
 		id: 'antalya',
-		name: 'Antalya',
+		name: 'Antalya Resort & HV',
 		x: 218, y: 340,
 		hotels: [
 			'Sultan Palace Hotel – Kemer',

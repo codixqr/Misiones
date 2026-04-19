@@ -81,7 +81,7 @@ export default function Section13() {
 						</p>
 					</div>
 					<div className="col-lg-5 d-flex align-items-end justify-content-lg-end">
-						<Link href="/our-service" className="tf-btn style-3">
+						<Link href="/hip" className="tf-btn style-3">
 							{lang === 'tr' ? 'HIP Detayları' : 'HIP Details'}
 							<i className="icon-chevron-right" />
 						</Link>
@@ -209,12 +209,12 @@ export default function Section13() {
 						</div>
 
 						<div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-							<Link href="/our-service" className="tf-btn">
+							<Link href="/hip" className="tf-btn">
 								{lang === 'tr' ? 'HIP\'i Keşfet' : 'Explore HIP'}
 								<i className="icon-chevron-right" />
 							</Link>
-							<Link href="/contact" className="tf-btn style-3">
-								{lang === 'tr' ? 'Ücretsiz Analiz İste' : 'Request Free Analysis'}
+							<Link href="/hip" className="tf-btn style-3">
+								{lang === 'tr' ? 'HIP Detayları' : 'HIP Details'}
 								<i className="icon-chevron-right" />
 							</Link>
 						</div>

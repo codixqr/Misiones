@@ -22,11 +22,6 @@ export default function MobileMenu() {
 		{
 			title: t('navOurService'),
 			path: "/our-service",
-			subMenu: [
-				{ title: t('navOurService'), path: "/our-service" },
-				{ title: t('navOurService2'), path: "/our-service-02" },
-				{ title: t('navServiceDetails'), path: "/service-details" },
-			]
 		},
 		{
 			title: t('navBlog'),

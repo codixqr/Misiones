@@ -55,10 +55,8 @@ export default function Footer1() {
 											<p className="footer-title footer-title-mobile" onClick={() => handleAccordion2(1)}>{t('footerQuickLinks')}</p>
 											<ul className="list tf-collapse-content" style={{ display: getDisplayStyle2(1) }}>
 												<li><Link href="/about-us">{t('footerLink1')}</Link></li>
-												<li><Link href="/career">{t('footerLink2')}</Link></li>
 												<li><Link href="/our-service">{t('footerLink3')}</Link></li>
 												<li><Link href="/contact">{t('footerLink4')}</Link></li>
-												<li><Link href="/case-study-01">{t('footerLink5')}</Link></li>
 											</ul>
 										</div>
 									</div>

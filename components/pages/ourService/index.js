@@ -161,7 +161,7 @@ const serviceCategories = [
   {
     id: 'broker',
     icon: 'flaticon-building',
-    image: '/images/section/service-yatirim.jpg',
+    image: '/images/section/service-broker.jpg',
     titleTr: 'Otel Alım/Satım/Kiralama Aracılık Danışmanlığı',
     titleEn: 'Hotel Acquisition / Sale / Lease Brokerage',
     descTr: 'Otelcilik sektöründe yatırımcı ile otel sahibi arasındaki kritik köprüyü kuruyoruz. Otel satışları, kiralamaları ve işletme devri gibi tüm süreçlerde uzman aracılık hizmeti sunarak taraflar için en uygun zemini hazırlıyoruz.',
