@@ -53,70 +53,11 @@ export default function Section1() {
 							<Image
 								width="600"
 								height="500"
-								src="/images/section/service-yatirim.jpg" 
+								src="/images/section/neden-bizi-secmelisiniz-yeni.jpg" 
 								alt="Misiones Strategy" 
 								style={{ width: "100%", height: "auto", objectFit: 'cover' }}
 							/>
 						</div>
-					</div>
-				</div>
-				<div className="content-wrap wrap-2">
-					<div className="image-left relative">
-						<div className="image" style={{ borderRadius: '20px', overflow: 'hidden' }}>
-							<Image
-								width="600"
-								height="500"
-								src="/images/section/service-marka.jpg" 
-								alt="Misiones Excellence" 
-								style={{ width: "100%", height: "auto", objectFit: 'cover' }}
-							/>
-						</div>
-					</div>
-					<div className="content-right">
-						<p className="s-title text-anime-wave" style={{ color: '#1B2F5E' }}>
-							{t('s2SmartChoice')}
-						</p>
-						<ul className="list">
-							<li className="wow fadeInUp" data-wow-delay="0s">
-								<div className="number" style={{ background: '#1B2F5E', color: '#fff' }}>
-									<p>1</p>
-								</div>
-								<div>
-									<h4 className="title" style={{ color: '#1B2F5E', fontWeight: '700' }}>
-										{t('s2Solution1Title')}
-									</h4>
-									<p style={{ color: '#505878' }}>
-										{t('s2Solution1Desc')}
-									</p>
-								</div>
-							</li>
-							<li className="wow fadeInUp" data-wow-delay="0.1s">
-								<div className="number" style={{ background: '#C8232C', color: '#fff' }}>
-									<p>2</p>
-								</div>
-								<div>
-									<h4 className="title" style={{ color: '#1B2F5E', fontWeight: '700' }}>
-										{t('s2Solution2Title')}
-									</h4>
-									<p style={{ color: '#505878' }}>
-										{t('s2Solution2Desc')}
-									</p>
-								</div>
-							</li>
-							<li className="wow fadeInUp" data-wow-delay="0.2s">
-								<div className="number" style={{ background: '#1B2F5E', color: '#fff' }}>
-									<p>3</p>
-								</div>
-								<div>
-									<h4 className="title" style={{ color: '#1B2F5E', fontWeight: '700' }}>
-										{t('s2Solution3Title')}
-									</h4>
-									<p style={{ color: '#505878' }}>
-										{t('s2Solution3Desc')}
-									</p>
-								</div>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</section>
