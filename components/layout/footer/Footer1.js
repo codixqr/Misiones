@@ -47,7 +47,7 @@ export default function Footer1() {
 												<li><Link href="/our-service">{t('footerService2')}</Link></li>
 												<li><Link href="/our-service">{t('footerService3')}</Link></li>
 												<li><Link href="/our-service">{t('footerService4')}</Link></li>
-												<li><Link href="/our-service">{t('footerService5')}</Link></li>
+												<li><Link href="/hip">{t('footerService5')}</Link></li>
 											</ul>
 										</div>
 										<div className={`footer-inner-wrap footer-col-block ${isAccordion2 === 1 ? 'open' : ''}`}>

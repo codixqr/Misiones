@@ -46,13 +46,13 @@ export default function HipDetails() {
 
 				{/* İlk Görsel */}
 				<div className="row mb-50 mt-50">
-					<div className="col-12 text-center">
+					<div className="col-12 text-center" style={{ display: 'flex', justifyContent: 'center' }}>
 						<Image 
 							src="/images/section/kpi-benchmark-1.jpg" 
 							alt="Departman Bazlı KPI Benchmark" 
-							width={1200} 
-							height={800} 
-							style={{ width: '100%', height: 'auto', borderRadius: '16px', boxShadow: '0 8px 30px rgba(0,0,0,0.1)' }} 
+							width={800} 
+							height={533} 
+							style={{ maxWidth: '100%', width: 'auto', maxHeight: '600px', height: 'auto', borderRadius: '16px', boxShadow: '0 8px 30px rgba(0,0,0,0.15)', objectFit: 'contain' }} 
 						/>
 					</div>
 				</div>
@@ -149,13 +149,13 @@ export default function HipDetails() {
 
 				{/* İkinci Görsel */}
 				<div className="row mb-50 mt-50">
-					<div className="col-12 text-center">
+					<div className="col-12 text-center" style={{ display: 'flex', justifyContent: 'center' }}>
 						<Image 
 							src="/images/section/kpi-benchmark-2.jpg" 
 							alt="Departman Bazlı KPI Benchmark Tablosu" 
-							width={1200} 
-							height={800} 
-							style={{ width: '100%', height: 'auto', borderRadius: '16px', boxShadow: '0 8px 30px rgba(0,0,0,0.1)' }} 
+							width={800} 
+							height={533} 
+							style={{ maxWidth: '100%', width: 'auto', maxHeight: '600px', height: 'auto', borderRadius: '16px', boxShadow: '0 8px 30px rgba(0,0,0,0.15)', objectFit: 'contain' }} 
 						/>
 					</div>
 				</div>
