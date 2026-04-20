@@ -122,9 +122,9 @@ export default function Footer1() {
 								</p>
 								<div className="policy-list">
 									<ul className="list">
-										<li><Link href="/faqs">{t('footerTerms')}</Link></li>
+										<li><Link href="/terms-of-use">{t('footerTerms')}</Link></li>
 										<li><span className="dot" /></li>
-										<li><Link href="/faqs">{t('footerPrivacy')}</Link></li>
+										<li><Link href="/privacy-policy">{t('footerPrivacy')}</Link></li>
 									</ul>
 								</div>
 							</div>

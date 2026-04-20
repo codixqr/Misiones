@@ -62,8 +62,8 @@ export default function Section4() {
     },
     {
       id: 2,
-      regionTr: 'Antalya & Resort',
-      regionEn: 'Antalya & Resort',
+      regionTr: 'Antalya Resort & HV',
+      regionEn: 'Antalya Resort & HV',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2v2" />
@@ -87,8 +87,9 @@ export default function Section4() {
         'Pegasos Hotels - İncekum',
         'Naturland Eco Park - Çamyuva',
         'Talya Hotel - Antalya',
-        'Club Aldiana - Kemer',
-        'Club Med. - Kemer'
+        'Club Aldiana HV Kemer',
+        'Club Med HV Kemer',
+        'Club Salima HV Kemer'
       ],
       color: '#1B2F5E',
       mapFocus: 'resort'
