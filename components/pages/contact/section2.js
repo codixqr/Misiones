@@ -3,7 +3,7 @@ import { useLanguage } from '@/utils/LanguageContext'
 import { useState } from 'react'
 
 export default function Section2() {
-	const { lang } = useLanguage()
+	const { lang, t } = useLanguage()
 	const [submitted, setSubmitted] = useState(false)
 
 	const handleSubmit = (e) => {
@@ -34,13 +34,10 @@ export default function Section2() {
 								<div className="content">
 									<div className="comment-wrap style-2">
 										<h3 className="text-anime-wave">
-											{lang === 'tr' ? 'Danışmanlık Talebi Gönderin' : 'Send a Consultation Request'}
+											{t('contactTitle')}
 										</h3>
 										<p className="note mb-40">
-											{lang === 'tr'
-												? 'Projenizi, sorunuzu veya iş birliği teklifinizi bize iletin. En kısa sürede yanıt veririz.'
-												: 'Share your project, question or collaboration offer. We\'ll respond as soon as possible.'
-											}
+											{t('contactDesc')}
 										</p>
 
 										{submitted ? (
@@ -53,54 +50,45 @@ export default function Section2() {
 											}}>
 												<i className="icon-check-circle" style={{ fontSize: '48px', color: '#4caf50', marginBottom: '16px', display: 'block' }} />
 												<p style={{ fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
-													{lang === 'tr' ? 'Mesajınız Alındı!' : 'Message Received!'}
+													{t('msgReceived')}
 												</p>
 												<p style={{ opacity: 0.85, fontSize: '15px' }}>
-													{lang === 'tr'
-														? 'En kısa sürede size geri döneceğiz.'
-														: 'We will get back to you shortly.'
-													}
+													{t('msgSuccess')}
 												</p>
 											</div>
 										) : (
 											<form onSubmit={handleSubmit} className="form-comment style-3">
 												<div className="cols mb-20">
 													<fieldset>
-														<input type="text" placeholder={lang === 'tr' ? 'Ad Soyad *' : 'Full Name *'} required />
+														<input type="text" placeholder={t('formName')} required />
 													</fieldset>
 													<fieldset>
-														<input type="tel" placeholder={lang === 'tr' ? 'Telefon *' : 'Phone *'} required />
+														<input type="tel" placeholder={t('formPhone')} required />
 													</fieldset>
 												</div>
 												<div className="cols mb-20">
 													<fieldset>
-														<input type="email" placeholder={lang === 'tr' ? 'E-posta *' : 'Email *'} required />
+														<input type="email" placeholder={t('formEmail')} required />
 													</fieldset>
 													<fieldset>
-														<input type="text" placeholder={lang === 'tr' ? 'Konu' : 'Subject'} />
+														<input type="text" placeholder={t('formSubject')} />
 													</fieldset>
 												</div>
 												<div className="cols mb-20">
 													<fieldset>
 														<textarea
 															rows={5}
-															placeholder={lang === 'tr'
-																? 'Mesajınızı buraya yazın...'
-																: 'Write your message here...'
-															}
+															placeholder={t('formMsg')}
 														/>
 													</fieldset>
 												</div>
 												<div className="bot">
 													<button type="submit" className="tf-btn text-anime-style-1">
-														{lang === 'tr' ? 'Mesajı Gönder' : 'Send Message'}
+														{t('formSend')}
 														<i className="icon-chevron-right" />
 													</button>
 													<p style={{ marginTop: '12px', fontSize: '13px', color: '#888' }}>
-														{lang === 'tr'
-															? 'veya doğrudan yazın: '
-															: 'or write directly: '
-														}
+														{t('formOr')}
 														<a href="mailto:info@misiones.com.tr" style={{ color: '#C8232C', fontWeight: '600' }}>
 															info@misiones.com.tr
 														</a>

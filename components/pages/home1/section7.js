@@ -7,152 +7,129 @@ const WHY_ITEMS = [
 		icon: 'flaticon-target',
 		titleTr: 'Sahadaki Gerçek Deneyim',
 		titleEn: 'Real Field Experience',
-		descTr: 'Yalnızca teoriden değil; 40 yıllık sektörel deneyim, 20 yıllık profesyonel otel yönetimi ve yatırım süreçlerinden süzülmüş bilgelikle danışmanlık yapıyoruz.',
-		descEn: 'Consulting from 20+ years of real hotel management and investment processes — not just theory.',
+		key: 'whyField',
 	},
 	{
 		icon: 'flaticon-return-of-investment',
 		titleTr: 'Sonuç Odaklı Yaklaşım',
 		titleEn: 'Results-Oriented Approach',
-		descTr: '"Otel iyi görünüyor mu?" sorusunu değil, "Para kazanıyor mu?" sorusunu sorarız. Her adım ölçülebilir ve kârlılığa yöneliktir.',
-		descEn: 'We don\'t ask "Does the hotel look good?" but "Is it making money?" Every step is measurable and profit-oriented.',
+		key: 'whyResults',
 	},
 	{
 		icon: 'flaticon-human-resources',
 		titleTr: 'Kapsamlı Hizmet Yelpazesi',
 		titleEn: 'Comprehensive Service Range',
-		descTr: 'Yatırım fizibilitesinden marka entegrasyonuna, gelir yönetiminden HIP\'e kadar otelciliğin tüm boyutlarında yanınızdayız.',
-		descEn: 'From investment feasibility to brand integration, revenue management to HIP — we\'re with you across all dimensions of hospitality.',
+		key: 'whyService',
 	},
 	{
 		icon: 'flaticon-data-management',
 		titleTr: 'Global & Yerel Perspektif',
 		titleEn: 'Global & Local Perspective',
-		descTr: 'Avrupa\'dan Orta Asya\'ya, Marriot, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med ve Club Aldiana gibi dev markalarla doğrudan çalışma deneyimine sahibiz.',
-		descEn: 'From Europe to Central Asia, we have direct working experience with major brands like Marriott, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med and Club Aldiana.',
+		key: 'whyGlobal',
 	},
 ]
 
 const FAQS = [
-	{
-		key: 1,
-		qTr: 'MISIONES kiminle çalışır?',
-		qEn: 'Who does MISIONES work with?',
-		aTr: 'Otel yatırımcıları, girişimciler, mevcut otel işletmecileri ve uluslararası marka almak isteyen tüm paydaşlarla çalışıyoruz. Uluslararası dev markalarla doğrudan çalışma deneyimine sahibiz.',
-		aEn: 'We work with hotel investors, entrepreneurs, existing hotel operators and all stakeholders seeking international brands. We have direct experience with major international brands.',
-	},
-	{
-		key: 2,
-		qTr: 'HIP nedir ve kime göre tasarlanmıştır?',
-		qEn: 'What is HIP and who is it designed for?',
-		aTr: 'HIP (Hotel Improvement Plan), mevcut otellerin gelir kayıplarını, operasyonel verimsizliklerini ve pazar konumlandırma sorunlarını tespit edip çözen özel bir danışmanlık paketidir. Düşük performanslı her otel için idealdir.',
-		aEn: 'HIP (Hotel Improvement Plan) is a specialized consulting package that identifies and resolves revenue losses, operational inefficiencies and market positioning problems of existing hotels. Ideal for any underperforming hotel.',
-	},
-	{
-		key: 3,
-		qTr: 'Danışmanlık süreci nasıl başlar?',
-		qEn: 'How does the consulting process begin?',
-		aTr: 'Ücretsiz bir ön görüşmeyle başlarız. Otelin veya yatırımın mevcut durumunu, hedeflerini ve sorunlarını dinler; ardından kapsamlı bir analiz ve yol haritası sunarız.',
-		aEn: 'We start with a free initial consultation. We listen to the current situation, goals and problems of the hotel or investment; then provide a comprehensive analysis and roadmap.',
-	},
-	{
-		key: 4,
-		qTr: 'Uluslararası otel markalarıyla çalışma deneyiminiz var mı?',
-		qEn: 'Do you have experience with international hotel brands?',
-		aTr: 'Evet. Marriot, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med, Club Aldiana ve Avrupa, Orta Asya\'daki seçkin otellerle doğrudan çalışma deneyimlerimiz bulunmaktadır.',
-		aEn: 'Yes. We have direct working experience with international brands such as Marriott, Hilton, Wyndham, Accor, IHG, Radisson, Steigenberger, Ascott, BWH, Club Med, Club Aldiana and distinguished hotels in Europe and Central Asia.',
-	},
-	{
-		key: 5,
-		qTr: 'Yalnızca otellerle mi çalışıyorsunuz?',
-		qEn: 'Do you work only with hotels?',
-		aTr: 'Ana uzmanlığımız şehir otelleri, resort oteller ve tatil köyleri olmak üzere konaklama sektörüdür. Ancak, apart ve butik oteller için de satış, pazarlama, yönetim, denetim ve markalama odaklı karma projelerde de stratejik danışmanlık veriyoruz.',
-		aEn: 'Our core expertise is the hospitality sector, specifically city hotels, resorts and holiday villages. However, we also provide strategic consulting for apart and boutique hotels in mixed-use projects focused on sales, marketing, management, auditing and branding.',
-	},
-	{
-		key: 6,
-		qTr: 'Danışmanlık sonrası uygulama takibi yapıyor musunuz?',
-		qEn: 'Do you provide post-consulting implementation follow-up?',
-		aTr: 'Evet. Yol haritası tesliminden sonra KPI takibi, periyodik değerlendirme toplantıları ve saha geri bildirimleriyle uygulamanın sonuç üretmesini aktif olarak izliyoruz.',
-		aEn: 'Yes. After delivering the roadmap, we actively monitor results through KPI tracking, periodic review meetings and field feedback.',
-	},
+	{ key: 1, transKey: 'faq1' },
+	{ key: 2, transKey: 'faq2' },
+	{ key: 3, transKey: 'faq3' },
+	{ key: 4, transKey: 'faq4' },
+	{ key: 5, transKey: 'faq5' },
+	{ key: 6, transKey: 'faq6' },
 ]
 
 export default function Section7() {
 	const [isAccordion, setIsAccordion] = useState(1)
-	const { lang } = useLanguage()
+	const { lang, t } = useLanguage()
 
 	const handleAccordion = (key) => {
 		setIsAccordion(prevState => prevState === key ? null : key)
 	}
 
 	const counters = [
-		{ count: 20, suffix: '+', labelTr: 'Yıl Deneyim', labelEn: 'Years Experience' },
-		{ count: 50, suffix: '+', labelTr: 'Proje & Otel', labelEn: 'Projects & Hotels' },
-		{ count: 8, suffix: '', labelTr: 'Ülke', labelEn: 'Countries' },
+		{ count: 20, suffix: '+', labelKey: 'statsYears' },
+		{ count: 50, suffix: '+', labelKey: 'statsProjects' },
+		{ count: 8, suffix: '', labelKey: 'statsCountries' },
 	]
 
 	return (
 		<>
 			<section className="s-faq-redesign tf-spacing-1 bg-white" style={{ background: '#ffffff', position: 'relative', zIndex: 1 }}>
 				<div className="tf-container">
-					<div className="row mb-50">
+					<div className="row mb-60">
 						<div className="col-lg-12">
 							<div className="content text-center">
-								<p className="s-sub-title justify-center mb-17">
-									<i className="icon-angles-right moveLeftToRight" />
-									{lang === 'tr' ? 'SSS' : 'FAQ'}
+								<p className="s-sub-title justify-center mb-20" style={{ textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '800' }}>
+									<i className="icon-angles-right moveLeftToRight" style={{ color: '#C8232C' }} />
+									{t('navFaqs')}
 								</p>
-								<p className="s-title" style={{ color: '#1B2F5E', fontSize: 'clamp(32px, 3.5vw, 48px)', lineHeight: '1.2' }}>
+								<h2 className="s-title" style={{ color: '#1B2F5E', fontSize: 'clamp(32px, 4.5vw, 56px)', lineHeight: '1.1', fontWeight: '900', letterSpacing: '-1px' }}>
 									{lang === 'tr'
 										? <>Sahadan Gelen Bilgelik,<br /><span style={{ color: '#C8232C' }}>Ölçülebilir Sonuçlar</span></>
+                    : lang === 'ar' ? <>حكمة من الميدان،<br /><span style={{ color: '#C8232C' }}>نتائج قابلة للقياس</span></>
+                    : lang === 'ru' ? <>Мудрость с полей,<br /><span style={{ color: '#C8232C' }}>измеримые результаты</span></>
 										: <>Field-Tested Wisdom,<br /><span style={{ color: '#C8232C' }}>Measurable Results</span></>
 									}
-								</p>
+								</h2>
 							</div>
 						</div>
 					</div>
 
-					<div className="row">
+					<div className="row g-4">
 						{/* Left: Why Us Grid */}
 						<div className="col-lg-6">
-							<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '40px' }}>
+							<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '40px' }}>
 								{WHY_ITEMS.map((item, i) => (
-									<div key={i} style={{
-										background: '#f8f9fd',
+									<div key={i} className="why-item-card" style={{
+										background: '#fff',
 										border: '1px solid #eef2fa',
-										borderRadius: '16px',
-										padding: '24px',
-										transition: 'all 0.3s ease',
-										boxShadow: '0 4px 15px rgba(27,47,94,0.03)'
+										borderRadius: '24px',
+										padding: '32px 28px',
+										transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+										boxShadow: '0 10px 30px rgba(27,47,94,0.04)',
+                    cursor: 'default',
+                    position: 'relative',
+                    overflow: 'hidden'
 									}}>
 										<div style={{
-											width: '48px', height: '48px', borderRadius: '12px',
-											background: '#1B2F5E',
+											width: '56px', height: '56px', borderRadius: '16px',
+											background: 'linear-gradient(135deg, #1B2F5E 0%, #2A4685 100%)',
 											display: 'flex', alignItems: 'center', justifyContent: 'center',
-											marginBottom: '16px',
+											marginBottom: '20px',
+                      boxShadow: '0 8px 20px rgba(27,47,94,0.2)'
 										}}>
-											<i className={item.icon} style={{ fontSize: '22px', color: '#ffffff' }} />
+											<i className={item.icon} style={{ fontSize: '24px', color: '#ffffff' }} />
 										</div>
-										<p style={{ color: '#1B2F5E', fontWeight: '800', fontSize: '15px', marginBottom: '10px', lineHeight: '1.4' }}>
-											{lang === 'tr' ? item.titleTr : item.titleEn}
-										</p>
-										<p style={{ color: '#606580', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
-											{lang === 'tr' ? item.descTr : item.descEn}
+										<h4 style={{ color: '#1B2F5E', fontWeight: '800', fontSize: '18px', marginBottom: '12px', lineHeight: '1.3' }}>
+											{t(item.key + 'Title')}
+										</h4>
+										<p style={{ color: '#606580', fontSize: '15px', lineHeight: '1.6', margin: 0, opacity: 0.9 }}>
+											{t(item.key + 'Desc')}
 										</p>
 									</div>
 								))}
 							</div>
 
 							{/* Stats */}
-							<div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', padding: '20px', background: '#1B2F5E', borderRadius: '20px', boxShadow: '0 10px 30px rgba(27,47,94,0.15)' }}>
+							<div style={{ 
+                display: 'flex', 
+                gap: '24px', 
+                flexWrap: 'wrap', 
+                padding: '35px', 
+                background: 'linear-gradient(135deg, #1B2F5E 0%, #0f1e3e 100%)', 
+                borderRadius: '30px', 
+                boxShadow: '0 20px 40px rgba(15,30,62,0.3)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'rgba(200,35,44,0.1)', borderRadius: '50%', filter: 'blur(50px)' }} />
 								{counters.map((c, i) => (
-									<div key={i} style={{ flex: 1, minWidth: '120px', textAlign: 'center' }}>
-										<div style={{ color: '#fff', fontSize: '32px', fontWeight: '800', marginBottom: '4px' }}>
+									<div key={i} style={{ flex: 1, minWidth: '120px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
+										<div style={{ color: '#fff', fontSize: '40px', fontWeight: '900', marginBottom: '6px', letterSpacing: '-1px' }}>
 											{c.count}<span style={{ color: '#C8232C' }}>{c.suffix}</span>
 										</div>
-										<p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '13px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-											{lang === 'tr' ? c.labelTr : c.labelEn}
+										<p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px', margin: 0 }}>
+											{t(c.labelKey)}
 										</p>
 									</div>
 								))}
@@ -161,56 +138,59 @@ export default function Section7() {
 
 						{/* Right: Accordion */}
 						<div className="col-lg-6">
-							<div style={{ background: '#fff', borderRadius: '20px', padding: '10px' }}>
+							<div style={{ background: '#f8f9fd', borderRadius: '32px', padding: '32px', border: '1px solid #eef2fa' }}>
 								<div className="tf-accordion-redesign">
 									{FAQS.map((faq) => (
 										<div key={faq.key} style={{
-											marginBottom: '12px',
-											borderRadius: '12px',
+											marginBottom: '16px',
+											borderRadius: '20px',
 											overflow: 'hidden',
 											border: '1px solid',
-											borderColor: isAccordion === faq.key ? '#C8232C' : '#eef2fa',
-											background: isAccordion === faq.key ? '#fff' : '#fcfdff',
-											transition: 'all 0.3s ease'
+											borderColor: isAccordion === faq.key ? '#C8232C' : 'transparent',
+											background: isAccordion === faq.key ? '#fff' : '#fff',
+											transition: 'all 0.3s ease',
+                      boxShadow: isAccordion === faq.key ? '0 15px 35px rgba(200,35,44,0.08)' : '0 4px 15px rgba(27,47,94,0.02)'
 										}}>
 											<div
 												onClick={() => handleAccordion(faq.key)}
 												style={{
-													padding: '20px 24px',
+													padding: '24px 30px',
 													cursor: 'pointer',
 													display: 'flex',
 													alignItems: 'center',
 													justifyContent: 'space-between',
-													gap: '15px'
+													gap: '20px'
 												}}
 											>
 												<span style={{
-													color: isAccordion === faq.key ? '#1B2F5E' : '#606580',
-													fontWeight: '700',
-													fontSize: '17px',
-													transition: 'color 0.3s'
+													color: isAccordion === faq.key ? '#1B2F5E' : '#505878',
+													fontWeight: '800',
+													fontSize: '18px',
+													transition: 'color 0.3s',
+                          lineHeight: '1.4'
 												}}>
-													{lang === 'tr' ? faq.qTr : faq.qEn}
+													{t(faq.transKey + 'Q')}
 												</span>
 												<div style={{
-													width: '24px', height: '24px', borderRadius: '50%',
-													background: isAccordion === faq.key ? '#C8232C' : '#eef2fa',
+													width: '32px', height: '32px', borderRadius: '10px',
+													background: isAccordion === faq.key ? '#C8232C' : '#f0f4fb',
 													color: isAccordion === faq.key ? '#fff' : '#1B2F5E',
 													display: 'flex', alignItems: 'center', justifyContent: 'center',
-													fontSize: '12px',
-													transition: 'all 0.3s'
+													fontSize: '14px',
+													transition: 'all 0.3s',
+                          flexShrink: 0
 												}}>
 													<i className={isAccordion === faq.key ? 'icon-minus' : 'icon-plus'} />
 												</div>
 											</div>
 											<div style={{
-												maxHeight: isAccordion === faq.key ? '300px' : '0',
+												maxHeight: isAccordion === faq.key ? '500px' : '0',
 												overflow: 'hidden',
-												transition: 'max-height 0.4s ease',
+												transition: 'max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
 												background: '#fff'
 											}}>
-												<div style={{ padding: '0 24px 20px 24px', color: '#606580', fontSize: '15px', lineHeight: '1.7' }}>
-													{lang === 'tr' ? faq.aTr : faq.aEn}
+												<div style={{ padding: '0 30px 30px 30px', color: '#606580', fontSize: '16px', lineHeight: '1.8', opacity: 0.9 }}>
+													{t(faq.transKey + 'A')}
 												</div>
 											</div>
 										</div>
@@ -220,7 +200,15 @@ export default function Section7() {
 						</div>
 					</div>
 				</div>
+        <style jsx>{`
+          .why-item-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(27,47,94,0.08) !important;
+            border-color: #1B2F5E !important;
+          }
+        `}</style>
 			</section>
 		</>
 	)
 }
+
