@@ -13,8 +13,8 @@ export default function Section3() {
           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
         </svg>
       ),
-      title: lang === 'en' ? 'Hotel Investors & Entrepreneurs' : 'Otel Yatırımcıları & Girişimciler', 
-      desc: lang === 'en' ? 'Those who want to maximize returns on their hotel investments.' : 'Otel yatırımlarından maksimum getiri elde etmek isteyen vizyonerler.' 
+      title: lang === 'en' ? 'Hotel Investors & Entrepreneurs' : lang === 'ar' ? 'مستثمرون ورواد أعمال في الفنادق' : lang === 'ru' ? 'Инвесторы и предприниматели отелей' : 'Otel Yatırımcıları & Girişimciler', 
+      desc: lang === 'en' ? 'Those who want to maximize returns on their hotel investments.' : lang === 'ar' ? 'أولئك الذين يرغبون في تحقيق أقصى عائد على استثماراتهم.' : lang === 'ru' ? 'Те, кто хочет получить максимальную отдачу от своих инвестиций.' : 'Otel yatırımlarından maksimum getiri elde etmek isteyen vizyonerler.' 
     },
     { 
       id: 2,
@@ -25,8 +25,8 @@ export default function Section3() {
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
         </svg>
       ),
-      title: lang === 'en' ? 'Global & Local Hotel Brands' : 'Global & Yerel Otel Markaları', 
-      desc: lang === 'en' ? 'International and domestic brands seeking operational excellence.' : 'Operasyonel mükemmelliği ve marka standartlarını arayan markalar.' 
+      title: lang === 'en' ? 'Global & Local Hotel Brands' : lang === 'ar' ? 'علامات فندقية عالمية ومحلية' : lang === 'ru' ? 'Глобальные и местные бренды' : 'Global & Yerel Otel Markaları', 
+      desc: lang === 'en' ? 'International and domestic brands seeking operational excellence.' : lang === 'ar' ? 'العلامات التي تبحث عن التميز التشغيلي.' : lang === 'ru' ? 'Бренды, стремящиеся к операционному совершенству.' : 'Operasyonel mükemmelliği ve marka standartlarını arayan markalar.' 
     },
     { 
       id: 3,
@@ -36,8 +36,8 @@ export default function Section3() {
           <polyline points="9 22 9 12 15 12 15 22" />
         </svg>
       ),
-      title: lang === 'en' ? 'Tourism Businesses' : 'Turizm İşletmeleri', 
-      desc: lang === 'en' ? 'Companies seeking growth in the tourism sector.' : 'Turizm sektöründe ölçeklenmek ve sürdürülebilir büyümek isteyen şirketler.' 
+      title: lang === 'en' ? 'Tourism Businesses' : lang === 'ar' ? 'شركات السياحة' : lang === 'ru' ? 'Туристический бизнес' : 'Turizm İşletmeleri', 
+      desc: lang === 'en' ? 'Companies seeking growth in the tourism sector.' : lang === 'ar' ? 'الشركات التي تسعى للنمو في قطاع السياحة.' : lang === 'ru' ? 'Компании, стремящиеся к росту в секторе туризма.' : 'Turizm sektöründe ölçeklenmek ve sürdürülebilir büyümek isteyen şirketler.' 
     },
     { 
       id: 4,
@@ -47,8 +47,8 @@ export default function Section3() {
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
         </svg>
       ),
-      title: lang === 'en' ? 'Operational Excellence Seekers' : 'Operasyonel Mükemmellik', 
-      desc: lang === 'en' ? 'Investors aiming for peak performance in hotel management.' : 'Otel yönetiminde en üst performansı ve kaliteyi hedefleyen yatırımcılar.' 
+      title: lang === 'en' ? 'Operational Excellence Seekers' : lang === 'ar' ? 'الباحثون عن التميز التشغيلي' : lang === 'ru' ? 'Искатели операционного совершенства' : 'Operasyonel Mükemmellik', 
+      desc: lang === 'en' ? 'Investors aiming for peak performance in hotel management.' : lang === 'ar' ? 'المستثمرون الذين يهدفون إلى أعلى أداء في الإدارة.' : lang === 'ru' ? 'Инвесторы, стремящиеся к максимальной производительности.' : 'Otel yönetiminde en üst performansı ve kaliteyi hedefleyen yatırımcılar.' 
     },
   ]
 
@@ -59,14 +59,18 @@ export default function Section3() {
           <div className="col-lg-5 mb-40">
             <span style={{ color: '#C8232C', fontWeight: '700', fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '15px' }}>
               <i className="icon-angles-right moveLeftToRight" style={{ marginRight: '8px' }} />
-              {lang === 'en' ? 'Who We Serve' : 'Kime Hizmet Ediyoruz'}
+              {lang === 'en' ? 'Who We Serve' : lang === 'ar' ? 'من نخدم' : lang === 'ru' ? 'Кого мы обслуживаем' : 'Kime Hizmet Ediyoruz'}
             </span>
             <h2 style={{ color: '#1B2F5E', fontSize: '3rem', fontWeight: '900', marginBottom: '30px', lineHeight: '1.1' }}>
-              {lang === 'en' ? <>Our Target <span>Audience</span></> : <>Hedef <span>Kitlemiz</span></>}
+              {lang === 'en' ? <>Our Target <span>Audience</span></> : lang === 'ar' ? <>جمهورنا <span>المستهدف</span></> : lang === 'ru' ? <>Наша целевая <span>аудитория</span></> : <>Hedef <span>Kitlemiz</span></>}
             </h2>
             <p style={{ color: '#505878', lineHeight: '1.85', marginBottom: '32px', fontSize: '1.2rem', fontWeight: '500' }}>
               {lang === 'en'
                 ? 'Our clients are not just investors seeking financial returns; they are visionaries who want to elevate the guest experience into a meaningful stage. For them, we are a strategic intellectual partner guiding them on the field.'
+				: lang === 'ar'
+				? 'عملاؤنا ليسوا مجرد مستثمرين؛ بل هم أصحاب رؤى يرغبون في الارتقاء بتجربة الضيف.'
+				: lang === 'ru'
+				? 'Наши клиенты — это не просто инвесторы; это дальновидные люди, которые хотят поднять качество обслуживания на новый уровень.'
                 : 'Müşterilerimiz, yalnızca finansal geri dönüş arayan yatırımcılar değil; aynı zamanda misafir deneyimini anlamlı bir sahneye taşımak isteyen vizyonerlerdir. Onlar için biz, sahada yol gösteren stratejik bir akıl ortağıyız.'}
             </p>
             <div style={{
@@ -75,11 +79,15 @@ export default function Section3() {
               boxShadow: '0 20px 48px rgba(27,47,94,0.15)'
             }}>
               <p style={{ color: '#C8232C', fontSize: '0.85rem', marginBottom: '12px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1.5px' }}>
-                {lang === 'en' ? 'Our Sector' : 'Mensubu Olduğumuz Sektör'}
+                {lang === 'en' ? 'Our Sector' : lang === 'ar' ? 'قطاعنا' : lang === 'ru' ? 'Наш сектор' : 'Mensubu Olduğumuz Sektör'}
               </p>
               <p style={{ color: 'rgba(255,255,255,0.92)', lineHeight: '1.8', fontSize: '1.1rem', margin: '0', fontWeight: '400' }}>
                 {lang === 'en'
                   ? 'We operate in the most dynamic area of the tourism and hospitality sector - investment and management consultancy, creating sustainable value.'
+				  : lang === 'ar'
+				  ? 'نحن نعمل في المجال الأكثر ديناميكية في قطاع السياحة - استشارات الاستثمار والإدارة.'
+				  : lang === 'ru'
+				  ? 'Мы работаем в самой динамичной сфере туризма – инвестиционный и управленческий консалтинг.'
                   : 'Turizm ve otelcilik sektörünün en dinamik alanında; yatırım ve yönetim danışmanlığı ile sürdürülebilir değer yaratan bir ekosistemde faaliyet gösteriyoruz.'}
               </p>
             </div>

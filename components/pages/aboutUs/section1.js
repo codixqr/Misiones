@@ -15,28 +15,40 @@ export default function Section1() {
             <div style={{ paddingRight: '40px' }}>
               <p className="s-sub-title mb-16" style={{ color: '#C8232C' }}>
                 <i className="icon-angles-right moveLeftToRight" />
-                {lang === 'en' ? 'Who We Are' : 'Biz Kimiz?'}
+                {lang === 'en' ? 'Who We Are' : lang === 'ar' ? 'من نحن' : lang === 'ru' ? 'Кто мы' : 'Biz Kimiz?'}
               </p>
               <h2 className="s-title mb-30 text-anime-wave" style={{ color: '#1B2F5E', fontSize: '2.8rem', lineHeight: '1.2', fontWeight: '900' }}>
                 {lang === 'en'
                   ? 'A Transformation Manifesto for the Hospitality Industry'
+				  : lang === 'ar' 
+				  ? 'بيان تحول لصناعة الضيافة'
+				  : lang === 'ru'
+				  ? 'Манифест трансформации для индустрии гостеприимства'
                   : 'Otelcilik Sektörü İçin Bir Dönüşüm Manifestosu'}
               </h2>
               <p style={{ color: '#505878', lineHeight: '1.85', marginBottom: '24px', fontSize: '1.45rem', fontWeight: '500' }}>
                 {lang === 'en'
                   ? 'We are the wise voice shaped by the realities of the hospitality industry – a companion who shapes investment, management, and guest experience not just with numbers, but with meaning. MISIONES Hotel Industry Experience Consulting is a transformation manifesto that strengthens hotels against today\'s competition and tomorrow\'s uncertainty, bringing together data with wisdom, strategy with storytelling, and operations with artistry.'
+				  : lang === 'ar'
+				  ? 'نحن الصوت الحكيم الذي شكلته حقائق صناعة الضيافة – رفيق يشكل الاستثمار والإدارة وتجربة الضيف ليس فقط بالأرقام، ولكن بالمعنى. استشارات ميسيونيز هي بيان تحول يعزز الفنادق، ويجمع بين البيانات والحكمة.'
+				  : lang === 'ru'
+				  ? 'Мы — мудрый голос, сформированный реалиями индустрии гостеприимства — спутник, который формирует инвестиции, управление и опыт гостей не только цифрами, но и смыслом. MISIONES объединяет данные с мудростью.'
                   : 'Biz, otelcilik sektörünün sahadan gelen gerçekleriyle yoğrulmuş bilge sesi; yatırımı, yönetimi ve misafir deneyimini yalnızca rakamlarla değil, anlamla şekillendiren bir yol arkadaşıyız. MISIONES Hotel Industry Experience Consulting, otelleri bugünün rekabetinden çıkarıp yarının belirsizliğine karşı güçlendiren; veriyi bilgelikle, stratejiyi hikâyeyle, operasyonu sanatla buluşturan bir dönüşüm manifestosudur.'}
               </p>
               <p style={{ color: '#505878', lineHeight: '1.85', marginBottom: '36px', fontSize: '1.45rem', fontWeight: '500' }}>
                 {lang === 'en'
                   ? 'We are not just consultants in hospitality; we are representatives of a vision that unites the spirit of the industry with the dynamics of the times to build the future and leave a lasting mark.'
+				  : lang === 'ar'
+				  ? 'نحن لسنا مجرد مستشارين؛ نحن ممثلون لرؤية توحد روح الصناعة لترك بصمة دائمة.'
+				  : lang === 'ru'
+				  ? 'Мы не просто консультанты; мы представители видения, которое объединяет дух отрасли, чтобы оставить неизгладимый след.'
                   : 'Biz, otelcilikte yalnızca danışman değil; sektörün ruhunu ve zamanın dinamiklerini birleştirerek geleceği inşa eden, kalıcı iz bırakan bir vizyonun temsilcisiyiz.'}
               </p>
-旋              <div className="row" style={{ gap: '0' }}>
+              <div className="row" style={{ gap: '0' }}>
                 {[
-                  { count: 20, label: lang === 'en' ? 'Years Experience' : 'Yıl Deneyim' },
-                  { count: 150, label: lang === 'en' ? 'Projects Completed' : 'Tamamlanan Proje' },
-                  { count: 12, label: lang === 'en' ? 'Cities' : 'Şehir' },
+                  { count: 20, label: lang === 'en' ? 'Years Experience' : lang === 'ar' ? 'سنوات خبرة' : lang === 'ru' ? 'Лет опыта' : 'Yıl Deneyim' },
+                  { count: 150, label: lang === 'en' ? 'Projects Completed' : lang === 'ar' ? 'المشاريع المنجزة' : lang === 'ru' ? 'Завершенных проектов' : 'Tamamlanan Proje' },
+                  { count: 12, label: lang === 'en' ? 'Cities' : lang === 'ar' ? 'المدن' : lang === 'ru' ? 'Городов' : 'Şehir' },
                 ].map((item, i) => (
                   <div className="col-4" key={i}>
                     <div style={{ textAlign: 'center', padding: '16px 8px', background: i % 2 === 0 ? '#f5f8fd' : '#fff', borderRadius: '10px' }}>
@@ -69,7 +81,7 @@ export default function Section1() {
                   padding: '40px 32px 28px',
                 }}>
                   <p style={{ color: '#C8232C', fontSize: '0.78rem', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '6px' }}>
-                    {lang === 'en' ? 'Founder & Principal Consultant' : 'Kurucu & Baş Danışman'}
+                    {lang === 'en' ? 'Founder & Principal Consultant' : lang === 'ar' ? 'المؤسس والمستشار الرئيسي' : lang === 'ru' ? 'Основатель и главный консультант' : 'Kurucu & Baş Danışman'}
                   </p>
                   <h3 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: '800', margin: '0 0 6px' }}>Nevzat Çelebi</h3>
                   <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', margin: 0 }}>MISIONES Hotel Industry Experience Consulting</p>
@@ -83,13 +95,13 @@ export default function Section1() {
               }}>
                 <div style={{ width: '40px', height: '3px', background: '#C8232C', borderRadius: '2px', marginBottom: '14px' }} />
                 <h4 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '14px', fontWeight: '700' }}>
-                  {lang === 'en' ? 'Our Core Question' : 'Temel Sorumuz'}
+                  {lang === 'en' ? 'Our Core Question' : lang === 'ar' ? 'سؤالنا الأساسي' : lang === 'ru' ? 'Наш основной вопрос' : 'Temel Sorumuz'}
                 </h4>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '18px' }}>
                   {[
-                    lang === 'en' ? 'Is it making money?' : 'Para kazanıyor mu?',
-                    lang === 'en' ? 'How much is it earning?' : 'Ne kadar kazanıyor?',
-                    lang === 'en' ? 'If not – we show why.' : 'Kazanmıyorsa, nedenini gösteririz.',
+                    lang === 'en' ? 'Is it making money?' : lang === 'ar' ? 'هل يدر المال؟' : lang === 'ru' ? 'Она приносит деньги?' : 'Para kazanıyor mu?',
+                    lang === 'en' ? 'How much is it earning?' : lang === 'ar' ? 'كم يربح؟' : lang === 'ru' ? 'Сколько она зарабатывает?' : 'Ne kadar kazanıyor?',
+                    lang === 'en' ? 'If not – we show why.' : lang === 'ar' ? 'إذا لم يكن كذلك - نبين السبب.' : lang === 'ru' ? 'Если нет - мы показываем почему.' : 'Kazanmıyorsa, nedenini gösteririz.',
                   ].map((q, i) => (
                     <span key={i} style={{
                       display: 'inline-flex', alignItems: 'center', gap: '7px',
@@ -107,7 +119,7 @@ export default function Section1() {
                   borderRadius: '50px', fontSize: '0.88rem', fontWeight: '600',
                   textDecoration: 'none',
                 }}>
-                  {lang === 'en' ? 'Get in Touch' : 'Bize Ulaşın'}
+                  {lang === 'en' ? 'Get in Touch' : lang === 'ar' ? 'اتصل بنا' : lang === 'ru' ? 'Связаться с нами' : 'Bize Ulaşın'}
                   <i className="icon-chevron-right" />
                 </Link>
               </div>

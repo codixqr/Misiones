@@ -14,9 +14,10 @@ export default function Section2() {
           <line x1="12" y1="17" x2="12.01" y2="17" />
         </svg>
       ),
-      title: lang === 'en' ? 'Wisdom' : 'Bilgelik',
+      title: lang === 'en' ? 'Wisdom' : lang === 'ar' ? 'الحكمة' : lang === 'ru' ? 'Мудрость' : 'Bilgelik',
       desc: lang === 'en' 
         ? 'We talk about measurable realities, not assumptions. Data-driven wisdom leads our path.' 
+		: lang === 'ar' ? 'نتحدث عن الحقائق القابلة للقياس، وليس الافتراضات.' : lang === 'ru' ? 'Мы говорим об измеримых реалиях, а не о предположениях.'
         : 'Varsayımları değil, ölçülebilir gerçekleri konuşuruz. Veriye dayalı bilgelik yolumuza yön verir.',
       color: '#1B2F5E'
     },
@@ -29,9 +30,10 @@ export default function Section2() {
           <line x1="17.5" y1="15" x2="9" y2="15" />
         </svg>
       ),
-      title: lang === 'en' ? 'Authenticity' : 'Sahicilik',
+      title: lang === 'en' ? 'Authenticity' : lang === 'ar' ? 'الأصالة' : lang === 'ru' ? 'Аутентичность' : 'Sahicilik',
       desc: lang === 'en' 
         ? 'We put field-tested experience above theory. Real solutions for real operation problems.' 
+		: lang === 'ar' ? 'نحن نضع الخبرة الميدانية فوق النظرية.' : lang === 'ru' ? 'Мы ставим практический опыт выше теории.'
         : 'Sahadan gelen deneyimi, teoriden üstün tutarız. Operasyonel sorunlara gerçek çözümler.',
       color: '#C8232C'
     },
@@ -44,9 +46,10 @@ export default function Section2() {
           <path d="M12 18a6 6 0 0 1-6-6" />
         </svg>
       ),
-      title: lang === 'en' ? 'Sustainability' : 'Sürdürülebilirlik',
+      title: lang === 'en' ? 'Sustainability' : lang === 'ar' ? 'الاستدامة' : lang === 'ru' ? 'Устойчивость' : 'Sürdürülebilirlik',
       desc: lang === 'en' 
         ? 'We consider environmental, social, and economic balance in every strategic decision.' 
+		: lang === 'ar' ? 'نحن نأخذ بعين الاعتبار التوازن البيئي والاجتماعي.' : lang === 'ru' ? 'Мы учитываем экологический, социальный и экономический баланс.'
         : 'Sürdürülebilir başarı için çevresel, sosyal ve ekonomik tüm dengeleri gözetiriz.',
       color: '#1B2F5E'
     },
@@ -61,9 +64,10 @@ export default function Section2() {
           <path d="M5.5 18h13" />
         </svg>
       ),
-      title: lang === 'en' ? 'Innovation' : 'Yenilik',
+      title: lang === 'en' ? 'Innovation' : lang === 'ar' ? 'الابتكار' : lang === 'ru' ? 'Инновации' : 'Yenilik',
       desc: lang === 'en' 
         ? 'We lead the market rather than just react to it. Pioneering new concepts in hospitality.' 
+		: lang === 'ar' ? 'نحن نقود السوق بدلاً من الرد عليه.' : lang === 'ru' ? 'Мы ведем рынок, а не просто реагируем на него.'
         : 'Pazara tepki vermek yerine pazarı yönlendiririz. Otelcilikte yeni konseptlerin öncüsü.',
       color: '#C8232C'
     },
@@ -77,9 +81,10 @@ export default function Section2() {
           <path d="M16 3.13a4 4 0 0 1 0 7.75" />
         </svg>
       ),
-      title: lang === 'en' ? 'People Value' : 'İnsana Değer',
+      title: lang === 'en' ? 'People Value' : lang === 'ar' ? 'قيمة الإنسان' : lang === 'ru' ? 'Ценность человека' : 'İnsana Değer',
       desc: lang === 'en' 
         ? 'We empower teams and put the guest experience at the heart of our strategy.' 
+		: lang === 'ar' ? 'نحن نمكن الفرق ونضع تجربة الضيف في جوهر استراتيجيتنا.' : lang === 'ru' ? 'Мы расширяем возможности команд и ставим опыт гостей в центр.'
         : 'Ekipleri güçlendirir, misafir deneyimini stratejimizin merkezine alırız.',
       color: '#1B2F5E'
     }
@@ -91,10 +96,10 @@ export default function Section2() {
         <div className="row justify-content-center mb-60">
           <div className="col-lg-8 text-center">
             <span style={{ color: '#C8232C', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '15px' }}>
-              {lang === 'en' ? 'WHAT DRIVES US' : 'BİZİ HAREREKETE GEÇİREN'}
+              {lang === 'en' ? 'WHAT DRIVES US' : lang === 'ar' ? 'ما يحركنا' : lang === 'ru' ? 'ЧТО НАМИ ДВИЖЕТ' : 'BİZİ HAREREKETE GEÇİREN'}
             </span>
             <h2 style={{ color: '#1B2F5E', fontSize: '3rem', fontWeight: '900', letterSpacing: '-1px' }}>
-              {lang === 'en' ? 'Our Values' : 'Değerlerimiz'}
+              {lang === 'en' ? 'Our Values' : lang === 'ar' ? 'قيمنا' : lang === 'ru' ? 'Наши ценности' : 'Değerlerimiz'}
             </h2>
           </div>
         </div>

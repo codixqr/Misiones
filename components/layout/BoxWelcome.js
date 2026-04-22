@@ -18,19 +18,17 @@ export default function BoxWelcome({ handleWelcomeBox, isWelcomeBox }) {
 							Misiones Danışmanlık
 						</p>
 						<p className="text">
-							{lang === 'tr'
-								? 'Otelcilik inovasyon ve danışmanlık alanında profesyonel çözümler sunuyoruz. İşletmenizi bir üst seviyeye taşımak için buradayız.'
-								: 'We provide professional solutions in hospitality innovation and consulting. We are here to take your business to the next level.'}
+							{lang === 'tr' ? 'Otelcilik inovasyon ve danışmanlık alanında profesyonel çözümler sunuyoruz. İşletmenizi bir üst seviyeye taşımak için buradayız.' : lang === 'ar' ? 'نقدم حلولاً احترافية في ابتكار واستشارات الضيافة. نحن هنا للارتقاء بعملك إلى المستوى التالي.' : lang === 'ru' ? 'Мы предоставляем профессиональные решения в области инноваций и консалтинга. Мы здесь, чтобы вывести ваш бизнес на новый уровень.' : 'We provide professional solutions in hospitality innovation and consulting. We are here to take your business to the next level.'}
 						</p>
 					</div>
 					<div className="wrap">
 						<p className="title">
-							{lang === 'tr' ? 'İletişim' : 'Contact Us'}
+							{lang === 'tr' ? 'İletişim' : lang === 'ar' ? 'اتصل بنا' : lang === 'ru' ? 'Связаться с нами' : 'Contact Us'}
 						</p>
 						<ul className="contact-list mb-20">
 							<li>
 								<p>
-									{lang === 'tr' ? 'Adres' : 'Address'}:{' '}
+									{lang === 'tr' ? 'Adres' : lang === 'ar' ? 'العنوان' : lang === 'ru' ? 'Адрес' : 'Address'}:{' '}
 									<Link href="https://maps.google.com/?q=Yeşilbahçe+Mah.+1456+Sok.+No:26+Muratpaşa+Antalya" target="_blank">
 										Yeşilbahçe Mah. 1456 Sok. No: 26, Muratpaşa / ANTALYA
 									</Link>

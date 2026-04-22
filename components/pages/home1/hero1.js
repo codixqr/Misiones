@@ -97,6 +97,7 @@ export default function Hero1() {
 										{t('heroTitle')} {t('heroTitleAnd')}
 										<div style={{ color: '#C8232C', marginTop: '5px' }}>
 											<TypeAnimation
+												key={lang}
 												sequence={[
 													t('heroWord1'),
 													1200,

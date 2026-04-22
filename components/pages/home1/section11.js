@@ -30,10 +30,10 @@ export default function Section11() {
 			<div style={{ textAlign: 'center', marginBottom: '40px' }}>
 				<p style={{ color: '#C8232C', fontWeight: '700', fontSize: '14px', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '10px' }}>
 					<i className="icon-angles-right moveLeftToRight" style={{ marginRight: '8px' }} />
-					{lang === 'tr' ? 'İz Bıraktığımız Yerler' : 'Our Footprint'}
+					{lang === 'tr' ? 'İz Bıraktığımız Yerler' : lang === 'ar' ? 'بصمتنا' : lang === 'ru' ? 'Наш след' : 'Our Footprint'}
 				</p>
 				<h2 style={{ color: '#1B2F5E', fontWeight: '800', fontSize: '2.5rem' }}>
-					{lang === 'tr' ? 'Hizmet Verdiğimiz Seçkin Markalar' : 'Elite Brands We Have Served'}
+					{lang === 'tr' ? 'Hizmet Verdiğimiz Seçkin Markalar' : lang === 'ar' ? 'العلامات التجارية النخبة التي خدمناها' : lang === 'ru' ? 'Премиум-бренды, с которыми мы работали' : 'Elite Brands We Have Served'}
 				</h2>
 				<div style={{ width: '60px', height: '3px', background: '#C8232C', margin: '20px auto' }} />
 			</div>

@@ -13,17 +13,21 @@ export default function Section9() {
 								<div className="content-left">
 									<p className="s-sub-title mb-17">
 										<i className="icon-angles-right moveLeftToRight" />
-										{lang === 'tr' ? 'danışmanlık alın' : 'need consultations'}
+										{lang === 'tr' ? 'danışmanlık alın' : lang === 'ar' ? 'احصل على استشارة' : lang === 'ru' ? 'получить консультацию' : 'need consultations'}
 									</p>
 									<p className="s-title text-anime-wave-right" style={{ fontSize: 'clamp(36px, 4vw, 54px)', lineHeight: '1.15' }}>
 										{lang === 'tr'
 											? <>Ücretsiz <span>Danışmanlık</span> Almak İster misiniz?</>
+											: lang === 'ar'
+											? <>هل أنت مستعد للحصول على <span>استشارة</span> مجانية؟</>
+											: lang === 'ru'
+											? <>Готовы получить бесплатную <span>консультацию</span>?</>
 											: <>Ready to Get Free <span>Consultation?</span></>
 										}
 									</p>
 									<ul className="list">
 										<li className="wow fadeInUp" data-wow-delay="0s">
-											<p className="cap" style={{ fontSize: 'clamp(24px, 1.9vw, 30px)', marginBottom: '12px' }}>{lang === 'tr' ? 'Adresimiz' : 'Our Address'}</p>
+											<p className="cap" style={{ fontSize: 'clamp(24px, 1.9vw, 30px)', marginBottom: '12px' }}>{lang === 'tr' ? 'Adresimiz' : lang === 'ar' ? 'عنواننا' : lang === 'ru' ? 'Наш адрес' : 'Our Address'}</p>
 											<p className="infor" style={{ fontSize: 'clamp(20px, 1.35vw, 25px)', lineHeight: '1.75' }}>
 												Yeşilbahçe Mah. 1456 Sok. No: 26<br />
 												İ. Özalp Apt. Kat: 4 Daire: 11<br />
@@ -31,7 +35,7 @@ export default function Section9() {
 											</p>
 										</li>
 										<li className="wow fadeInUp" data-wow-delay="0.2s">
-											<p className="cap" style={{ fontSize: 'clamp(24px, 1.9vw, 30px)', marginBottom: '12px' }}>{lang === 'tr' ? 'İletişim' : 'Contact Us'}</p>
+											<p className="cap" style={{ fontSize: 'clamp(24px, 1.9vw, 30px)', marginBottom: '12px' }}>{lang === 'tr' ? 'İletişim' : lang === 'ar' ? 'اتصل بنا' : lang === 'ru' ? 'Связаться с нами' : 'Contact Us'}</p>
 											<p className="infor" style={{ fontSize: 'clamp(20px, 1.35vw, 25px)', lineHeight: '1.75' }}>
 												info@misiones.com.tr<br />
 												+90 532 323 17 54
@@ -41,32 +45,32 @@ export default function Section9() {
 								</div>
 								<div className="content-right">
 									<p className="title mb-30 text-center font-main-2">
-										{lang === 'tr' ? 'Ücretsiz Danışmanlık Alın' : 'Get Free Consultation'}
+										{lang === 'tr' ? 'Ücretsiz Danışmanlık Alın' : lang === 'ar' ? 'احصل على استشارة مجانية' : lang === 'ru' ? 'Получите бесплатную консультацию' : 'Get Free Consultation'}
 									</p>
 									<form action="#" className="form-contact style-3">
 										<div className="cols mb-20">
 											<fieldset>
-												<input type="text" placeholder={lang === 'tr' ? 'Ad Soyad' : 'Full Name'} required />
+												<input type="text" placeholder={lang === 'tr' ? 'Ad Soyad' : lang === 'ar' ? 'الاسم الكامل' : lang === 'ru' ? 'ФИО' : 'Full Name'} required />
 											</fieldset>
 											<fieldset>
-												<input type="text" placeholder={lang === 'tr' ? 'Telefon' : 'Phone'} required />
-											</fieldset>
-										</div>
-										<div className="cols mb-20">
-											<fieldset>
-												<input type="email" placeholder={lang === 'tr' ? 'E-posta' : 'Email'} required />
-											</fieldset>
-											<fieldset>
-												<input type="text" placeholder={lang === 'tr' ? 'Konu' : 'Subject'} required />
+												<input type="text" placeholder={lang === 'tr' ? 'Telefon' : lang === 'ar' ? 'الهاتف' : lang === 'ru' ? 'Телефон' : 'Phone'} required />
 											</fieldset>
 										</div>
 										<div className="cols mb-20">
 											<fieldset>
-												<textarea className="h-100px" placeholder={lang === 'tr' ? 'Mesajınızı yazın' : 'Write message'} />
+												<input type="email" placeholder={lang === 'tr' ? 'E-posta' : lang === 'ar' ? 'البريد الإلكتروني' : lang === 'ru' ? 'Эл. почта' : 'Email'} required />
+											</fieldset>
+											<fieldset>
+												<input type="text" placeholder={lang === 'tr' ? 'Konu' : lang === 'ar' ? 'الموضوع' : lang === 'ru' ? 'Тема' : 'Subject'} required />
+											</fieldset>
+										</div>
+										<div className="cols mb-20">
+											<fieldset>
+												<textarea className="h-100px" placeholder={lang === 'tr' ? 'Mesajınızı yazın' : lang === 'ar' ? 'اكتب رسالتك' : lang === 'ru' ? 'Напишите сообщение' : 'Write message'} />
 											</fieldset>
 										</div>
 										<button type="submit" className="tf-btn full">
-											{lang === 'tr' ? 'Danışmanlık Talebi Gönder' : 'Get Consultation'}
+											{lang === 'tr' ? 'Danışmanlık Talebi Gönder' : lang === 'ar' ? 'إرسال طلب استشارة' : lang === 'ru' ? 'Отправить запрос' : 'Get Consultation'}
 											<i className="icon-chevron-right" />
 										</button>
 									</form>

@@ -11,6 +11,8 @@ export default function Section4() {
       id: 0,
       regionTr: 'Avrupa & Uluslararası',
       regionEn: 'Europe & International',
+      regionAr: 'أوروبا ودولي',
+      regionRu: 'Европа и международный',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="12" cy="12" r="10" />
@@ -20,6 +22,8 @@ export default function Section4() {
       ),
       introTr: 'Avrupa’nın seçkin otellerinde kültürel çeşitliliği ve üst düzey hizmet anlayışını özümsedik.',
       introEn: 'Absorbed cultural diversity and high-level service in elite European hotels.',
+      introAr: 'استوعبنا التنوع الثقافي والخدمة عالية المستوى في فنادق النخبة الأوروبية.',
+      introRu: 'Мы впитали культурное разнообразие и высокий уровень обслуживания в элитных европейских отелях.',
       hotels: [
         'Germany Berlin California Hotel',
         'Austria Vienna Kaiserhof Wien Hotel',
@@ -34,6 +38,8 @@ export default function Section4() {
       id: 1,
       regionTr: 'İstanbul',
       regionEn: 'Istanbul',
+      regionAr: 'إسطنبول',
+      regionRu: 'Стамбул',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M3 21h18" />
@@ -48,6 +54,8 @@ export default function Section4() {
       ),
       introTr: 'Metropol otelciliğinde operasyonel mükemmellik ve iş dünyası odaklı projeler.',
       introEn: 'Operational excellence and business-oriented projects in metropolitan hospitality.',
+      introAr: 'التميز التشغيلي والمشاريع الموجهة للأعمال في الضيافة الحضرية.',
+      introRu: 'Операционное совершенство и бизнес-ориентированные проекты в столичном гостиничном бизнесе.',
       hotels: [
         'Steigenberger Airport Hotel - Güneşli',
         'Ramada By Wyndham Asia Business Hotel - Altunizade',
@@ -64,6 +72,8 @@ export default function Section4() {
       id: 2,
       regionTr: 'Antalya Resort & HV',
       regionEn: 'Antalya Resort & HV',
+      regionAr: 'منتجع أنطاليا',
+      regionRu: 'Курорт Анталия',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2v2" />
@@ -79,6 +89,8 @@ export default function Section4() {
       ),
       introTr: 'Resort otelciliğinde geniş kapsamlı yönetim ve misafir deneyimi mimarisi.',
       introEn: 'comprehensive management and guest experience architecture in resort hospitality.',
+      introAr: 'إدارة شاملة وهندسة لتجربة الضيوف في المنتجعات السياحية.',
+      introRu: 'Комплексное управление и архитектура гостевого опыта в курортном гостеприимстве.',
       hotels: [
         'Maya World Hotels - Antalya',
         'Mary Palace Resort - Side',
@@ -98,6 +110,8 @@ export default function Section4() {
       id: 3,
       regionTr: 'Anadolu Şehirleri',
       regionEn: 'Anatolian Cities',
+      regionAr: 'المدن الأناضولية',
+      regionRu: 'Анатолийские города',
       icon: (
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M20 10c0 6-9 13-9 13s-9-7-9-13a9 9 0 0 1 18 0z" />
@@ -106,6 +120,8 @@ export default function Section4() {
       ),
       introTr: 'Anadolu’nun dört bir yanında, butik ve termal otelcilikte değer yaratan dokunuşlar.',
       introEn: 'Value-creating touches in boutique and thermal hospitality across Anatolia.',
+      introAr: 'لمسات تخلق قيمة في الضيافة البوتيكية والحرارية في جميع أنحاء الأناضول.',
+      introRu: 'Ценные штрихи в бутик- и термальных отелях по всей Анатолии.',
       hotels: [
         'Bursa Marrion Hotel - İnegöl',
         'Ankara Hattuşa Thermal Club - Ayaş',
@@ -134,10 +150,10 @@ export default function Section4() {
           <div className="col-lg-8 text-center">
             <span style={{ color: '#C8232C', fontWeight: '700', fontSize: '0.9rem', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '15px' }}>
               <i className="icon-angles-right" style={{ marginRight: '10px' }} />
-              {lang === 'en' ? 'OUR GLOBAL FOOTPRINT' : 'KÜRESEL AYAK İZİMİZ'}
+              {lang === 'en' ? 'OUR GLOBAL FOOTPRINT' : lang === 'ar' ? 'بصمتنا العالمية' : lang === 'ru' ? 'НАШ ГЛОБАЛЬНЫЙ СЛЕД' : 'KÜRESEL AYAK İZİMİZ'}
             </span>
             <h2 style={{ color: '#1B2F5E', fontSize: '3.5rem', fontWeight: '900', letterSpacing: '-1.5px', lineHeight: '1.1' }}>
-              {lang === 'en' ? <>Places Where We <span>Left Our Mark</span></> : <>İz <span>Bıraktığımız</span> Yerler</>}
+              {lang === 'en' ? <>Places Where We <span>Left Our Mark</span></> : lang === 'ar' ? <>أماكن تركنا فيها <span>بصمتنا</span></> : lang === 'ru' ? <>Места, где мы <span>оставили след</span></> : <>İz <span>Bıraktığımız</span> Yerler</>}
             </h2>
           </div>
         </div>
@@ -172,10 +188,10 @@ export default function Section4() {
                   </div>
                   <div>
                     <h4 style={{ margin: 0, fontSize: '1.25rem', fontWeight: '800' }}>
-                      {lang === 'en' ? region.regionEn : region.regionTr}
+                      {lang === 'en' ? region.regionEn : lang === 'ar' ? region.regionAr : lang === 'ru' ? region.regionRu : region.regionTr}
                     </h4>
                     <p style={{ margin: '4px 0 0', fontSize: '0.85rem', opacity: activeRegion === i ? 0.8 : 0.6 }}>
-                      {region.hotels.length} {lang === 'en' ? 'Projects' : 'Proje'}
+                      {region.hotels.length} {lang === 'en' ? 'Projects' : lang === 'ar' ? 'مشاريع' : lang === 'ru' ? 'проектов' : 'Proje'}
                     </p>
                   </div>
                 </button>
@@ -204,10 +220,10 @@ export default function Section4() {
               <div style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{ marginBottom: '35px' }}>
                   <h3 style={{ color: '#1B2F5E', fontSize: '2rem', fontWeight: '900', marginBottom: '15px' }}>
-                    {lang === 'en' ? current.regionEn : current.regionTr}
+                    {lang === 'en' ? current.regionEn : lang === 'ar' ? current.regionAr : lang === 'ru' ? current.regionRu : current.regionTr}
                   </h3>
                   <p style={{ color: '#505878', fontSize: '1.15rem', lineHeight: '1.7', fontStyle: 'italic', maxWidth: '90%' }}>
-                    &ldquo;{lang === 'en' ? current.introEn : current.introTr}&rdquo;
+                    &ldquo;{lang === 'en' ? current.introEn : lang === 'ar' ? current.introAr : lang === 'ru' ? current.introRu : current.introTr}&rdquo;
                   </p>
                 </div>
 

@@ -5,19 +5,19 @@ export default function Section6() {
 	const { lang } = useLanguage()
 
 	const labels = {
-		subtitle: lang === 'tr' ? 'iletişim' : 'contact us',
-		title: lang === 'tr' ? <>Ücretsiz <span>Danışmanlık</span> Alın</> : <>Get a Free <span>Consultation</span></>,
-		address: lang === 'tr' ? 'Adres' : 'Address',
+		subtitle: lang === 'tr' ? 'iletişim' : lang === 'ar' ? 'اتصل بنا' : lang === 'ru' ? 'связаться с нами' : 'contact us',
+		title: lang === 'tr' ? <>Ücretsiz <span>Danışmanlık</span> Alın</> : lang === 'ar' ? <>احصل على <span>استشارة</span> مجانية</> : lang === 'ru' ? <>Получите бесплатную <span>консультацию</span></> : <>Get a Free <span>Consultation</span></>,
+		address: lang === 'tr' ? 'Adres' : lang === 'ar' ? 'العنوان' : lang === 'ru' ? 'Адрес' : 'Address',
 		addressVal: 'Yeşilbahçe Mah. 1456 Sok. No: 26 İ. Özalp Apt. Kat: 4 Daire: 11 07160 Muratpaşa ANTALYA',
-		contact: lang === 'tr' ? 'İletişim' : 'Contact',
+		contact: lang === 'tr' ? 'İletişim' : lang === 'ar' ? 'اتصل' : lang === 'ru' ? 'Контакт' : 'Contact',
 		contactVal: <>info@misiones.com.tr<br />+90 532 323 17 54</>,
-		formTitle: lang === 'tr' ? 'Bize Ulaşın' : 'Send a Message',
-		namePh: lang === 'tr' ? 'Ad Soyad' : 'Full Name',
-		phonePh: lang === 'tr' ? 'Telefon' : 'Phone',
-		emailPh: lang === 'tr' ? 'E-posta' : 'Email',
-		subjectPh: lang === 'tr' ? 'Konu' : 'Subject',
-		messagePh: lang === 'tr' ? 'Mesajınızı yazın...' : 'Write your message...',
-		submit: lang === 'tr' ? 'Danışmanlık Talebi Gönder' : 'Send Consultation Request',
+		formTitle: lang === 'tr' ? 'Bize Ulaşın' : lang === 'ar' ? 'أرسل رسالة' : lang === 'ru' ? 'Отправить сообщение' : 'Send a Message',
+		namePh: lang === 'tr' ? 'Ad Soyad' : lang === 'ar' ? 'الاسم' : lang === 'ru' ? 'ФИО' : 'Full Name',
+		phonePh: lang === 'tr' ? 'Telefon' : lang === 'ar' ? 'الهاتف' : lang === 'ru' ? 'Телефон' : 'Phone',
+		emailPh: lang === 'tr' ? 'E-posta' : lang === 'ar' ? 'البريد الإلكتروني' : lang === 'ru' ? 'Эл. почта' : 'Email',
+		subjectPh: lang === 'tr' ? 'Konu' : lang === 'ar' ? 'الموضوع' : lang === 'ru' ? 'Тема' : 'Subject',
+		messagePh: lang === 'tr' ? 'Mesajınızı yazın...' : lang === 'ar' ? 'اكتب رسالتك...' : lang === 'ru' ? 'Напишите сообщение...' : 'Write your message...',
+		submit: lang === 'tr' ? 'Danışmanlık Talebi Gönder' : lang === 'ar' ? 'إرسال طلب استشارة' : lang === 'ru' ? 'Отправить запрос' : 'Send Consultation Request',
 	}
 
 	return (
