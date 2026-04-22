@@ -79,7 +79,7 @@ function CircularBadge() {
 
 export default function Hero1() {
 	const [isOpen, setOpen] = useState(false)
-	const { t } = useLanguage()
+	const { t, lang } = useLanguage()
 
 	return (
 		<>
