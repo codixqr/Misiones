@@ -31,9 +31,9 @@ export const metadata = {
     title: 'Misiones - Otelcilik İnovasyon & Danışmanlık',
     description: 'Misiones Hospitality Innovation & Consultancy - Profesyonel otelcilik ve iş danışmanlığı hizmetleri',
     icons: {
-        icon: '/images/logo/misiones-favicon-white.png',
-        shortcut: '/images/logo/misiones-favicon-white.png',
-        apple: '/images/logo/misiones-favicon-white.png',
+        icon: '/images/logo/misiones-favicon-preloader.png',
+        shortcut: '/images/logo/misiones-favicon-preloader.png',
+        apple: '/images/logo/misiones-favicon-preloader.png',
     },
 }
 

@@ -937,9 +937,18 @@ export const translations = {
 export function LanguageProvider({ children }) {
     const [lang, setLang] = useState('tr')
 
-    const t = (key) => translations[lang][key] || key
+    const t = (key) => {
+        if (translations[lang] && translations[lang][key]) return translations[lang][key]
+        if (translations.en && translations.en[key]) return translations.en[key]
+        if (translations.tr && translations.tr[key]) return translations.tr[key]
+        return key
+    }
 
-    const toggleLang = () => setLang(prev => prev === 'tr' ? 'en' : 'tr')
+    const toggleLang = () => setLang(prev => {
+        const order = ['tr', 'en', 'ar', 'ru']
+        const idx = order.indexOf(prev)
+        return order[(idx + 1) % order.length]
+    })
 
     return (
         <LanguageContext.Provider value={{ lang, setLang, t, toggleLang }}>

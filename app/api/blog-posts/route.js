@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server'
 import Parser from 'rss-parser'
 
-const AUTHOR_NAME = 'Nevzat'
+const AUTHOR_NAME = 'nevzat'
+const WEEK_IN_SECONDS = 604800
 
 const STATIC_ARTICLES = [
 
@@ -130,7 +131,7 @@ async function fetchRSSFeed(parser, url) {
 		const res = await fetch(url, {
 			signal: controller.signal,
 			headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Misiones-Bot/1.0)' },
-			next: { revalidate: 3600 },
+			next: { revalidate: WEEK_IN_SECONDS },
 		})
 		clearTimeout(timeout)
 		if (!res.ok) return null
@@ -139,6 +140,29 @@ async function fetchRSSFeed(parser, url) {
 	} catch {
 		return null
 	}
+}
+
+function isNevzatArticle(item) {
+	const creator = `${item['dc:creator'] || ''} ${item.author || ''} ${item.creator || ''}`.toLowerCase()
+	const title = `${item.title || ''}`.toLowerCase()
+	const content = `${item['content:encoded'] || item.content || item.contentSnippet || ''}`.toLowerCase()
+	const link = `${item.link || ''}`.toLowerCase()
+
+	return (
+		creator.includes(AUTHOR_NAME) ||
+		title.includes('çelebi') ||
+		title.includes('celebi') ||
+		content.includes('nevzat') ||
+		content.includes('çelebi') ||
+		link.includes('nevzat') ||
+		link.includes('celebi')
+	)
+}
+
+function parseTimestamp(item) {
+	const raw = item.pubDate || item.isoDate || item.date
+	const ts = Date.parse(raw || '')
+	return Number.isNaN(ts) ? 0 : ts
 }
 
 function extractImageFromItem(item) {
@@ -185,9 +209,7 @@ export async function GET() {
 		if (!feed || !feed.items) continue
 
 		for (const item of feed.items) {
-			const creator = item['dc:creator'] || item.author || item.creator || ''
-			const isNevzat = creator.toLowerCase().includes(AUTHOR_NAME.toLowerCase())
-			if (!isNevzat) continue
+			if (!isNevzatArticle(item)) continue
 
 			const alreadyExists = STATIC_ARTICLES.some(
 				(a) => a.url === item.link || a.title === item.title
@@ -209,6 +231,7 @@ export async function GET() {
 				date: formatDate(item.pubDate || item.isoDate),
 				cat: 'Köşe Yazısı',
 				img: safeImg || FALLBACK_IMAGES[fallbackIndex % FALLBACK_IMAGES.length],
+				timestamp: parseTimestamp(item),
 			})
 			fallbackIndex++
 		}
@@ -227,15 +250,25 @@ export async function GET() {
 			return {
 				...article,
 				img: ogImg || FALLBACK_IMAGES[idx % FALLBACK_IMAGES.length],
+				timestamp: parseTimestamp({ date: article.date }),
 			}
 		})
 	)
 
-	const allArticles = [...dynamicArticles, ...staticWithImages]
+	const deduped = [...dynamicArticles, ...staticWithImages].reduce((acc, article) => {
+		const key = (article.url || article.title || article.id).toLowerCase()
+		if (!acc.has(key)) acc.set(key, article)
+		return acc
+	}, new Map())
+
+	const allArticles = [...deduped.values()]
+		.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0))
+		.slice(0, 24)
+		.map(({ timestamp, ...rest }) => rest)
 
 	return NextResponse.json(allArticles, {
 		headers: {
-			'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=7200',
+			'Cache-Control': `public, s-maxage=${WEEK_IN_SECONDS}, stale-while-revalidate=86400`,
 		},
 	})
 }

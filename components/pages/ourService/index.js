@@ -116,6 +116,24 @@ const serviceCategories = [
     ],
   },
   {
+    id: 'hip',
+    icon: 'flaticon-rocket',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80',
+    titleTr: 'HIP - Hotel Improvement Plan',
+    titleEn: 'HIP - Hotel Improvement Plan',
+    descTr: 'HIP, otelinizin performansını KPI bazlı analiz ederek gelir, operasyon ve maliyet tarafında ölçülebilir iyileştirme sunan dönüşüm programımızdır.',
+    descEn: 'HIP is our transformation program that analyzes your hotel with KPI-based metrics and delivers measurable improvements in revenue, operations, and cost control.',
+    items: [
+      { titleTr: 'KPI Tabanlı Durum Analizi', titleEn: 'KPI-Based Current State Analysis', descTr: 'RevPAR, ADR, doluluk, kanal dağılımı, maliyet ve ekip verimliliği göstergeleriyle otelinizin güçlü ve zayıf alanlarını netleştiririz.', descEn: 'We identify strengths and weaknesses through RevPAR, ADR, occupancy, channel mix, cost and team productivity metrics.' },
+      { titleTr: 'Odaklı İyileştirme Aksiyonları', titleEn: 'Focused Improvement Actions', descTr: 'Fiyatlandırma, satış kanalları, operasyonel süreçler ve personel verimliliği gibi kritik alanlarda hızlı uygulanabilir aksiyon planı çıkarırız.', descEn: 'We create fast, actionable plans for critical areas such as pricing, sales channels, operations, and team productivity.' },
+      { titleTr: 'Performans Takibi ve Raporlama', titleEn: 'Performance Tracking and Reporting', descTr: 'Uygulama sonrasında KPI sonuçlarını düzenli takip eder, iyileştirmelerin sürdürülebilirliğini raporlarla güvence altına alırız.', descEn: 'After implementation, we monitor KPI outcomes regularly and ensure sustainability through reporting.' },
+      { titleTr: 'Detaylı HIP Yol Haritası', titleEn: 'Detailed HIP Roadmap', descTr: 'Tam kapsamlı metodoloji, departman bazlı benchmark ve uygulama adımları için HIP detay sayfasını kullanabilirsiniz.', descEn: 'For full methodology, department-level benchmarks, and implementation steps, see the detailed HIP page.' },
+    ],
+    ctaHref: '/hip',
+    ctaTr: 'HIP Detaylarına Git',
+    ctaEn: 'Go to HIP Details',
+  },
+  {
     id: 'denetim',
     icon: 'flaticon-inspect',
     image: '/images/section/service-denetim.jpg',
@@ -193,12 +211,12 @@ function ServiceAccordion({ service, lang }) {
           position: 'relative',
           alignSelf: 'flex-start'
         }} className="service-image-container">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={service.image}
             alt={lang === 'en' ? service.titleEn : service.titleTr}
-            fill
-            sizes="420px"
-            style={{ objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            loading="lazy"
           />
         </div>
         {/* Right: accordion items */}
@@ -251,6 +269,14 @@ function ServiceAccordion({ service, lang }) {
                 )}
               </div>
             ))}
+            {service.ctaHref && (
+              <div style={{ padding: '20px 40px 28px' }}>
+                <Link href={service.ctaHref} className="tf-btn style-3">
+                  {lang === 'en' ? service.ctaEn : service.ctaTr}
+                  <i className="icon-chevron-right" />
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
