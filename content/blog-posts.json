@@ -1,122 +1,462 @@
 [
     {
-        "id": "otelcilikte-markan-n-derin-anlam-ve-g-c",
-        "title": "Otelcilikte Markanın Derin Anlamı Ve Gücü",
-        "description": "Otelcilikte Markanın Derin Anlamı Ve Gücü...",
+        "id": "nevzat-celebi-oda-degi-l-eri-si-lebi-li-rli-k-satiyoruz",
+        "title": "NEVZAT ÇELEBİ: \"ODA DEĞİL, ERİŞİLEBİLİRLİK SATIYORUZ\"",
+        "description": "Yeni Zamanın Otelcilik Gerçeği Erişilebilir Lüks ile\nDeğer Odaklı Konaklama Arasında İnce Çizgi\n\nOrta doğuda yaşanan savaş nedeni ile, başta Alman tur......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-oda-degil-erisilebilirlik-satiyoruz",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-oda-degi-l-eri-si-lebi-li-rli-k-satiyoruz.webp"
+    },
+    {
+        "id": "nevzat-celebi-hucre-zari-metaforu-i-le-otelci-li-kte-firsat-mali-yeti",
+        "title": "NEVZAT ÇELEBİ | HÜCRE ZARI METAFORU İLE OTELCİLİKTE FIRSAT MALİYETİ",
+        "description": "Türkiye otelcilik sektöründe fırsat maliyeti kavramını\nanlatırken, biyolojiden ödünç alacağımız hücre zarı metaforu aslında sahadaki\nen gerçekçi yönet......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-hucre-zari-metaforu-ile-otelcilikte-firsat-maliyeti",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-hucre-zari-metaforu-i-le-otelci-li-kte-firsat-mali-yeti.webp"
+    },
+    {
+        "id": "nevzat-celebi-yazdi-turki-ye-turi-zm-ve-otelci-li-k-sektorunde-gunumuz-onceli-kleri",
+        "title": "NEVZAT ÇELEBİ YAZDI: TÜRKİYE TURİZM VE OTELCİLİK SEKTÖRÜNDE GÜNÜMÜZ ÖNCELİKLERİ",
+        "description": "Teknoloji ve Dijitalleşme\n\nAkıllı otel yönetim sistemleri: Rezervasyon, müşteri\nilişkileri ve operasyonel süreçlerin dijitalleşmesi verimliliği\nartırı......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-yazdi-turkiye-turizm-ve-otelcilik-sektorunde-gunumuz-oncelikleri",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-yazdi-turki-ye-turi-zm-ve-otelci-li-k-sektorunde-gunumuz-onceli-kleri.webp"
+    },
+    {
+        "id": "nevzat-celebi-mutlu-mi-safi-r-efsanesi-ni-n-gorunmeyen-kahramanlari",
+        "title": "NEVZAT ÇELEBİ: MUTLU MİSAFİR EFSANESİNİN GÖRÜNMEYEN KAHRAMANLARI",
+        "description": "Mutlu Misafir Efsanesinin Görünmeyen KahramanlarıOtelcilikte İnsanı Yaşatmadan Hizmeti Yaşatamazsınız.Türkiye otelcilik sektörü, yıllardır misafir mem......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-mutlu-misafir-efsanesinin-gorunmeyen-kahramanlari",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-mutlu-mi-safi-r-efsanesi-ni-n-gorunmeyen-kahramanlari.webp"
+    },
+    {
+        "id": "nevzat-celebi-otelci-li-kte-baslangic-kirilma-ve-bi-ti-s-noktalari",
+        "title": "NEVZAT ÇELEBİ: OTELCİLİKTE BAŞLANGIÇ, KIRILMA VE BİTİŞ NOKTALARI",
+        "description": "Türkiye’de otelcilik sektörü, çoğu zaman bir hayalin\ncazibesine kapılarak başlar.&nbsp;\n\nBir patron, bir yatırımcı ya da bir girişimci; deniz\nkenarınd......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-otelcilikte-baslangic-kirilma-ve-bitis-noktalari",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-otelci-li-kte-baslangic-kirilma-ve-bi-ti-s-noktalari.webp"
+    },
+    {
+        "id": "nevzat-celebi-otelci-li-k-sektorunde-nerede-hata-yapiliyor-nerede-kazaniliyor-nerede-kaybedi-li-yor",
+        "title": "NEVZAT ÇELEBİ | OTELCİLİK SEKTÖRÜNDE NEREDE HATA YAPILIYOR? NEREDE KAZANILIYOR? NEREDE KAYBEDİLİYOR?",
+        "description": "Nerede Hata Yapılıyor?Türkiye otelcilik sektörünün en büyük hatası, deneyimi\nrakamların gölgesinde bırakmasıdır.Yatırımcılar ve yöneticiler çoğu zaman......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-otelcilik-sektorunde-nerede-hata-yapiliyor-nerede-kazaniliyor-nerede-kaybediliyor",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-otelci-li-k-sektorunde-nerede-hata-yapiliyor-nerede-kazaniliyor-nerede-kaybedi-li-yor.webp"
+    },
+    {
+        "id": "nevzat-celebi-otelci-li-k-sektorunun-gunumuz-gercekleri-ve-degerleri",
+        "title": "NEVZAT ÇELEBİ | OTELCİLİK SEKTÖRÜNÜN GÜNÜMÜZ GERÇEKLERİ VE DEĞERLERİ",
+        "description": "Bugün bilgiye erişim sınırsız.&nbsp;\n\nCep telefonlarımızda yapay zekâ asistanları, ekranlarımızda\nYouTube dersleri, elimizin altında binlerce makale v......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-otelcilik-sektorunun-gunumuz-gercekleri-ve-degerleri",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-otelci-li-k-sektorunun-gunumuz-gercekleri-ve-degerleri.webp"
+    },
+    {
+        "id": "nevzat-celebi-otelci-li-kte-gercekleri-n-di-li",
+        "title": "NEVZAT ÇELEBİ | OTELCİLİKTE GERÇEKLERİN DİLİ",
+        "description": "MIŞ GİBİ YAPMANIN BEDELİ\n\nOTELCİLİKTE GERÇEKLERİN DİLİ\n\nOtelcilik sektörü, misafirperverliğin en rafine haliyle\nbuluştuğu bir sahnedir.&nbsp;\n\nAncak b......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-otelcilikte-gerceklerin-dili",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-otelci-li-kte-gercekleri-n-di-li.webp"
+    },
+    {
+        "id": "nevzat-celebi-otelci-li-kte-surdurulebi-li-rli-gi-n-i-nce-detaylari",
+        "title": "NEVZAT ÇELEBİ | OTELCİLİKTE SÜRDÜRÜLEBİLİRLİĞİN İNCE DETAYLARI",
+        "description": "Marifeti Büyütürken Hikmeti Kaybetmemek Gerek&nbsp;\n\nOtelcilikte Sürdürülebilirliğin İnce Detayları\n\nOtelcilik sektörü, doğası gereği insanı, mekânı v......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-otelcilikte-surdurulebilirligin-ince-detaylari",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-otelci-li-kte-surdurulebi-li-rli-gi-n-i-nce-detaylari.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-gelecegi-seki-llendi-ren-di-nami-kler",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİKTE GELECEĞİ ŞEKİLLENDİREN DİNAMİKLER",
+        "description": "Turizm ve otelcilik sektörü, artık yalnızca yatak satmakla\nsınırlı bir iş değil; kültürleri buluşturan, deneyimleri dönüştüren ve yaşam\ntarzlarını yen......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-gelecegi-sekillendiren-dinamikler",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-gelecegi-seki-llendi-ren-di-nami-kler.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-turki-ye-otelci-li-k-sektorune-bi-r-profesyoneli-n-i-cten-bakisi",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: TÜRKİYE OTELCİLİK SEKTÖRÜNE BİR PROFESYONELİN İÇTEN BAKIŞI",
+        "description": "Otelcilik sektörü, dışarıdan bakıldığında göz kamaştırıcı bir vitrin gibi görünür.&nbsp;Mermer zeminler, kristal avizeler, altın kaplama musluklar, ün......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-turkiye-otelcilik-sektorune-bir-profesyonelin-icten-bakisi",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-turki-ye-otelci-li-k-sektorune-bi-r-profesyoneli-n-i-cten-bakisi.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-bi-r-oteli-n-dogus-hi-k-yesi",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: BİR OTELİN DOĞUŞ HİKÂYESİ",
+        "description": "Otel yatırımı, dışarıdan bakıldığında cazip bir gayrimenkul projesi gibi görünse de, aslında bir yaşam biçimi, bir strateji ve bir kültür inşasıdır.Be......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-bir-otelin-dogus-hik-yesi",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-bi-r-oteli-n-dogus-hi-k-yesi.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-cesareti-n-ve-donusumun-gucu",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİKTE CESARETİN VE DÖNÜŞÜMÜN GÜCÜ",
+        "description": "Modern otelcilik sektörü bir hizmet endüstrisinden çok daha fazlasıdır.&nbsp;O, insan ruhuna dokunan, beklentileri dönüştüren ve misafirlerle kurulan ......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-cesaretin-ve-donusumun-gucu",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-cesareti-n-ve-donusumun-gucu.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-oteli-n-di-ji-tal-dna-si",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI OTELİN DİJİTAL DNA’SI",
+        "description": "Dijitalde Güven İnşa Etmek Akıl, Mesleki ve Sektörel Bilgi, Etik Kurallara Sahip Olmak ve Emek İster.\nOtelin Dijital DNA’sı: Online İtibarın Görünmeye......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelin-dijital-dna-si",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-oteli-n-di-ji-tal-dna-si.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-gunumuz-gercegi-veri-odakli-otelci-li-k-k-rliligin-yeni-paradi-gmasidir",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: GÜNÜMÜZ GERÇEĞİ VERİ ODAKLI OTELCİLİK KÂRLILIĞIN YENİ PARADİGMASIDIR",
+        "description": "Malum sezon ve&nbsp; yıl sonuna doğru yaklaşırken, stratejik\nplanlama dönemine giriyoruz.\n\nBu dönemler; otel yöneticileri için yalnızca bütçe\ntablolar......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-gunumuz-gercegi-veri-odakli-otelcilik-k-rliligin-yeni-paradigmasidir",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-gunumuz-gercegi-veri-odakli-otelci-li-k-k-rliligin-yeni-paradi-gmasidir.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-gm-koltugunda-taht-savaslari",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: GM KOLTUĞUNDA TAHT SAVAŞLARI",
+        "description": "Bir GM Hikayesi; Vizyonla Başlayan, Veriye Dönüşen YolculukGM Değişirse Otel DeğişirTürkiye’de otelcilik sektörü, yalnızca yatak kapasitesiyle değil; ......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-gm-koltugunda-taht-savaslari",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-gm-koltugunda-taht-savaslari.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-i-ki-ayri-dunya",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİKTE İKİ AYRI DÜNYA",
+        "description": "ADR Ve Dbl Occ’un Ötesinde Bir Perspektif\n\n&nbsp;\n\nOtelcilik sektörü, yüzeyde benzer operasyonel dinamiklere\nsahip gibi görünse de, derinlere inildiği......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-iki-ayri-dunya",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-i-ki-ayri-dunya.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-donusum-egi-ti-mden-etki-ye-yolculuk",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI OTELCİLİKTE DÖNÜŞÜM EĞİTİMDEN ETKİYE YOLCULUK",
+        "description": "Yıllar boyunca, Türkiye otelcilik sektörü fiziki\nyatırımlarla, mimari gelişimle ve altyapı odaklı büyüme stratejileriyle\nşekillendi.&nbsp;\n\nBeş yıldız......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-donusum-egitimden-etkiye-yolculuk",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-donusum-egi-ti-mden-etki-ye-yolculuk.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-unutulmus-bi-lgi-ler",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİKTE UNUTULMUŞ BİLGİLER",
+        "description": "Hatırlanması Gereken Bir MirasGünümüzde otelcilik sektörü hızla dijitalleşiyor, otomasyon büyüyor, misafir beklentileri değişiyor. Ama, bu dönüşüm içe......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-unutulmus-bilgiler",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-unutulmus-bi-lgi-ler.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-sessi-z-devri-m-kri-z-degi-l-donusum",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİKTE SESSİZ DEVRİM, KRİZ DEĞİL DÖNÜŞÜM",
+        "description": "Sular çekildiğinde kimler yüzüyor olacak ?&nbsp; Kimler batmış, gitmiş olacak ? Yılın sonunda göreceğiz.2025 yaz sezonu, Türkiye turizmi için sadece s......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-sessiz-devrim-kriz-degil-donusum",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-sessi-z-devri-m-kri-z-degi-l-donusum.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-yeni-nesi-l-hi-zmet-anlayisi-geli-yor",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİKTE YENİ NESİL HİZMET ANLAYIŞI GELİYOR",
+        "description": "Sektörün klasik yaklaşımlarının ötesine geçen, anlamlı, çağdaş ve sahadan iş ve işleyişten beslenen yepyeni bir otelcilik hizmet felsefesi geldi, geli......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-yeni-nesil-hizmet-anlayisi-geliyor",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-yeni-nesi-l-hi-zmet-anlayisi-geli-yor.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-yapay-zek-otelci-li-k-sektorune-yakisacak-mi-yapisacak-mi",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: YAPAY ZEKÂ OTELCİLİK SEKTÖRÜNE YAKIŞACAK MI YAPIŞACAK MI?",
+        "description": "Sınırları Yeniden ÇizmekHizmet mi?Hakimiyet mi?Otelcilik, insan temasının ve misafirperverliğin kalbinde atan bir sektör. Ancak artık bu kalbin atış r......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-yapay-zek-otelcilik-sektorune-yakisacak-mi-yapisacak-mi",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-yapay-zek-otelci-li-k-sektorune-yakisacak-mi-yapisacak-mi.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-zi-hni-yet-devri-mi",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİKTE ZİHNİYET DEVRİMİ",
+        "description": "Konfor Alanı mı?Global Liderlik mi?Türkiye Otelcilik Sektöründe Değişimin ZorunluluğuKonaklama sektörü, yalnızca oda satışı ve hizmet sunumu ile sınır......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-zihniyet-devrimi",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-zi-hni-yet-devri-mi.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-k-sektorunde-buyuk-satranc",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİK SEKTÖRÜNDE BÜYÜK SATRANÇ",
+        "description": "Karlılığı Kim Stratejiyle Yönetiyor?Rekabetin çok sert olduğu günümüz şartlarında otelcilik sektöründe, finansal başarıyı yalnızca doğru stratejilerle......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilik-sektorunde-buyuk-satranc",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-k-sektorunde-buyuk-satranc.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-k-yeni-bi-r-caga-gi-ri-yor",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİK YENİ BİR ÇAĞA GİRİYOR",
+        "description": "Otelcilikte Değişen DNA Misafirperverliğin Geçmişi, Bugünü Ve GeleceğiMisafirperverlikle Başlayan Dijital Ve Sürdürülebilir Geleceğe Uzanan Yolculuk.Y......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilik-yeni-bir-caga-giriyor",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-k-yeni-bi-r-caga-gi-ri-yor.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-turki-ye-turi-zmi-nde-gece-turi-zmi-noctourism",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: TÜRKİYE TURİZMİNDE; GECE TURİZMİ (NOCTOURISM)",
+        "description": "Fırsatlarla Dolu Dinamik Sırların Işıltısı.Türkiye’nin kıyı turizmi, güneş ve deniz eksenli olsa da, gece turizmi sektörel büyümenin kritik unsurların......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-turkiye-turizminde-gece-turizmi-noctourism",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-turki-ye-turi-zmi-nde-gece-turi-zmi-noctourism.webp"
+    },
+    {
+        "id": "nevzat-celebi-yazdi-otelci-li-kte-gercek-rekabet-teknoloji-mi-duygu-mu",
+        "title": "NEVZAT ÇELEBİ YAZDI: OTELCİLİKTE GERÇEK REKABET TEKNOLOJİ Mİ DUYGU MU?",
+        "description": "Günümüz Otelciliğinde Lüksün Yeni Tanımı İhtişam Değil. Görünmeyen Kusursuzluktur..Otelcilikte Gerçek Rekabet Teknoloji mi Duygu mu?Otelcilikte gerçek......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-yazdi-otelcilikte-gercek-rekabet-teknoloji-mi-duygu-mu",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-yazdi-otelci-li-kte-gercek-rekabet-teknoloji-mi-duygu-mu.webp"
+    },
+    {
+        "id": "nevzat-celebi-yazdi-otel-yatirimcilarinin-beklenti-leri-ve-profesyonel-yoneti-ci-li-gi-n-gercekleri",
+        "title": "NEVZAT ÇELEBİ YAZDI: OTEL YATIRIMCILARININ BEKLENTİLERİ VE PROFESYONEL YÖNETİCİLİĞİN GERÇEKLERİ",
+        "description": "Türkiye’de otel yatırımcıları, yüksek kârlılık, sürdürülebilir büyüme ve rekabet avantajı sağlama hedefiyle hareket ederken, sektörün dinamikleri çoğu......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-yazdi-otel-yatirimcilarinin-beklentileri-ve-profesyonel-yoneticiligin-gercekleri",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-yazdi-otel-yatirimcilarinin-beklenti-leri-ve-profesyonel-yoneti-ci-li-gi-n-gercekleri.webp"
+    },
+    {
+        "id": "nevzat-celebi-yazdi-evrensel-otelci-li-gi-n-kadi-m-yolculuguna-kisa-bi-r-bakis-atmaya-ne-dersi-ni-z",
+        "title": "NEVZAT ÇELEBİ YAZDI: EVRENSEL OTELCİLİĞİN KADİM YOLCULUĞUNA KISA BİR BAKIŞ ATMAYA NE DERSİNİZ?",
+        "description": "Misafirhaneden Küresel Konaklamaya Giden YolculukOtelcilik, bugün bildiğimiz hâline ulaşmadan önce, misafir ve misafirhane özüne dayanan kadim bir uyg......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-yazdi-evrensel-otelciligin-kadim-yolculuguna-kisa-bir-bakis-atmaya-ne-dersiniz",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-yazdi-evrensel-otelci-li-gi-n-kadi-m-yolculuguna-kisa-bi-r-bakis-atmaya-ne-dersi-ni-z.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-turki-ye-ve-dunya-otelci-li-k-sektorunun-kesi-si-m-noktalari",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: TÜRKİYE VE DÜNYA OTELCİLİK SEKTÖRÜNÜN KESİŞİM NOKTALARI",
+        "description": "Dünya genelindeki otelcilik sektörü ile Türkiye’deki otelcilik sektörü arasında ki farkları hiç merak ettiniz mi?Sektörde ki bu belirgin farklar çok i......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-turkiye-ve-dunya-otelcilik-sektorunun-kesisim-noktalari",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-turki-ye-ve-dunya-otelci-li-k-sektorunun-kesi-si-m-noktalari.webp"
+    },
+    {
+        "id": "nevzat-celebi-yazdi-mi-safi-r-memnuni-yeti-ni-n-di-ji-tal-yansimasi-otelci-li-kte-yeni-donemi-n-sektorel-pi-yasasi-yani-borsasidir",
+        "title": "NEVZAT ÇELEBİ YAZDI: MİSAFİR MEMNUNİYETİNİN DİJİTAL YANSIMASI OTELCİLİKTE YENİ DÖNEMİN SEKTÖREL PİYASASI YANİ; BORSASIDIR",
+        "description": "Misafirlerin deneyimlerine dair yorumlar, otelcilik sektöründe adeta bir “borsa” gibi değerlendirilebilir.Bu yorumlar, otellerin itibarını, doluluk or......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-yazdi-misafir-memnuniyetinin-dijital-yansimasi-otelcilikte-yeni-donemin-sektorel-piyasasi-yani-borsasidir",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-yazdi-mi-safi-r-memnuni-yeti-ni-n-di-ji-tal-yansimasi-otelci-li-kte-yeni-donemi-n-sektorel-pi-yasasi-yani-borsasidir.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-yazdi-otelci-li-kte-luks-nereye-gi-di-yor",
+        "title": "NEVZAT AHMET ÇELEBİ YAZDI: OTELCİLİKTE LÜKS NEREYE GİDİYOR?",
+        "description": "\r\nOtelciliğin bugünkü lüksü minimalist ve sade yaşam.\r\n\r\n\r\nGünümüzde lüks otelcilik alanında minimalist ve sade tasarımlar misafirler tarafından benim......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-yazdi-otelcilikte-luks-nereye-gidiyor",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-yazdi-otelci-li-kte-luks-nereye-gi-di-yor.png"
+    },
+    {
+        "id": "nevzat-ahmet-celebi-maya-hotels-te",
+        "title": "Nevzat Ahmet Çelebi, Maya Hotels'te",
+        "description": "Nevzat Ahmet Çelebi, Maya Hotels’e ait olan Maya Park Belek, Maya Golf Side Otelleri ve Didim Maya World Otel’in üst yönetimine İcra Kurulu Başkanı ol......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-ahmet-celebi-maya-hotelste",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi-maya-hotels-te.jpg"
+    },
+    {
+        "id": "nevzat-celebi-korona-gunlugunden",
+        "title": "Nevzat Çelebi: “Korona Günlüğünden”",
+        "description": "Nevzat Çelebi: “Korona Günlüğünden”\r\nNevzat Çelebi koronavirüs salgını hakkında yazdı. GM Turizm ve Yönetim  Dergisi okurları için yazan Çelebi’nin “K......",
+        "date": "22 Nisan 2026",
+        "url": "https://gmtourism.com/nevzat-celebi-korona-gunlugunden",
+        "source": "GM Tourism",
+        "cat": "Turizm Haberleri",
+        "img": "/images/blog/blog-20260422-nevzat-celebi-korona-gunlugunden.webp"
+    },
+    {
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
         "date": "20 Nisan 2026",
         "url": "https://otelpostasi.com/kose-yazisi/otelcilikte-markanin-derin-anlami-ve-gucu",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-otelcilikte-markan-n-derin-anlam-ve-g-c.png"
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.png"
     },
     {
-        "id": "yerli-otel-markalar-neden-fark-yaratam-yor",
-        "title": "Yerli Otel Markaları Neden Fark Yaratamıyor?",
-        "description": "Yerli Otel Markaları Neden Fark Yaratamıyor?...",
-        "date": "13 Nisan 2026",
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "20 Nisan 2026",
         "url": "https://otelpostasi.com/kose-yazisi/yerli-otel-markalari-neden-fark-yaratamiyor",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-yerli-otel-markalar-neden-fark-yaratam-yor.png"
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.png"
     },
     {
-        "id": "otelcilikte-dijital-d-n-m-n-nabz-roomxqr",
-        "title": "Otelcilikte Dijital Dönüşümün Nabzı RoomXQR",
-        "description": "Otelcilikte Dijital Dönüşümün Nabzı...",
-        "date": "06 Nisan 2026",
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "20 Nisan 2026",
         "url": "https://otelpostasi.com/kose-yazisi/otelcilikte-dijital-donusumun-nabzi-roomxqr",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-otelcilikte-dijital-d-n-m-n-nabz-roomxqr.png"
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.png"
     },
     {
-        "id": "otelcilikte-karar-vermemenin-gizli-maliyeti",
-        "title": "Otelcilikte Karar Vermemenin Gizli Maliyeti",
-        "description": "Otelcilikte Karar Vermemenin Gizli Maliyeti...",
-        "date": "30 Mart 2026",
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "20 Nisan 2026",
         "url": "https://otelpostasi.com/kose-yazisi/otelcilikte-karar-vermemenin-gizli-maliyeti-guvendeyim-derken-patronajin-kaybettikleri",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-otelcilikte-karar-vermemenin-gizli-maliyeti.png"
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.png"
     },
     {
-        "id": "t-rkiye-otelcilik-sekt-r-nde-yat-r-mc-profili-ve-zihinsel-yap",
-        "title": "Türkiye Otelcilik Sektöründe Yatırımcı Profili Ve Zihinsel Yapı",
-        "description": "Türkiye Otelcilik Sektöründe Yatırımcı Profili Ve Zihinsel Yapı...",
-        "date": "22 Mart 2026",
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "20 Nisan 2026",
         "url": "https://otelpostasi.com/kose-yazisi/turkiye-otelcilik-sektorunde-yatirimci-profili-ve-zihinsel-yapi",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-t-rkiye-otelcilik-sekt-r-nde-yat-r-mc-profili-ve-zihinsel-yap.png"
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.png"
     },
     {
-        "id": "ben-den-biz-e-otelcilikte-tak-m-ruhu-ve-ortak-ba-ar",
-        "title": "Ben’den Biz’e Otelcilikte Takım Ruhu Ve Ortak Başarı",
-        "description": "Ben’den Biz’e Otelcilikte Takım Ruhu Ve Ortak Başarı...",
-        "date": "16 Mart 2026",
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "20 Nisan 2026",
         "url": "https://otelpostasi.com/kose-yazisi/benden-bize-otelcilikte-takim-ruhu-ve-ortak-basari",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-ben-den-biz-e-otelcilikte-tak-m-ruhu-ve-ortak-ba-ar.png"
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.png"
     },
     {
-        "id": "odaklanamayan-otellerin-sessiz-k-dikkat-sermayesinin-g-c",
-        "title": "Odaklanamayan Otellerin Sessiz Çöküşü   Dikkat Sermayesinin Gücü",
-        "description": "Odaklanamayan Otellerin Sessiz Çöküşü...",
-        "date": "08 Mart 2026",
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "20 Nisan 2026",
         "url": "https://otelpostasi.com/kose-yazisi/odaklanamayan-otellerin-sessiz-cokusu-dikkat-sermayesinin-gucu",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-odaklanamayan-otellerin-sessiz-k-dikkat-sermayesinin-g-c.png"
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.png"
     },
     {
-        "id": "otelcilikte-liderlik-ve-y-neticilik-sekt-r-n-kalbine-dokunan-bir-ger-ek",
-        "title": "Otelcilikte Liderlik Ve Yöneticilik Sektörün Kalbine Dokunan Bir Gerçek",
-        "description": "Otelcilikte Liderlik Ve Yöneticilik...",
-        "date": "02 Mart 2026",
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "20 Nisan 2026",
         "url": "https://otelpostasi.com/kose-yazisi/otelcilikte-liderlik-ve-yoneticilik-sektorun-kalbine-dokunan-bir-gercek",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-otelcilikte-liderlik-ve-y-neticilik-sekt-r-n-kalbine-dokunan-bir-ger-ek.png"
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.png"
     },
     {
-        "id": "genel-m-d-r-n-b-ro-m-d-r-se-erse",
-        "title": "Genel Müdürü Ön Büro Müdürü Seçerse…",
-        "description": "Bir süredir içimde biriken bir konuyu artık dillendirme ihtiyacı hissediyorum. Bu bir sitem mi, bir uyarı mı, yoksa sektöre küçük bir ayna tutma çabası mı… Bunu okuyan karar versin....",
-        "date": "24 Ocak 2026",
-        "url": "https://otelpostasi.com/kose-yazisi/genel-muduru-on-buro-muduru-secerse",
-        "source": "Otel Postası",
-        "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-genel-m-d-r-n-b-ro-m-d-r-se-erse.jpeg"
-    },
-    {
-        "id": "otellerde-yerel-dokunu-lar",
-        "title": "Otellerde Yerel Dokunuşlar",
-        "description": "Bugün 2026 yılındayız ve hala şuna şaşırıyorum; neden bazı oteller kapıdan içeri girdiğiniz an dünyanın her yerindeki o birbirinin kopyası “soğuk” yapılara benziyor? Yani Antalya’da mıyım, New York’ta...",
-        "date": "06 Ocak 2026",
-        "url": "https://otelpostasi.com/kose-yazisi/otellerde-yerel-dokunuslar-2026nin-rekabet-araci",
-        "source": "Otel Postası",
-        "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-otellerde-yerel-dokunu-lar.png"
-    },
-    {
-        "id": "2026-ya-girerken-sessiz-a-r",
-        "title": "2026’ya Girerken Sessiz Çağrı",
-        "description": "2026’ya Girerken Sessiz Çağrı Yapmak Değil, Anlamak Kazandırır Yolculuğu...",
-        "date": "29 Aralık 2025",
-        "url": "https://otelpostasi.com/kose-yazisi/2026ya-girerken-sessiz-cagri-yapmak-degil-anlamak-kazandirir-yolculugu",
-        "source": "Otel Postası",
-        "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-2026-ya-girerken-sessiz-a-r.jpg"
-    },
-    {
-        "id": "awards-me-masters-of-excellence",
-        "title": "AWARDS ME – Masters of Excellence",
-        "description": "Turizm sektöründe hizmet kalitesini yükseltmeyi, başarılı işletmeleri ve sektör profesyonellerini görünür kılmayı amaçlayan AWARDS ME – Masters of Excellence, bu yıl ilk kez düzenlenerek dünyanın dört...",
+        "id": "otel-postasi",
+        "title": "Otel Postası",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
         "date": "18 Aralık 2025",
         "url": "https://otelpostasi.com/kose-yazisi/awards-me-masters-of-excellence",
         "source": "Otel Postası",
         "cat": "Köşe Yazısı",
-        "img": "/images/blog/blog-20260422-awards-me-masters-of-excellence.jpg"
+        "img": "/images/blog/blog-20260422-otel-postasi.jpg"
+    },
+    {
+        "id": "nevzat-ahmet-celebi",
+        "title": "Nevzat Ahmet ÇELEBİ",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "18 Aralık 2025",
+        "url": "https://otelpostasi.com/kose-yazisi/2026ya-girerken-sessiz-cagri-yapmak-degil-anlamak-kazandirir-yolculugu",
+        "source": "Otel Postası",
+        "cat": "Köşe Yazısı",
+        "img": "/images/blog/blog-20260422-nevzat-ahmet-celebi.jpg"
+    },
+    {
+        "id": "sevara-aranci",
+        "title": "Sevara Arancı",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "18 Aralık 2025",
+        "url": "https://otelpostasi.com/kose-yazisi/otellerde-yerel-dokunuslar-2026nin-rekabet-araci",
+        "source": "Otel Postası",
+        "cat": "Köşe Yazısı",
+        "img": "/images/blog/blog-20260422-sevara-aranci.png"
+    },
+    {
+        "id": "gnl-mdr",
+        "title": "GNL MDR",
+        "description": "Turizm sektörünün nabzını tutan Otel Postası; güncel otel haberleri, üst düzey atamalar, yatırım analizleri ve tourism leaders içerikleriyle sektör profesyonellerinin buluşma noktası....",
+        "date": "18 Aralık 2025",
+        "url": "https://otelpostasi.com/kose-yazisi/genel-muduru-on-buro-muduru-secerse",
+        "source": "Otel Postası",
+        "cat": "Köşe Yazısı",
+        "img": "/images/blog/blog-20260422-gnl-mdr.jpg"
     }
 ]

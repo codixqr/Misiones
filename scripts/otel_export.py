@@ -3,83 +3,88 @@ from bs4 import BeautifulSoup
 import json
 import os
 import re
-from datetime import datetime, timedelta
+import sys
+from datetime import datetime
+from urllib.parse import urljoin
+
+# Fix encoding for Windows console
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
 
 # Configuration
-AUTHOR_ID = "1107"
-BASE_URL = "https://otelpostasi.com"
-# When running in GitHub Actions, paths should be relative to the repo root
-DATA_FILE = "content/blog-posts.json"
+SOURCES = [
+    {
+        "name": "Otel Postası",
+        "list_url": "https://otelpostasi.com/yazar/?id=1107",
+        "link_pattern": "/kose-yazisi/",
+        "base_url": "https://otelpostasi.com",
+        "cat": "Köşe Yazısı"
+    },
+    {
+        "name": "GM Tourism",
+        "list_url": "https://gmtourism.com/search?search=nevzat",
+        "link_pattern": "nevzat-", # Filters for articles with 'nevzat' in the slug
+        "base_url": "https://gmtourism.com",
+        "cat": "Turizm Haberleri"
+    }
+]
+
 IMAGE_DIR = "public/images/blog"
+DATA_FILE = "content/blog-posts.json"
 SEEN_FILE = "scripts/seen_articles.json"
-
-MONTHS_TR = {
-    "Ocak": 1, "Şubat": 2, "Mart": 3, "Nisan": 4, "Mayıs": 5, "Haziran": 6,
-    "Temmuz": 7, "Ağustos": 8, "Eylül": 9, "Ekim": 10, "Kasım": 11, "Aralık": 12
-}
-
-def parse_tr_date(date_str):
-    if not date_str: return None
-    try:
-        parts = date_str.split()
-        if len(parts) == 3:
-            day = int(parts[0])
-            month = MONTHS_TR.get(parts[1], 1)
-            year = int(parts[2])
-            return datetime(year, month, day)
-    except: pass
-    return None
+EXPORT_ALL = False # Set to True to re-scrape everything
 
 def download_image(url, filename):
+    if not url:
+        return None
+    
+    # Ensure full URL
+    if url.startswith('//'):
+        url = 'https:' + url
+    
     try:
-        if not url: return None
-        if url.startswith('//'): url = 'https:' + url
         response = requests.get(url, stream=True, timeout=10)
-        response.raise_for_status()
-        
-        ext = url.split('.')[-1].split('?')[0]
-        if len(ext) > 4 or len(ext) < 3: ext = 'jpg'
-        
-        rel_path = f"blog-{datetime.now().strftime('%Y%m%d')}-{filename}.{ext}"
-        full_path = os.path.join(IMAGE_DIR, rel_path)
-        os.makedirs(os.path.dirname(full_path), exist_ok=True)
-        
-        with open(full_path, 'wb') as f:
-            for chunk in response.iter_content(1024):
-                f.write(chunk)
-        return f"/images/blog/{rel_path}"
+        if response.status_code == 200:
+            os.makedirs(os.path.dirname(filename), exist_ok=True)
+            with open(filename, 'wb') as f:
+                for chunk in response.iter_content(1024):
+                    f.write(chunk)
+            return True
     except Exception as e:
         print(f"Error downloading image {url}: {e}")
-        return None
+    return False
 
-def get_article_data(url):
+def get_article_data(url, source_config):
     try:
-        response = requests.get(url)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'html.parser')
+        response = requests.get(url, timeout=15)
+        soup = BeautifulSoup(response.content, 'html.parser')
         
-        h1s = soup.find_all('h1')
-        title = h1s[1].text.strip() if len(h1s) > 1 else (h1s[0].text.strip() if h1s else "Untitled")
-        
-        content_div = soup.find('div', class_='post-content') or soup.find('div', class_='entry-content') or soup.find('article')
-        
-        content = ""
+        title = ""
+        # Try multiple title selectors
+        title_tag = soup.find('h1') or soup.find('h2', class_='post-title')
+        if title_tag:
+            title = title_tag.get_text().strip()
+        else:
+            title_tag = soup.find('meta', property='og:title')
+            if title_tag:
+                title = title_tag['content'].split('|')[0].strip()
+
+        content_div = soup.find('div', class_='post-content') or soup.find('div', class_='entry-content') or soup.find('div', class_='post-cont')
         description = ""
         if content_div:
-            paragraphs = content_div.find_all('p')
-            if paragraphs:
-                description = paragraphs[0].text.strip()[:200] + "..."
-                
-            for elem in content_div.find_all(['p', 'h2', 'h3', 'h4', 'li']):
-                text = elem.text.strip()
-                if text:
-                    if elem.name.startswith('h'):
-                        content += f"\n### {text}\n\n"
-                    elif elem.name == 'li':
-                        content += f"- {text}\n"
-                    else:
-                        content += f"{text}\n\n"
+            # Extract first few paragraphs for description
+            paras = content_div.find_all('p')
+            for p in paras:
+                text = p.get_text().strip()
+                if len(text) > 50:
+                    description = text[:200] + "..."
+                    break
         
+        if not description:
+            desc_tag = soup.find('meta', property='og:description')
+            if desc_tag:
+                description = desc_tag['content'][:200] + "..."
+
         img_url = None
         # Try og:image first but ignore if it's the site logo
         og_tag = soup.find('meta', property='og:image')
@@ -87,103 +92,177 @@ def get_article_data(url):
             img_url = og_tag['content']
             
         if not img_url:
-            # Look for images that look like article images (e.g. have 'yazi' in name or in content area)
+            # Look for images that look like article images
             all_imgs = soup.find_all('img')
             for img in all_imgs:
                 src = img.get('src') or img.get('data-src')
-                if src and ("yazi" in src.lower() or "uploads/20" in src.lower()):
+                if src and ("yazi" in src.lower() or "uploads/20" in src.lower() or "digitaloceanspaces" in src.lower()):
                     if "logo" not in src.lower():
                         img_url = src
                         break
         
-        # Last resort fallback if still nothing found
+        # Last resort fallback
         if not img_url:
             img_tag = soup.find('meta', property='og:image')
             if img_tag:
                 img_url = img_tag['content']
 
+        # Try to find date in specific content elements first to avoid header/sidebar dates
+        content_area = soup.find('div', class_='post-cont') or soup.find('div', class_='post-content') or soup.find('div', class_='entry-content') or soup
+        date_tag = content_area.find('ul', class_='post-tags') or content_area.find('div', class_='post-date') or content_area.find('span', class_='date')
+        
         date_text = ""
         date_pattern = re.compile(r'\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}')
-        matches = date_pattern.findall(response.text)
-        if matches:
-            date_text = matches[0]
+        date_pattern_numeric = re.compile(r'\d{1,2}/\d{1,2}/\d{4}')
+
+        if date_tag:
+            tag_text = date_tag.get_text()
+            match = date_pattern.search(tag_text) or date_pattern_numeric.search(tag_text)
+            if match:
+                date_text = match.group(0)
+        
+        if not date_text:
+            # Fallback to general search but skip the very top of the page (header)
+            page_text = soup.get_text()
+            # Find title first and search after it
+            title_idx = page_text.find(title) if title else 0
+            search_text = page_text[title_idx:] if title_idx != -1 else page_text
             
+            match = date_pattern.search(search_text) or date_pattern_numeric.search(search_text)
+            if match:
+                date_text = match.group(0)
+        
+        if not date_text:
+            date_text = datetime.now().strftime("%d %B %Y")
+
         return {
-            "id": re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-'),
             "title": title,
             "description": description,
             "date": date_text,
-            "url": url,
-            "source": "Otel Postası",
-            "cat": "Köşe Yazısı",
-            "img_url": img_url
+            "img_url": img_url,
+            "cat": source_config.get("cat", "Blog")
         }
     except Exception as e:
-        print(f"Error fetching {url}: {e}")
+        print(f"Error scraping {url}: {e}")
         return None
 
+def slugify(text):
+    text = text.lower()
+    text = text.replace('ı', 'i').replace('ğ', 'g').replace('ü', 'u').replace('ş', 's').replace('ö', 'o').replace('ç', 'c')
+    text = re.sub(r'[^a-z0-9]+', '-', text)
+    return text.strip('-')
+
 def main():
-    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
-    os.makedirs(os.path.dirname(SEEN_FILE), exist_ok=True)
+    # Change to script directory to find relative files
+    os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     
     seen_articles = {}
-    if os.path.exists(SEEN_FILE):
-        with open(SEEN_FILE, 'r', encoding='utf-8') as f:
-            seen_articles = json.load(f)
-            
+    if os.path.exists(SEEN_FILE) and not EXPORT_ALL:
+        try:
+            with open(SEEN_FILE, 'r', encoding='utf-8') as f:
+                seen_articles = json.load(f)
+                if isinstance(seen_articles, list):
+                    # Convert list to dict if needed
+                    seen_articles = {url: True for url in seen_articles}
+        except:
+            pass
+
     existing_posts = []
     if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r', encoding='utf-8') as f:
-            existing_posts = json.load(f)
+        try:
+            with open(DATA_FILE, 'r', encoding='utf-8') as f:
+                existing_posts = json.load(f)
+        except:
+            pass
 
-    print("Checking for new articles...")
-    all_links = []
-    page = 1
-    while True:
-        url = f"{BASE_URL}/yazar/?id={AUTHOR_ID}&paged={page}"
-        response = requests.get(url)
-        if response.status_code != 200: break
-        
-        soup = BeautifulSoup(response.text, 'html.parser')
-        links = [a['href'] for a in soup.find_all('a', href=True) if '/kose-yazisi/' in a['href']]
-        if not links: break
-        
-        for link in links:
-            if link not in all_links:
-                all_links.append(link)
-        page += 1
-        if page > 5: break # Safety limit
-
-    new_count = 0
-    for idx, link in enumerate(all_links):
-        if link in seen_articles:
-            continue
+    new_posts_found = 0
+    
+    for source in SOURCES:
+        print(f"Checking source: {source['name']}")
+        try:
+            response = requests.get(source['list_url'], timeout=15)
+            soup = BeautifulSoup(response.content, 'html.parser')
             
-        print(f"New article found: {link}")
-        data = get_article_data(link)
-        if data:
-            # Download image
-            img_path = download_image(data['img_url'], f"{data['id']}")
-            data['img'] = img_path
-            del data['img_url'] # Cleanup
-            
-            existing_posts.insert(0, data)
-            seen_articles[link] = data['date']
-            new_count += 1
+            links = []
+            for a in soup.find_all('a', href=True):
+                href = a['href']
+                if source['link_pattern'] in href:
+                    full_url = urljoin(source['base_url'], href)
+                    if full_url not in seen_articles and full_url not in [p['url'] for p in existing_posts]:
+                        if full_url not in [l[0] for l in links]:
+                            # Try to find a date near this link
+                            list_date = None
+                            # Check parents and siblings
+                            search_area = a.find_parent(['div', 'article', 'li'])
+                            if search_area:
+                                # Try to go up one more level to find the container
+                                container = search_area.find_parent(['div', 'article']) or search_area
+                                text = container.get_text()
+                                # Check for DD/MM/YYYY or DD Month YYYY
+                                date_match = re.search(r'\d{1,2}/\d{1,2}/\d{4}', text)
+                                if not date_match:
+                                    date_match = re.search(r'\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}', text)
+                                
+                                if date_match:
+                                    list_date = date_match.group(0)
+                            
+                            links.append((full_url, a.get_text().strip(), list_date))
 
-    if new_count > 0:
-        # Keep it sorted by date (parsing date for sorting)
-        existing_posts.sort(key=lambda x: parse_tr_date(x['date']) or datetime.min, reverse=True)
-        
+            for url, link_text, list_date in reversed(links):
+                print(f"New article found: {url} (List Date: {list_date})")
+                data = get_article_data(url, source)
+                if data and data['title']:
+                    # Use date from list if found, otherwise from article page
+                    article_date = list_date if list_date else data['date']
+                    post_id = slugify(data['title'])
+                    
+                    # Local image path
+                    img_ext = "png"
+                    if data['img_url']:
+                        if '.jpg' in data['img_url'].lower() or '.jpeg' in data['img_url'].lower():
+                            img_ext = "jpg"
+                        elif '.webp' in data['img_url'].lower():
+                            img_ext = "webp"
+
+                    local_img_name = f"blog-{datetime.now().strftime('%Y%m%d')}-{post_id}.{img_ext}"
+                    local_img_path = os.path.join(IMAGE_DIR, local_img_name)
+                    
+                    if download_image(data['img_url'], local_img_path):
+                        img_path = f"/images/blog/{local_img_name}"
+                    else:
+                        img_path = "/images/blog/blog-details.jpg" # Fallback
+
+                    new_post = {
+                        "id": post_id,
+                        "title": data['title'],
+                        "description": data['description'],
+                        "date": article_date,
+                        "url": url,
+                        "source": source['name'],
+                        "cat": data['cat'],
+                        "img": img_path
+                    }
+                    
+                    existing_posts.insert(0, new_post)
+                    seen_articles[url] = data['date']
+                    new_posts_found += 1
+
+        except Exception as e:
+            print(f"Error checking source {source['name']}: {e}")
+
+    if new_posts_found > 0:
+        # Save updated data
+        os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
         with open(DATA_FILE, 'w', encoding='utf-8') as f:
-            json.dump(existing_posts, f, ensure_ascii=False, indent=4)
-            
+            json.dump(existing_posts, f, indent=4, ensure_ascii=False)
+        
+        os.makedirs(os.path.dirname(SEEN_FILE), exist_ok=True)
         with open(SEEN_FILE, 'w', encoding='utf-8') as f:
-            json.dump(seen_articles, f, ensure_ascii=False, indent=4)
+            json.dump(seen_articles, f, indent=4, ensure_ascii=False)
             
-        print(f"Added {new_count} new articles.")
+        print(f"Added {new_posts_found} new articles.")
     else:
-        print("No new articles.")
+        print("No new articles found.")
 
 if __name__ == "__main__":
     main()
