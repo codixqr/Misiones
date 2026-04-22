@@ -81,13 +81,26 @@ def get_article_data(url):
                         content += f"{text}\n\n"
         
         img_url = None
-        img_tag = soup.find('meta', property='og:image')
-        if img_tag:
-            img_url = img_tag['content']
+        # Try og:image first but ignore if it's the site logo
+        og_tag = soup.find('meta', property='og:image')
+        if og_tag and "logo" not in og_tag['content'].lower():
+            img_url = og_tag['content']
+            
         if not img_url:
-            img_tag = content_div.find('img') if content_div else None
+            # Look for images that look like article images (e.g. have 'yazi' in name or in content area)
+            all_imgs = soup.find_all('img')
+            for img in all_imgs:
+                src = img.get('src') or img.get('data-src')
+                if src and ("yazi" in src.lower() or "uploads/20" in src.lower()):
+                    if "logo" not in src.lower():
+                        img_url = src
+                        break
+        
+        # Last resort fallback if still nothing found
+        if not img_url:
+            img_tag = soup.find('meta', property='og:image')
             if img_tag:
-                img_url = img_tag.get('src') or img_tag.get('data-src')
+                img_url = img_tag['content']
 
         date_text = ""
         date_pattern = re.compile(r'\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}')
