@@ -1,40 +1,144 @@
 import { NextResponse } from 'next/server'
 import Parser from 'rss-parser'
+import fs from 'fs'
+import path from 'path'
 
 const AUTHOR_NAME = 'nevzat'
 const WEEK_IN_SECONDS = 604800
 
-const STATIC_ARTICLES = [
+function getLocalArticles() {
+	try {
+		const filePath = path.join(process.cwd(), 'content', 'blog-posts.json')
+		if (fs.existsSync(filePath)) {
+			const data = fs.readFileSync(filePath, 'utf8')
+			return JSON.parse(data)
+		}
+	} catch (error) {
+		console.error('Error reading local articles:', error)
+	}
+	return []
+}
 
+const STATIC_ARTICLES = [
 	{
-		id: 'nevzat-gmtourism-1',
-		title: 'Oda Değil, Erişilebilirlik Satıyoruz',
-		description: 'Erişilebilir lüks ile değer odaklı konaklama arasındaki ince çizgi. Otelcilik artık yalnızca oda satışı değil; erişilebilirlik, güven, esneklik ve değer satışıdır.',
-		url: 'https://gmtourism.com/nevzat-celebi-oda-degil-erisilebilirlik-satiyoruz',
-		source: 'GM Tourism',
-		date: '16 Nisan 2026',
-		cat: 'Turizm Röportajları',
-		img: null,
-	},
-	{
-		id: 'nevzat-tourismtoday-1',
-		title: 'Otelcilik Sektöründe Uygulanan Stratejilere Derin Bir Bakış',
-		description: 'Otelcilik sektörü krizleri tek başına aşmakla değil, birlikte yeni sahneler kurarak aşar. Kolektif dayanışma, sürdürülebilirlik ve ortaklık stratejileri.',
-		url: 'https://www.tourismtoday.net/TR/2025/3940/Otelcilik-sektorunde-uygulanan-stratejilere-derin-bir-bakis',
-		source: 'Tourism Today',
-		date: '9 Nisan 2026',
+		id: 'otelcilikte-markanin-derin-anlami-ve-gucu',
+		title: 'Otelcilikte Markanın Derin Anlamı Ve Gücü',
+		description: 'Otelcilikte Markanın Derin Anlamı Ve Gücü. Marka, otelcilik sektöründe yalnızca bir isim ya da logo değildir; bir işletmenin ruhunu, vizyonunu ve sahadaki gerçekliğini misafirin zihnine ve kalbine nakşeden en güçlü araçtır.',
+		url: 'https://otelpostasi.com/kose-yazisi/otelcilikte-markanin-derin-anlami-ve-gucu',
+		source: 'Otel Postası',
+		date: '20 Nisan 2026',
 		cat: 'Köşe Yazısı',
-		img: null,
+		img: '/images/blog/blog-20260422-0.png',
 	},
 	{
-		id: 'nevzat-otelpostasi-1',
+		id: 'yerli-otel-markalari-neden-fark-yaratamiyor',
 		title: 'Yerli Otel Markaları Neden Fark Yaratamıyor?',
-		description: 'Türk otelcilik sektöründe yerli markaların fark yaratamamasının ardındaki zihinsel model eksikliği ve 3F Modeli (Farklı Düşün, Farklı Konuş, Farklı Görün) ile geleceğe bakış.',
+		description: 'Yerli Otel Markaları Neden Fark Yaratamıyor? 3F Modeli ile Geleceğe Bakış. Türk otelcilik sektöründe yerli markaların yıllardır süregelen bir açmazı var: fark yaratamamak.',
 		url: 'https://otelpostasi.com/kose-yazisi/yerli-otel-markalari-neden-fark-yaratamiyor',
 		source: 'Otel Postası',
 		date: '13 Nisan 2026',
 		cat: 'Köşe Yazısı',
-		img: null,
+		img: '/images/blog/blog-20260422-1.png',
+	},
+	{
+		id: 'otelcilikte-dijital-donusumun-nabzi-roomxqr',
+		title: 'Otelcilikte Dijital Dönüşümün Nabzı RoomXQR',
+		description: 'Otelcilikte Dijital Dönüşümün Nabzı RoomXQR Ve RestXQR. Bir otelin kalbi hâlâ lobide atar; fakat artık aklı, dijital zekâsını RoomXQR ve RestXQR yazılımlarında çalıştırıyor.',
+		url: 'https://otelpostasi.com/kose-yazisi/otelcilikte-dijital-donusumun-nabzi-roomxqr',
+		source: 'Otel Postası',
+		date: '06 Nisan 2026',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-2.png',
+	},
+	{
+		id: 'otelcilikte-karar-vermemenin-gizli-maliyeti',
+		title: 'Otelcilikte Karar Vermemenin Gizli Maliyeti',
+		description: 'Otelcilikte Karar Vermemenin Gizli Maliyeti. Güvendeyim Derken Patronajın Kaybettikleri. Sektörde yıllarını vermiş olan herkes bilir: otelcilikte en pahalı karar, aslında verilmeyen karardır.',
+		url: 'https://otelpostasi.com/kose-yazisi/otelcilikte-karar-vermemenin-gizli-maliyeti-guvendeyim-derken-patronajin-kaybettikleri',
+		source: 'Otel Postası',
+		date: '30 Mart 2026',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-3.png',
+	},
+	{
+		id: 'turkiye-otelcilik-sektorunde-yatirimci-profili-ve-zihinsel-yapi',
+		title: 'Türkiye Otelcilik Sektöründe Yatırımcı Profili Ve Zihinsel Yapı',
+		description: 'Türkiye Otelcilik Sektöründe Yatırımcı Profili Ve Zihinsel Yapı. Türkiye’de otelcilik sektörünün yatırımcı profili, yalnızca sermaye gücüyle değil, zihinsel yapısıyla da şekillenen çok katmanlı bir olgudur.',
+		url: 'https://otelpostasi.com/kose-yazisi/turkiye-otelcilik-sektorunde-yatirimci-profili-ve-zihinsel-yapi',
+		source: 'Otel Postası',
+		date: '22 Mart 2026',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-4.png',
+	},
+	{
+		id: 'benden-bize-otelcilikte-takim-ruhu-ve-ortak-basari',
+		title: 'Ben’den Biz’e Otelcilikte Takım Ruhu Ve Ortak Başarı',
+		description: 'Ben’den Biz’e Otelcilikte Takım Ruhu Ve Ortak Başarı. Otelcilik sektörü, tek başına parlayan yıldızların değil, birlikte ışıldayan takımların sahnesidir.',
+		url: 'https://otelpostasi.com/kose-yazisi/benden-bize-otelcilikte-takim-ruhu-ve-ortak-basari',
+		source: 'Otel Postası',
+		date: '16 Mart 2026',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-5.png',
+	},
+	{
+		id: 'odaklanamayan-otellerin-sessiz-cokusu-dikkat-sermayesinin-gucu',
+		title: 'Odaklanamayan Otellerin Sessiz Çöküşü Dikkat Sermayesinin Gücü',
+		description: 'Odaklanamayan Otellerin Sessiz Çöküşü. Dikkat Sermayesinin Gücü. Otelcilik sektörü, yıllardır teknoloji yatırımlarını “kurtarıcı” olarak gördü.',
+		url: 'https://otelpostasi.com/kose-yazisi/odaklanamayan-otellerin-sessiz-cokusu-dikkat-sermayesinin-gucu',
+		source: 'Otel Postası',
+		date: '08 Mart 2026',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-6.png',
+	},
+	{
+		id: 'otelcilikte-liderlik-ve-yoneticilik-sektorun-kalbine-dokunan-bir-gercek',
+		title: 'Otelcilikte Liderlik Ve Yöneticilik Sektörün Kalbine Dokunan Bir Gerçek',
+		description: 'Otelcilikte Liderlik Ve Yöneticilik. Sektörün Kalbine Dokunan Bir Gerçek. Konaklama sektöründe yıllarını sahada geçirmiş herkes bilir.',
+		url: 'https://otelpostasi.com/kose-yazisi/otelcilikte-liderlik-ve-yoneticilik-sektorun-kalbine-dokunan-bir-gercek',
+		source: 'Otel Postası',
+		date: '02 Mart 2026',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-7.png',
+	},
+	{
+		id: 'awards-me-masters-of-excellence',
+		title: 'AWARDS ME – Masters of Excellence',
+		description: 'AWARDS ME – Masters of Excellence Turizmde Mükemmelliği Onurlandıran Prestijli Dijital Oylama Bu Yıl İlk Kez Düzenleniyor.',
+		url: 'https://otelpostasi.com/kose-yazisi/awards-me-masters-of-excellence',
+		source: 'Otel Postası',
+		date: '18 Aralık 2025',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-8.png',
+	},
+	{
+		id: '2026ya-girerken-sessiz-cagri',
+		title: '2026’ya Girerken Sessiz Çağrı',
+		description: '2026’ya Girerken Sessiz Çağrı Yapmak Değil, Anlamak Kazandırır Yolculuğu. Yapmak Değil, Anlamak Kazandırır Yolculuğu.',
+		url: 'https://otelpostasi.com/kose-yazisi/2026ya-girerken-sessiz-cagri-yapmak-degil-anlamak-kazandirir-yolculugu',
+		source: 'Otel Postası',
+		date: '29 Aralık 2025',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-9.png',
+	},
+	{
+		id: 'otellerde-yerel-dokunuslar',
+		title: 'Otellerde Yerel Dokunuşlar',
+		description: 'Bugün 2026 yılındayız ve hala şuna şaşırıyorum; neden bazı oteller kapıdan içeri girdiğiniz an dünyanın her yerindeki o birbirinin kopyası “soğuk” yapılara benziyor?',
+		url: 'https://otelpostasi.com/kose-yazisi/otellerde-yerel-dokunuslar-2026nin-rekabet-araci',
+		source: 'Otel Postası',
+		date: '06 Ocak 2026',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-10.png',
+	},
+	{
+		id: 'genel-muduru-on-buro-muduru-secerse',
+		title: 'Genel Müdürü Ön Büro Müdürü Seçerse…',
+		description: 'Bir süredir içimde biriken bir konuyu artık dillendirme ihtiyacı hissediyorum. Bu bir sitem mi, bir uyarı mı, yoksa sektöre küçük bir ayna tutma çabası mı… Bunu okuyan karar versin.',
+		url: 'https://otelpostasi.com/kose-yazisi/genel-muduru-on-buro-muduru-secerse',
+		source: 'Otel Postası',
+		date: '24 Ocak 2026',
+		cat: 'Köşe Yazısı',
+		img: '/images/blog/blog-20260422-11.png',
 	},
 ]
 
@@ -255,7 +359,8 @@ export async function GET() {
 		})
 	)
 
-	const deduped = [...dynamicArticles, ...staticWithImages].reduce((acc, article) => {
+	const localArticles = getLocalArticles()
+	const deduped = [...dynamicArticles, ...staticWithImages, ...localArticles].reduce((acc, article) => {
 		const key = (article.url || article.title || article.id).toLowerCase()
 		if (!acc.has(key)) acc.set(key, article)
 		return acc
