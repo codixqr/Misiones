@@ -4,6 +4,9 @@ import { useLanguage } from '@/utils/LanguageContext'
 
 export default function HipDetails() {
 	const { lang } = useLanguage()
+	const tr = lang === 'tr'
+	const ar = lang === 'ar'
+	const ru = lang === 'ru'
 
 	return (
 		<div className="hip-details-page bg-white tf-spacing-1">
@@ -14,10 +17,10 @@ export default function HipDetails() {
 						<div className="text-center mb-50">
 							<p className="s-sub-title justify-center mb-17">
 								<i className="icon-angles-right moveLeftToRight" />
-								HIP – Otelinizi Geliştirme Planımız
+								{tr ? 'HIP – Otelinizi Geliştirme Planımız' : ar ? 'HIP – خطة تطوير فندقك' : ru ? 'HIP – План развития вашего отеля' : 'HIP – Hotel Improvement Plan'}
 							</p>
 							<h2 className="s-title" style={{ color: '#1B2F5E', fontSize: 'clamp(28px, 3.5vw, 42px)' }}>
-								Modern Otelcilik İçin Bilgece Hazırlanmış Bir Yol Haritasıdır <span style={{ color: '#C8232C' }}>HIP</span>
+								{tr ? 'Modern Otelcilik İçin Bilgece Hazırlanmış Bir Yol Haritasıdır' : ar ? 'خارطة طريق ذكية للفندقة الحديثة' : ru ? 'Умная дорожная карта для современного отеля' : 'A Wise Roadmap for Modern Hospitality'} <span style={{ color: '#C8232C' }}>HIP</span>
 							</h2>
 						</div>
 
@@ -30,7 +33,7 @@ export default function HipDetails() {
 								Bu sanatın en rafine biçimde otelinizde uygulanması için tasarlanmış özel bir danışmanlık paketidir.
 							</p>
 							
-							<h4 style={{ color: '#C8232C', marginBottom: '15px', fontWeight: '700' }}>HIP’in Felsefesi</h4>
+							<h4 style={{ color: '#C8232C', marginBottom: '15px', fontWeight: '700' }}>{tr ? 'HIP’in Felsefesi' : ar ? 'فلسفة HIP' : ru ? 'Философия HIP' : 'HIP Philosophy'}</h4>
 							<ul style={{ listStyle: 'none', padding: 0, margin: 0, color: '#606580', fontSize: '16px', lineHeight: '1.8' }}>
 								<li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}><i className="icon-check" style={{ color: '#C8232C', marginRight: '10px' }}/> Varsayımları değil, ölçülebilir gerçekleri konuşur.</li>
 								<li style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}><i className="icon-check" style={{ color: '#C8232C', marginRight: '10px' }}/> KPI’ları yalnızca raporlamaz, onları stratejik bir pusulaya dönüştürür.</li>
@@ -60,7 +63,7 @@ export default function HipDetails() {
 				{/* Departman Bazlı Geliştirme Planı */}
 				<div className="row mb-50">
 					<div className="col-lg-12">
-						<h3 style={{ color: '#1B2F5E', fontWeight: '800', marginBottom: '30px', textAlign: 'center' }}>Departman Bazlı Geliştirme Planı</h3>
+						<h3 style={{ color: '#1B2F5E', fontWeight: '800', marginBottom: '30px', textAlign: 'center' }}>{tr ? 'Departman Bazlı Geliştirme Planı' : ar ? 'خطة تطوير حسب الأقسام' : ru ? 'План улучшений по отделам' : 'Department-Based Improvement Plan'}</h3>
 						<div className="row g-4">
 							{/* Kart 1 */}
 							<div className="col-md-6">
@@ -135,7 +138,7 @@ export default function HipDetails() {
 				<div className="row mb-50">
 					<div className="col-lg-12">
 						<div style={{ background: '#1B2F5E', color: '#fff', padding: '40px', borderRadius: '16px', textAlign: 'center' }}>
-							<h3 style={{ color: '#fff', fontWeight: '800', marginBottom: '20px' }}>HIP’in Sorduğu Tek Soru</h3>
+							<h3 style={{ color: '#fff', fontWeight: '800', marginBottom: '20px' }}>{tr ? 'HIP’in Sorduğu Tek Soru' : ar ? 'السؤال الأساسي في HIP' : ru ? 'Главный вопрос HIP' : 'The One Question HIP Asks'}</h3>
 							<p style={{ fontSize: '18px', lineHeight: '1.8', marginBottom: '20px' }}>
 								Biz otelin iyi görünüp görünmediğini sormuyoruz.<br />
 								<strong style={{ color: '#C8232C', fontSize: '24px', display: 'block', margin: '15px 0' }}>Para kazanıyor mu? Ne kadar kazanıyor?</strong>
@@ -163,7 +166,7 @@ export default function HipDetails() {
 				<div className="row mb-50">
 					<div className="col-lg-12">
 						<div style={{ borderLeft: '4px solid #C8232C', paddingLeft: '20px', marginBottom: '40px' }}>
-							<h3 style={{ color: '#1B2F5E', fontWeight: '800', marginBottom: '15px' }}>HIP ile Kazanacaklarınız</h3>
+							<h3 style={{ color: '#1B2F5E', fontWeight: '800', marginBottom: '15px' }}>{tr ? 'HIP ile Kazanacaklarınız' : ar ? 'ما الذي ستحققه مع HIP' : ru ? 'Что вы получите с HIP' : 'What You Gain with HIP'}</h3>
 							<ul style={{ listStyle: 'none', padding: 0, margin: 0, color: '#606580', fontSize: '16px', lineHeight: '1.8' }}>
 								<li><i className="icon-arrow-right" style={{ color: '#C8232C' }}/> Yanlış fiyatlandırma stratejilerinin düzeltilmesi</li>
 								<li><i className="icon-arrow-right" style={{ color: '#C8232C' }}/> OTA bağımlılığının azaltılması, doğrudan satışların artması</li>
@@ -173,7 +176,7 @@ export default function HipDetails() {
 							</ul>
 						</div>
 
-						<h3 style={{ color: '#1B2F5E', fontWeight: '800', marginBottom: '30px' }}>İki Seviyeli HIP Uygulaması</h3>
+						<h3 style={{ color: '#1B2F5E', fontWeight: '800', marginBottom: '30px' }}>{tr ? 'İki Seviyeli HIP Uygulaması' : ar ? 'تطبيق HIP على مستويين' : ru ? 'Двухуровневое применение HIP' : 'Two-Level HIP Implementation'}</h3>
 						<div className="row g-4 mb-50">
 							<div className="col-md-6">
 								<div style={{ background: '#fff', border: '1px solid #1B2F5E', padding: '30px', borderRadius: '12px' }}>
@@ -210,7 +213,7 @@ export default function HipDetails() {
 				<div className="row">
 					<div className="col-lg-12">
 						<div style={{ background: '#f8f9fd', borderRadius: '16px', padding: '40px', border: '1px solid #eef2fa' }}>
-							<h3 style={{ color: '#1B2F5E', fontWeight: '800', marginBottom: '20px', textAlign: 'center' }}>HIP KPI Benchmark Raporu – Analitik Derinlik</h3>
+							<h3 style={{ color: '#1B2F5E', fontWeight: '800', marginBottom: '20px', textAlign: 'center' }}>{tr ? 'HIP KPI Benchmark Raporu – Analitik Derinlik' : ar ? 'تقرير HIP KPI المعياري – عمق تحليلي' : ru ? 'Отчет HIP KPI Benchmark — аналитическая глубина' : 'HIP KPI Benchmark Report — Analytical Depth'}</h3>
 							<p style={{ textAlign: 'center', fontSize: '16px', color: '#606580', marginBottom: '40px' }}>
 								Otelinizin her departmanını ölçülebilir, kıyaslanabilir ve geliştirilebilir hale getirir. Bu bilgiler ve veriler otelinizi geliştirme planı’nın analitik omurgasını oluşturur.
 							</p>

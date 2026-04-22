@@ -8,6 +8,9 @@ import { useLanguage } from '@/utils/LanguageContext'
 export default function Section1() {
 	const [isAccordion, setIsAccordion] = useState(1)
 	const { lang, t } = useLanguage()
+	const tr = lang === 'tr'
+	const ar = lang === 'ar'
+	const ru = lang === 'ru'
 
 	const handleAccordion = (key) => {
 		setIsAccordion(prevState => prevState === key ? null : key)
@@ -33,21 +36,29 @@ export default function Section1() {
 									</div>
 								</div>
 								<p className="title s1 mb-20 text-anime-wave" style={{ color: '#1B2F5E', fontWeight: '800', fontSize: '2.5rem' }}>
-									{lang === 'tr' ? 'Otel Yatırım ve Yönetiminde Stratejik Bilgelik' : 'Strategic Wisdom in Hotel Investment & Management'}
+									{tr ? 'Otel Yatırım ve Yönetiminde Stratejik Bilgelik' : ar ? 'حكمة استراتيجية في استثمار وإدارة الفنادق' : ru ? 'Стратегическая экспертиза в инвестициях и управлении отелем' : 'Strategic Wisdom in Hotel Investment & Management'}
 								</p>
 								<p className="text s1 mb-25" style={{ fontSize: '1.2rem', lineHeight: '1.7' }}>
-									{lang === 'tr' 
-										? 'Misiones olarak, markanızı yükseltmek, misafir bağlılığını artırmak ve ölçülebilir iş büyümesi sağlamak için tasarlanmış kapsamlı danışmanlık hizmetleri sunuyoruz.' 
-										: 'At Misiones, we offer comprehensive consulting services designed to elevate your brand, enhance guest loyalty, and drive measurable business growth.'}
+									{tr
+										? 'Misiones olarak, markanızı yükseltmek, misafir bağlılığını artırmak ve ölçülebilir iş büyümesi sağlamak için tasarlanmış kapsamlı danışmanlık hizmetleri sunuyoruz.'
+										: ar
+											? 'في Misiones نقدم خدمات استشارية شاملة لرفع قيمة علامتك التجارية وتعزيز ولاء الضيف وتحقيق نمو أعمال قابل للقياس.'
+											: ru
+												? 'В Misiones мы предоставляем комплексный консалтинг для усиления бренда, роста лояльности гостей и измеримого роста бизнеса.'
+												: 'At Misiones, we offer comprehensive consulting services designed to elevate your brand, enhance guest loyalty, and drive measurable business growth.'}
 								</p>
 								<p className="text s2 mb-40">
-									{lang === 'tr'
+									{tr
 										? 'Hedef pazarınızı, endüstri trendlerini ve misafir davranışlarını anlıyoruz. Bu, büyüme fırsatlarını, piyasadaki boşlukları ve rekabetçi konumlandırmayı belirleyerek daha etkili stratejiler geliştirmemize yardımcı olur.'
-										: 'We understand your target market, industry trends, and guest behavior. This helps us identify growth opportunities and competitive positioning to craft more effective strategies.'}
+										: ar
+											? 'نفهم سوقك المستهدف واتجاهات القطاع وسلوك الضيف، مما يساعدنا على تحديد فرص النمو والتموضع التنافسي بشكل أدق.'
+											: ru
+												? 'Мы анализируем ваш целевой рынок, отраслевые тренды и поведение гостей, чтобы выявлять точки роста и конкурентное позиционирование.'
+												: 'We understand your target market, industry trends, and guest behavior. This helps us identify growth opportunities and competitive positioning to craft more effective strategies.'}
 								</p>
 								
 								<h3 className="title-2 s1 text-anime-wave" style={{ color: '#C8232C' }}>
-									{lang === 'tr' ? 'Temel Uzmanlık Alanlarımız:' : 'Our Core Areas of Expertise:'}
+									{tr ? 'Temel Uzmanlık Alanlarımız:' : ar ? 'مجالات خبرتنا الأساسية:' : ru ? 'Наши ключевые направления экспертизы:' : 'Our Core Areas of Expertise:'}
 								</h3>
 								<ul className="list-1 mb-40">
 									<li>
@@ -115,12 +126,16 @@ export default function Section1() {
 								</div>
 
 								<h3 className="title-2 s2 mb-15 text-anime-wave" style={{ color: '#1B2F5E' }}>
-									{lang === 'tr' ? 'Çalışma Sürecimiz' : 'Our Working Process'}
+											{tr ? 'Çalışma Sürecimiz' : ar ? 'آلية عملنا' : ru ? 'Наш рабочий процесс' : 'Our Working Process'}
 								</h3>
 								<p className="text s4 mb-50">
-									{lang === 'tr'
+									{tr
 										? 'Veriye dayalı, şeffaf ve sonuç odaklı bir yaklaşımla projelerinizi hayata geçiriyoruz.'
-										: 'We implement your projects with a data-driven, transparent, and results-oriented approach.'}
+										: ar
+											? 'ننّفذ مشاريعكم بمنهج قائم على البيانات والشفافية والنتائج.'
+											: ru
+												? 'Мы реализуем проекты на основе данных, прозрачности и ориентации на результат.'
+												: 'We implement your projects with a data-driven, transparent, and results-oriented approach.'}
 								</p>
 								<ul className="list-2 mb-70">
 									<li>
@@ -144,7 +159,7 @@ export default function Section1() {
 								</ul>
 
 								<h3 className="title-2 s3 mb-15 text-anime-wave">
-									{lang === 'tr' ? 'Sıkça Sorulan Sorular' : 'Frequently Asked Questions'}
+									{tr ? 'Sıkça Sorulan Sorular' : ar ? 'الأسئلة الشائعة' : ru ? 'Часто задаваемые вопросы' : 'Frequently Asked Questions'}
 								</h3>
 								<div className="tf-accordion style-4 style-2 accordion" id="accordionExample">
 									{[1, 2, 3, 4].map((i) => (
@@ -169,7 +184,7 @@ export default function Section1() {
 								<div className="sb-item mb-20">
 									<div className="sb-title">
 										<i className="icon-repair fs-20 color-main-black" />
-										<h5 className="title">{lang === 'tr' ? 'Hizmetlerimiz' : 'Our Services'}</h5>
+										<h5 className="title">{tr ? 'Hizmetlerimiz' : ar ? 'خدماتنا' : ru ? 'Наши услуги' : 'Our Services'}</h5>
 									</div>
 									<div className="sb-content sb-category">
 										<ul className="category-list">
@@ -210,21 +225,21 @@ export default function Section1() {
 								<div className="sb-item sb-contact" style={{ background: '#1B2F5E' }}>
 									<div className="sb-content">
 										<p className="s-title style-2 mb-30 text-white">
-											{lang === 'tr' ? 'Ücretsiz Danışmanlık' : 'Free Consultation'} <br />
-											<span style={{ color: '#C8232C' }}>{lang === 'tr' ? 'Almaya Hazır mısınız?' : 'Ready to Start?'}</span>
+											{tr ? 'Ücretsiz Danışmanlık' : ar ? 'استشارة مجانية' : ru ? 'Бесплатная консультация' : 'Free Consultation'} <br />
+											<span style={{ color: '#C8232C' }}>{tr ? 'Almaya Hazır mısınız?' : ar ? 'هل أنت مستعد للبدء؟' : ru ? 'Готовы начать?' : 'Ready to Start?'}</span>
 										</p>
 										<form className="form-contact bg-transparent style-3">
 											<div className="cols mb-10">
-												<fieldset><input type="text" placeholder={lang === 'tr' ? 'Ad Soyad' : 'Full Name'} required style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }} /></fieldset>
+												<fieldset><input type="text" placeholder={tr ? 'Ad Soyad' : ar ? 'الاسم الكامل' : ru ? 'Полное имя' : 'Full Name'} required style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }} /></fieldset>
 											</div>
 											<div className="cols mb-10">
 												<fieldset><input type="email" placeholder="Email" required style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }} /></fieldset>
 											</div>
 											<div className="cols mb-10">
-												<fieldset><textarea className="h-100px" placeholder={lang === 'tr' ? 'Mesajınız' : 'Message'} style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }} /></fieldset>
+												<fieldset><textarea className="h-100px" placeholder={tr ? 'Mesajınız' : ar ? 'رسالتك' : ru ? 'Ваше сообщение' : 'Message'} style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.2)' }} /></fieldset>
 											</div>
 											<button type="submit" className="tf-btn full" style={{ background: '#C8232C', border: 'none' }}>
-												{lang === 'tr' ? 'Gönder' : 'Send'}
+												{tr ? 'Gönder' : ar ? 'إرسال' : ru ? 'Отправить' : 'Send'}
 												<i className="icon-chevron-right" />
 											</button>
 										</form>

@@ -86,24 +86,42 @@ export default function Section1() {
 	}, [])
 
 	const labels = {
-		author: lang === 'tr' ? 'Yazar' : 'Author',
-		readMore: lang === 'tr' ? 'Devamını Oku' : 'Read More',
-		loading: lang === 'tr' ? 'Makaleler yükleniyor...' : 'Loading articles...',
-		search: lang === 'tr' ? 'Ara...' : 'Search...',
-		categories: lang === 'tr' ? 'Kategoriler' : 'Categories',
-		recentPosts: lang === 'tr' ? 'Son Yazılar' : 'Recent Posts',
-		tags: lang === 'tr' ? 'Etiketler' : 'Tags',
-		consultation: lang === 'tr' ? 'Danışmanlık Al' : 'Get Consultation',
-		serviceTitle: lang === 'tr' ? 'Otelcilik Danışmanlığı & Yönetim Hizmetleri' : 'Hospitality Consulting & Management Services',
+		author: lang === 'tr' ? 'Yazar' : lang === 'ar' ? 'الكاتب' : lang === 'ru' ? 'Автор' : 'Author',
+		readMore: lang === 'tr' ? 'Devamını Oku' : lang === 'ar' ? 'اقرأ المزيد' : lang === 'ru' ? 'Читать далее' : 'Read More',
+		loading: lang === 'tr' ? 'Makaleler yükleniyor...' : lang === 'ar' ? 'يتم تحميل المقالات...' : lang === 'ru' ? 'Загрузка статей...' : 'Loading articles...',
+		search: lang === 'tr' ? 'Ara...' : lang === 'ar' ? 'بحث...' : lang === 'ru' ? 'Поиск...' : 'Search...',
+		categories: lang === 'tr' ? 'Kategoriler' : lang === 'ar' ? 'الفئات' : lang === 'ru' ? 'Категории' : 'Categories',
+		recentPosts: lang === 'tr' ? 'Son Yazılar' : lang === 'ar' ? 'أحدث المقالات' : lang === 'ru' ? 'Последние статьи' : 'Recent Posts',
+		tags: lang === 'tr' ? 'Etiketler' : lang === 'ar' ? 'الوسوم' : lang === 'ru' ? 'Теги' : 'Tags',
+		consultation: lang === 'tr' ? 'Danışmanlık Al' : lang === 'ar' ? 'احصل على استشارة' : lang === 'ru' ? 'Получить консультацию' : 'Get Consultation',
+		serviceTitle: lang === 'tr' ? 'Otelcilik Danışmanlığı & Yönetim Hizmetleri' : lang === 'ar' ? 'خدمات استشارات وإدارة الضيافة' : lang === 'ru' ? 'Консалтинг и управление в гостеприимстве' : 'Hospitality Consulting & Management Services',
+		subtitle: lang === 'tr' ? 'haberler & makaleler' : lang === 'ar' ? 'أخبار ومقالات' : lang === 'ru' ? 'новости и статьи' : 'news & articles',
+		headerTitle: lang === 'tr' ? "Nevzat Ahmet Çelebi'nin" : lang === 'ar' ? 'أحدث مقالات' : lang === 'ru' ? 'Последние статьи' : 'Latest Articles by',
+		headerTitleSpan: lang === 'tr' ? 'Güncel Yazıları' : lang === 'ar' ? 'Nevzat Ahmet Çelebi' : lang === 'ru' ? 'Nevzat Ahmet Çelebi' : 'Nevzat Ahmet Çelebi',
+		headerDesc: lang === 'tr'
+			? 'GM Tourism · Otel Postası · Tourism Today kaynaklarından otomatik olarak derlenmektedir.'
+			: lang === 'ar'
+				? 'يتم تجميع المحتوى تلقائيا من GM Tourism و Otel Postası و Tourism Today.'
+				: lang === 'ru'
+					? 'Материалы автоматически собираются из GM Tourism, Otel Postası и Tourism Today.'
+					: 'Automatically curated from GM Tourism · Otel Postası · Tourism Today.',
 	}
 
 	const categoryList = lang === 'tr'
 		? ['Otel Yatırım Danışmanlığı', 'Marka Entegrasyonu', 'Gelir Yönetimi', 'Operasyon Danışmanlığı', 'HIP – Otel Geliştirme Planı']
-		: ['Hotel Investment Consulting', 'Brand Integration', 'Revenue Management', 'Operations Consulting', 'HIP – Hotel Improvement Plan']
+		: lang === 'ar'
+			? ['استشارات الاستثمار الفندقي', 'دمج العلامة التجارية', 'إدارة الإيرادات', 'الاستشارات التشغيلية', 'HIP – خطة تطوير الفندق']
+			: lang === 'ru'
+				? ['Инвестиционный консалтинг для отелей', 'Интеграция бренда', 'Управление доходами', 'Операционный консалтинг', 'HIP – План развития отеля']
+				: ['Hotel Investment Consulting', 'Brand Integration', 'Revenue Management', 'Operations Consulting', 'HIP – Hotel Improvement Plan']
 
 	const tagList = lang === 'tr'
 		? ['Otelcilik', 'Danışmanlık', 'Turizm', 'Gelir Yönetimi', 'Yatırım', 'Marka', 'Strateji', 'HIP']
-		: ['Hospitality', 'Consulting', 'Tourism', 'Revenue', 'Investment', 'Brand', 'Strategy', 'HIP']
+		: lang === 'ar'
+			? ['الضيافة', 'الاستشارات', 'السياحة', 'الإيرادات', 'الاستثمار', 'العلامة التجارية', 'الاستراتيجية', 'HIP']
+			: lang === 'ru'
+				? ['Гостеприимство', 'Консалтинг', 'Туризм', 'Доход', 'Инвестиции', 'Бренд', 'Стратегия', 'HIP']
+				: ['Hospitality', 'Consulting', 'Tourism', 'Revenue', 'Investment', 'Brand', 'Strategy', 'HIP']
 
 	return (
 		<>
@@ -115,19 +133,13 @@ export default function Section1() {
 						<div className="col-lg-12 text-center">
 							<p className="s-sub-title justify-center mb-17">
 								<i className="icon-angles-right moveLeftToRight" />
-								{lang === 'tr' ? 'haberler & makaleler' : 'news & articles'}
+								{labels.subtitle}
 							</p>
 							<p className="s-title text-anime-wave" style={{ color: '#1B2F5E' }}>
-								{lang === 'tr'
-									? <>Nevzat Ahmet Çelebi&apos;nin <span>Güncel Yazıları</span></>
-									: <>Latest Articles by <span>Nevzat Ahmet Çelebi</span></>
-								}
+								<>{labels.headerTitle} <span>{labels.headerTitleSpan}</span></>
 							</p>
 							<p style={{ color: '#888', fontSize: '14px', marginTop: '10px' }}>
-								{lang === 'tr'
-									? 'GM Tourism · Otel Postası · Tourism Today kaynaklarından otomatik olarak derlenmektedir.'
-									: 'Automatically curated from GM Tourism · Otel Postası · Tourism Today.'
-								}
+								{labels.headerDesc}
 							</p>
 						</div>
 					</div>

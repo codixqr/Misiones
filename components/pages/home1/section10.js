@@ -86,6 +86,20 @@ export default function Section10() {
 	const { lang } = useLanguage()
 	const [articles, setArticles] = useState(FALLBACK_ARTICLES)
 	const [loading, setLoading] = useState(true)
+	const labels = {
+		subtitle: lang === 'tr' ? 'haberler & makaleler' : lang === 'ar' ? 'أخبار ومقالات' : lang === 'ru' ? 'новости и статьи' : 'news & articles',
+		title: lang === 'tr' ? "Nevzat Ahmet Çelebi'nin" : lang === 'ar' ? 'أحدث مقالات' : lang === 'ru' ? 'Последние статьи' : 'Latest Articles by',
+		titleSpan: lang === 'tr' ? 'Güncel Yazıları' : lang === 'ar' ? 'Nevzat Ahmet Çelebi' : lang === 'ru' ? 'Nevzat Ahmet Çelebi' : 'Nevzat Ahmet Çelebi',
+		desc: lang === 'tr'
+			? 'GM Tourism · Otel Postası · Tourism Today kaynaklarından otomatik olarak derlenmektedir.'
+			: lang === 'ar'
+				? 'يتم تجميع المحتوى تلقائيا من GM Tourism و Otel Postası و Tourism Today.'
+				: lang === 'ru'
+					? 'Материалы автоматически собираются из GM Tourism, Otel Postası и Tourism Today.'
+					: 'Automatically curated from GM Tourism · Otel Postası · Tourism Today.',
+		loading: lang === 'tr' ? 'Makaleler yükleniyor...' : lang === 'ar' ? 'يتم تحميل المقالات...' : lang === 'ru' ? 'Загрузка статей...' : 'Loading articles...',
+		readMore: lang === 'tr' ? 'Devamını Oku' : lang === 'ar' ? 'اقرأ المزيد' : lang === 'ru' ? 'Читать далее' : 'Read More',
+	}
 
 	useEffect(() => {
 		fetch('/api/blog-posts')
@@ -107,26 +121,20 @@ export default function Section10() {
 						<div className="content text-center mb-70">
 							<p className="s-sub-title justify-center mb-17">
 								<i className="icon-angles-right moveLeftToRight" />
-								{lang === 'tr' ? 'haberler & makaleler' : 'news & articles'}
+								{labels.subtitle}
 							</p>
 							<p className="s-title text-anime-wave">
-								{lang === 'tr'
-									? <>Nevzat Ahmet Çelebi'nin <br /><span>Güncel Yazıları</span></>
-									: <>Latest Articles by <br /><span>Nevzat Ahmet Çelebi</span></>
-								}
+								{<>{labels.title} <br /><span>{labels.titleSpan}</span></>}
 							</p>
 							<p style={{ color: '#888', fontSize: '13px', marginTop: '8px' }}>
-								{lang === 'tr'
-									? 'GM Tourism · Otel Postası · Tourism Today kaynaklarından otomatik olarak derlenmektedir.'
-									: 'Automatically curated from GM Tourism · Otel Postası · Tourism Today.'
-								}
+								{labels.desc}
 							</p>
 						</div>
 
 						{loading ? (
 							<div style={{ textAlign: 'center', padding: '40px 0', color: '#888' }}>
 								<i className="icon-clock" style={{ marginRight: '8px' }} />
-								{lang === 'tr' ? 'Makaleler yükleniyor...' : 'Loading articles...'}
+								{labels.loading}
 							</div>
 						) : (
 							<Swiper {...sliderBlog} className="swiper-container slider-blog overflow-hidden">
@@ -163,7 +171,7 @@ export default function Section10() {
 													rel="noopener noreferrer"
 													className="tf-btn style-8 small type-2"
 												>
-													{lang === 'tr' ? 'Devamını Oku' : 'Read More'}
+													{labels.readMore}
 													<i className="icon-chevron-right" />
 												</Link>
 											</div>
