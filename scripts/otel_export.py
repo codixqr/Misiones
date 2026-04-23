@@ -11,6 +11,9 @@ from urllib.parse import urljoin
 if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8')
 
+DATE_PATTERN = re.compile(r'\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}')
+DATE_PATTERN_NUMERIC = re.compile(r'\d{1,2}/\d{1,2}/\d{4}')
+
 # Configuration
 SOURCES = [
     {
@@ -108,19 +111,26 @@ def get_article_data(url, source_config):
                 img_url = img_tag['content']
 
         # Try to find date in specific content elements first to avoid header/sidebar dates
-        content_area = soup.find('div', class_='post-cont') or soup.find('div', class_='post-content') or soup.find('div', class_='entry-content') or soup
+        content_area = soup.find('div', class_='post-cont') or soup.find('div', class_='post-content') or soup.find('div', class_='entry-content') or soup.find('div', class_='article-post') or soup
         date_tag = content_area.find('ul', class_='post-tags') or content_area.find('div', class_='post-date') or content_area.find('span', class_='date')
         
         date_text = ""
-        date_pattern = re.compile(r'\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}')
-        date_pattern_numeric = re.compile(r'\d{1,2}/\d{1,2}/\d{4}')
 
         if date_tag:
             tag_text = date_tag.get_text()
-            match = date_pattern.search(tag_text) or date_pattern_numeric.search(tag_text)
+            match = DATE_PATTERN.search(tag_text) or DATE_PATTERN_NUMERIC.search(tag_text)
             if match:
                 date_text = match.group(0)
         
+        if not date_text:
+            # Look for spans with numeric dates
+            for span in content_area.find_all('span'):
+                span_text = span.get_text().strip()
+                match = DATE_PATTERN_NUMERIC.search(span_text)
+                if match:
+                    date_text = match.group(0)
+                    break
+
         if not date_text:
             # Fallback to general search but skip the very top of the page (header)
             page_text = soup.get_text()
@@ -128,12 +138,15 @@ def get_article_data(url, source_config):
             title_idx = page_text.find(title) if title else 0
             search_text = page_text[title_idx:] if title_idx != -1 else page_text
             
-            match = date_pattern.search(search_text) or date_pattern_numeric.search(search_text)
+            # Avoid picking up header date (which is usually today's date in Turkish)
+            # Try to find the numeric pattern first as it's more specific to GM article dates
+            match = DATE_PATTERN_NUMERIC.search(search_text) or DATE_PATTERN.search(search_text)
             if match:
                 date_text = match.group(0)
         
         if not date_text:
             date_text = datetime.now().strftime("%d %B %Y")
+            print(f"Warning: Could not find date for {url}, using today's date.")
 
         return {
             "title": title,
@@ -193,18 +206,23 @@ def main():
                             # Try to find a date near this link
                             list_date = None
                             # Check parents and siblings
-                            search_area = a.find_parent(['div', 'article', 'li'])
+                            search_area = a.find_parent(['div', 'article', 'li', 'header'])
                             if search_area:
-                                # Try to go up one more level to find the container
-                                container = search_area.find_parent(['div', 'article']) or search_area
-                                text = container.get_text()
-                                # Check for DD/MM/YYYY or DD Month YYYY
-                                date_match = re.search(r'\d{1,2}/\d{1,2}/\d{4}', text)
-                                if not date_match:
-                                    date_match = re.search(r'\d{1,2}\s+(?:Ocak|Şubat|Mart|Nisan|Mayıs|Haziran|Temmuz|Ağustos|Eylül|Ekim|Kasım|Aralık)\s+\d{4}', text)
+                                # Try to find a date inside post-tags or a span near the link
+                                date_el = search_area.find('ul', class_='post-tags') or search_area.find('span', class_='date')
+                                if date_el:
+                                    text = date_el.get_text()
+                                    date_match = DATE_PATTERN_NUMERIC.search(text) or DATE_PATTERN.search(text)
+                                    if date_match:
+                                        list_date = date_match.group(0)
                                 
-                                if date_match:
-                                    list_date = date_match.group(0)
+                                if not list_date:
+                                    # Fallback to general search in the parent container
+                                    container = search_area.find_parent(['div', 'article']) or search_area
+                                    text = container.get_text()
+                                    date_match = DATE_PATTERN_NUMERIC.search(text) or DATE_PATTERN.search(text)
+                                    if date_match:
+                                        list_date = date_match.group(0)
                             
                             links.append((full_url, a.get_text().strip(), list_date))
 
