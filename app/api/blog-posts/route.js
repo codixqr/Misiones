@@ -268,18 +268,43 @@ export async function GET() {
 		timestamp: parseTimestamp({ date: article.date })
 	}))
 
-	const deduped = [...dynamicArticles, ...staticWithImages, ...localArticles].reduce((acc, article) => {
-		const key = (article.url || article.title || article.id).toLowerCase()
-		if (!acc.has(key)) acc.set(key, article)
-		return acc
-	}, new Map())
+	const combined = [...dynamicArticles, ...staticWithImages, ...localArticles]
 
-	const allArticles = [...deduped.values()]
+	// Deduplicate
+	const dedupedMap = new Map()
+	for (const article of combined) {
+		const key = (article.url || article.title || article.id).toLowerCase()
+		if (!dedupedMap.has(key)) dedupedMap.set(key, article)
+	}
+
+	let allArticles = [...dedupedMap.values()]
 		.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0))
+		.slice(0, 32) // Get a bit more for enrichment
+
+	// Enrich any article missing an image
+	allArticles = await Promise.all(allArticles.map(async (article, idx) => {
+		if ((!article.img || article.img === "") && article.url) {
+			try {
+				const ogImg = await fetchOgImage(article.url)
+				return {
+					...article,
+					img: sanitizeImageUrl(ogImg) || FALLBACK_IMAGES[idx % FALLBACK_IMAGES.length]
+				}
+			} catch (err) {
+				return {
+					...article,
+					img: FALLBACK_IMAGES[idx % FALLBACK_IMAGES.length]
+				}
+			}
+		}
+		return article
+	}))
+
+	const finalArticles = allArticles
 		.slice(0, 24)
 		.map(({ timestamp, ...rest }) => rest)
 
-	return NextResponse.json(allArticles, {
+	return NextResponse.json(finalArticles, {
 		headers: {
 			'Cache-Control': `public, s-maxage=${WEEK_IN_SECONDS}, stale-while-revalidate=86400`,
 		},
