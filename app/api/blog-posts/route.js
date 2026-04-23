@@ -49,11 +49,11 @@ const RSS_SOURCES = [
 ]
 
 const FALLBACK_IMAGES = [
-	'/images/blog/card-blog-item-1.jpg',
-	'/images/blog/card-blog-item-2.jpg',
-	'/images/blog/card-blog-item-3.jpg',
-	'/images/blog/card-blog-item-4.jpg',
-	'/images/blog/card-blog-item-5.jpg',
+	'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800',
+	'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&q=80&w=800',
+	'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800',
+	'https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&q=80&w=800',
+	'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800',
 ]
 
 function sanitizeImageUrl(url) {
@@ -64,7 +64,7 @@ function sanitizeImageUrl(url) {
 	const lower = normalized.toLowerCase()
 
 	// Avoid logo/icon like assets that break card design
-	if (lower.endsWith('.svg') || lower.includes('logo') || lower.includes('favicon') || lower.includes('icon')) {
+	if (lower.endsWith('.svg') || lower.includes('logo') || lower.includes('favicon') || lower.includes('icon') || lower.includes('avatar')) {
 		return null
 	}
 	return normalized
@@ -91,17 +91,39 @@ async function fetchOgImage(url) {
 		const timeout = setTimeout(() => controller.abort(), 6000)
 		const res = await fetch(url, {
 			signal: controller.signal,
-			headers: { 'User-Agent': 'Mozilla/5.0 (compatible; Misiones-Bot/1.0)' },
+			headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36' },
 			next: { revalidate: 86400 },
 		})
 		clearTimeout(timeout)
 		if (!res.ok) return null
 		const html = await res.text()
-		const match = html.match(/<meta[^>]+(?:property="og:image"|name="og:image")[^>]+content="([^"]+)"/i)
-			|| html.match(/<meta[^>]+content="([^"]+)"[^>]+(?:property="og:image"|name="og:image")/i)
-			|| html.match(/<meta[^>]+property="og:image"\s+content="([^"]+)"/i)
-			|| html.match(/og:image.*?content="([^"]+)"/i)
-		return match ? match[1] : null
+		
+		// Priority order for image meta tags
+		const patterns = [
+			/<meta[^>]+(?:property="og:image"|name="og:image")[^>]+content="([^"]+)"/i,
+			/<meta[^>]+content="([^"]+)"[^>]+(?:property="og:image"|name="og:image")/i,
+			/<meta[^>]+(?:name="twitter:image"|property="twitter:image")[^>]+content="([^"]+)"/i,
+			/<link[^>]+rel="image_src"[^>]+href="([^"]+)"/i,
+			/<meta[^>]+property="og:image:secure_url"[^>]+content="([^"]+)"/i
+		]
+
+		for (const pattern of patterns) {
+			const match = html.match(pattern)
+			if (match && match[1]) {
+				const sanitized = sanitizeImageUrl(match[1])
+				if (sanitized) return sanitized
+			}
+		}
+
+		// Fallback: search for the first large-ish image in the content area if possible
+		// (This is a bit risky but can work for some sites)
+		const imgMatch = html.match(/<img[^>]+src="([^"]+(?:jpe?g|png|webp))"[^>]*width="[5-9]\d{2,}"/i)
+		if (imgMatch && imgMatch[1]) {
+			const sanitized = sanitizeImageUrl(imgMatch[1])
+			if (sanitized) return sanitized
+		}
+
+		return null
 	} catch {
 		return null
 	}
