@@ -88,11 +88,16 @@ function formatDate(dateStr) {
 async function fetchOgImage(url) {
 	try {
 		const controller = new AbortController()
-		const timeout = setTimeout(() => controller.abort(), 6000)
+		const timeout = setTimeout(() => controller.abort(), 8000)
 		const res = await fetch(url, {
 			signal: controller.signal,
-			headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36' },
-			next: { revalidate: 86400 },
+			headers: { 
+				'User-Agent': 'facebookexternalhit/1.1',
+				'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+				'Accept-Language': 'en-US,en;q=0.5',
+				'Referer': 'https://www.google.com/'
+			},
+			next: { revalidate: 3600 }, // Shorter revalidation for now
 		})
 		clearTimeout(timeout)
 		if (!res.ok) return null
@@ -116,8 +121,7 @@ async function fetchOgImage(url) {
 		}
 
 		// Fallback: search for the first large-ish image in the content area if possible
-		// (This is a bit risky but can work for some sites)
-		const imgMatch = html.match(/<img[^>]+src="([^"]+(?:jpe?g|png|webp))"[^>]*width="[5-9]\d{2,}"/i)
+		const imgMatch = html.match(/<img[^>]+src="([^"]+(?:jpe?g|png|webp|avif))"[^>]*width="[4-9]\d{2,}"/i)
 		if (imgMatch && imgMatch[1]) {
 			const sanitized = sanitizeImageUrl(imgMatch[1])
 			if (sanitized) return sanitized
@@ -328,7 +332,7 @@ export async function GET() {
 
 	return NextResponse.json(finalArticles, {
 		headers: {
-			'Cache-Control': `public, s-maxage=${WEEK_IN_SECONDS}, stale-while-revalidate=86400`,
+			'Cache-Control': `public, s-maxage=3600, stale-while-revalidate=1800`,
 		},
 	})
 }
