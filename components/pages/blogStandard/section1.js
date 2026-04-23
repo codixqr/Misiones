@@ -98,13 +98,7 @@ export default function Section1() {
 		subtitle: lang === 'tr' ? 'haberler & makaleler' : lang === 'ar' ? 'أخبار ومقالات' : lang === 'ru' ? 'новости и статьи' : 'news & articles',
 		headerTitle: lang === 'tr' ? "Nevzat Ahmet Çelebi'nin" : lang === 'ar' ? 'أحدث مقالات' : lang === 'ru' ? 'Последние статьи' : 'Latest Articles by',
 		headerTitleSpan: lang === 'tr' ? 'Güncel Yazıları' : lang === 'ar' ? 'Nevzat Ahmet Çelebi' : lang === 'ru' ? 'Nevzat Ahmet Çelebi' : 'Nevzat Ahmet Çelebi',
-		headerDesc: lang === 'tr'
-			? 'GM Tourism · Otel Postası · Tourism Today kaynaklarından otomatik olarak derlenmektedir.'
-			: lang === 'ar'
-				? 'يتم تجميع المحتوى تلقائيا من GM Tourism و Otel Postası و Tourism Today.'
-				: lang === 'ru'
-					? 'Материалы автоматически собираются из GM Tourism, Otel Postası и Tourism Today.'
-					: 'Automatically curated from GM Tourism · Otel Postası · Tourism Today.',
+
 	}
 
 	const categoryList = lang === 'tr'
@@ -137,9 +131,6 @@ export default function Section1() {
 							</p>
 							<p className="s-title text-anime-wave" style={{ color: '#1B2F5E' }}>
 								<>{labels.headerTitle} <span>{labels.headerTitleSpan}</span></>
-							</p>
-							<p style={{ color: '#888', fontSize: '14px', marginTop: '10px' }}>
-								{labels.headerDesc}
 							</p>
 						</div>
 					</div>

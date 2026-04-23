@@ -90,13 +90,7 @@ export default function Section10() {
 		subtitle: lang === 'tr' ? 'haberler & makaleler' : lang === 'ar' ? 'أخبار ومقالات' : lang === 'ru' ? 'новости и статьи' : 'news & articles',
 		title: lang === 'tr' ? "Nevzat Ahmet Çelebi'nin" : lang === 'ar' ? 'أحدث مقالات' : lang === 'ru' ? 'Последние статьи' : 'Latest Articles by',
 		titleSpan: lang === 'tr' ? 'Güncel Yazıları' : lang === 'ar' ? 'Nevzat Ahmet Çelebi' : lang === 'ru' ? 'Nevzat Ahmet Çelebi' : 'Nevzat Ahmet Çelebi',
-		desc: lang === 'tr'
-			? 'GM Tourism · Otel Postası · Tourism Today kaynaklarından otomatik olarak derlenmektedir.'
-			: lang === 'ar'
-				? 'يتم تجميع المحتوى تلقائيا من GM Tourism و Otel Postası و Tourism Today.'
-				: lang === 'ru'
-					? 'Материалы автоматически собираются из GM Tourism, Otel Postası и Tourism Today.'
-					: 'Automatically curated from GM Tourism · Otel Postası · Tourism Today.',
+
 		loading: lang === 'tr' ? 'Makaleler yükleniyor...' : lang === 'ar' ? 'يتم تحميل المقالات...' : lang === 'ru' ? 'Загрузка статей...' : 'Loading articles...',
 		readMore: lang === 'tr' ? 'Devamını Oku' : lang === 'ar' ? 'اقرأ المزيد' : lang === 'ru' ? 'Читать далее' : 'Read More',
 	}
@@ -126,9 +120,7 @@ export default function Section10() {
 							<p className="s-title text-anime-wave">
 								{<>{labels.title} <br /><span>{labels.titleSpan}</span></>}
 							</p>
-							<p style={{ color: '#888', fontSize: '13px', marginTop: '8px' }}>
-								{labels.desc}
-							</p>
+
 						</div>
 
 						{loading ? (
