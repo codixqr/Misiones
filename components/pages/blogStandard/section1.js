@@ -236,10 +236,16 @@ export default function Section1() {
 									</div>
 									<div className="sb-content sb-category">
 										<ul className="category-list">
-											{categoryList.map((cat, i) => (
-												<li key={i}>
-													<Link href="/our-service">
-														{cat}
+											{[
+												{ id: 'yatirim', label: categoryList[0] },
+												{ id: 'marka', label: categoryList[1] },
+												{ id: 'gelir', label: categoryList[2] },
+												{ id: 'denetim', label: categoryList[3] },
+												{ id: 'hip', label: categoryList[4] },
+											].map((cat, i) => (
+												<li key={cat.id}>
+													<Link href={`/our-service?cat=${cat.id}`}>
+														{cat.label}
 														<i className="icon-chevron-right" />
 													</Link>
 												</li>
@@ -291,9 +297,15 @@ export default function Section1() {
 									</div>
 									<div className="sb-content sb-tag">
 										<ul className="tag-popular-list">
-											{tagList.map((tag, i) => (
-												<li key={i}><Link href="/our-service">{tag}</Link></li>
+											{[
+												{ id: 'yatirim', label: tagList[4] }, // Yatırım
+												{ id: 'marka', label: tagList[5] },   // Marka
+												{ id: 'gelir', label: tagList[3] },   // Gelir Yönetimi
+												{ id: 'hip', label: tagList[7] },     // HIP
+											].map((tag, i) => (
+												<li key={tag.id}><Link href={`/our-service?cat=${tag.id}`}>{tag.label}</Link></li>
 											))}
+											<li><Link href="/our-service">{tagList[1]}</Link></li> {/* Danışmanlık */}
 										</ul>
 									</div>
 								</div>
