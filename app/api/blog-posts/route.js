@@ -142,10 +142,35 @@ function isNevzatArticle(item) {
 	)
 }
 
+const TURKISH_MONTHS = {
+	'ocak': 0, 'şubat': 1, 'mart': 2, 'nisan': 3, 'mayıs': 4, 'haziran': 5,
+	'temmuz': 6, 'ağustos': 7, 'eylül': 8, 'ekim': 9, 'kasım': 10, 'aralık': 11
+}
+
 function parseTimestamp(item) {
-	const raw = item.pubDate || item.isoDate || item.date
-	const ts = Date.parse(raw || '')
-	return Number.isNaN(ts) ? 0 : ts
+	const raw = item.pubDate || item.isoDate || item.date || ''
+	if (!raw) return 0
+
+	// Try standard parsing first
+	let ts = Date.parse(raw)
+	if (!Number.isNaN(ts)) return ts
+
+	// Try Turkish date parsing (e.g. "16 Nisan 2026")
+	try {
+		const parts = raw.toLowerCase().split(/\s+/)
+		if (parts.length >= 3) {
+			const day = parseInt(parts[0], 10)
+			const month = TURKISH_MONTHS[parts[1]]
+			const year = parseInt(parts[2], 10)
+			if (!Number.isNaN(day) && month !== undefined && !Number.isNaN(year)) {
+				return new Date(year, month, day).getTime()
+			}
+		}
+	} catch (e) {
+		console.error('Error parsing Turkish date:', raw, e)
+	}
+
+	return 0
 }
 
 function extractImageFromItem(item) {
@@ -238,7 +263,11 @@ export async function GET() {
 		})
 	)
 
-	const localArticles = getLocalArticles()
+	const localArticles = getLocalArticles().map(article => ({
+		...article,
+		timestamp: parseTimestamp({ date: article.date })
+	}))
+
 	const deduped = [...dynamicArticles, ...staticWithImages, ...localArticles].reduce((acc, article) => {
 		const key = (article.url || article.title || article.id).toLowerCase()
 		if (!acc.has(key)) acc.set(key, article)
