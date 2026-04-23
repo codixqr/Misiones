@@ -43,10 +43,10 @@ export default function Footer1() {
 											<p className="footer-title footer-title-desktop">{t('footerServices')}</p>
 											<p className="footer-title footer-title-mobile" onClick={() => handleAccordion1(1)}>{t('footerServices')}</p>
 											<ul className="list tf-collapse-content" style={{ display: getDisplayStyle1(1) }}>
-												<li><Link href="/our-service">{t('footerService1')}</Link></li>
-												<li><Link href="/our-service">{t('footerService2')}</Link></li>
-												<li><Link href="/our-service">{t('footerService3')}</Link></li>
-												<li><Link href="/our-service">{t('footerService4')}</Link></li>
+												<li><Link href="/our-service?cat=yatirim">{t('footerService1')}</Link></li>
+												<li><Link href="/our-service?cat=marka">{t('footerService2')}</Link></li>
+												<li><Link href="/our-service?cat=yonetim">{t('footerService3')}</Link></li>
+												<li><Link href="/our-service?cat=denetim">{t('footerService4')}</Link></li>
 												<li><Link href="/hip">{t('footerService5')}</Link></li>
 											</ul>
 										</div>

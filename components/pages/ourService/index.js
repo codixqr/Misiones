@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/utils/LanguageContext'
@@ -408,7 +408,23 @@ export default function OurService() {
   const { lang, t } = useLanguage()
   const [openCat, setOpenCat] = useState(0)
 
+  useEffect(() => {
+    // Handle category selection via URL query param
+    const params = new URLSearchParams(window.location.search)
+    const catId = params.get('cat')
+    if (catId) {
+      const index = serviceCategories.findIndex(c => c.id === catId)
+      if (index !== -1) {
+        setOpenCat(index)
+        // Scroll to content if needed
+        const el = document.getElementById('services-content')
+        if (el) el.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }, [])
+
   const getTitle = (obj) => {
+    if (!obj) return ''
     if (lang === 'tr') return obj.titleTr
     if (lang === 'en') return obj.titleEn
     if (lang === 'ar') return obj.titleAr || obj.titleEn
@@ -442,7 +458,7 @@ export default function OurService() {
       </section>
 
       {/* Category Tabs + Accordion */}
-      <section style={{ background: '#fff', padding: '48px 0' }}>
+      <section id="services-content" style={{ background: '#fff', padding: '48px 0' }}>
         <div className="tf-container">
           {/* Category selector */}
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '36px', justifyContent: 'center' }}>
