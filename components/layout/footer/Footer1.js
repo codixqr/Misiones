@@ -56,6 +56,7 @@ export default function Footer1() {
 											<ul className="list tf-collapse-content" style={{ display: getDisplayStyle2(1) }}>
 												<li><Link href="/about-us">{t('footerLink1')}</Link></li>
 												<li><Link href="/our-service">{t('footerLink3')}</Link></li>
+												<li><Link href="/faqs">{t('navFaqs')}</Link></li>
 												<li><Link href="/contact">{t('footerLink4')}</Link></li>
 											</ul>
 										</div>
