@@ -27,7 +27,7 @@ export default function Section3() {
 											height="0"
 											sizes="100vw"
 											style={{ width: "100%", height: "auto", borderRadius: '12px' }}
-											src="/images/section/otel-yonetim-danismanligi.png"
+											src="/images/section/otel-yonetim-danismanligi.jpg"
 											alt="MISIONES otelcilik danışmanlığı"
 											className="lazyload tf-animate-2"
 										/>

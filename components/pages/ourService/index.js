@@ -148,7 +148,7 @@ const serviceCategories = [
   {
     id: 'yonetim',
     icon: 'flaticon-chart',
-    image: '/images/section/service-yonetim.jpg',
+    image: '/images/section/otel-yonetim-danismanligi.jpg',
     titleTr: 'Otel Yönetim Danışmanlığı',
     titleEn: 'Hotel Management Consulting',
     titleAr: 'استشارات إدارة الفنادق',
@@ -235,7 +235,7 @@ const serviceCategories = [
   {
     id: 'gelir',
     icon: 'flaticon-return-of-investment',
-    image: '/images/section/service-yonetim.jpg',
+    image: '/images/section/otel-yonetim-danismanligi.jpg',
     titleTr: 'Gelir Yönetimi & Satış-Pazarlama Danışmanlığı',
     titleEn: 'Revenue Management & Sales-Marketing Consulting',
     titleAr: 'إدارة الإيرادات واستشارات المبيعات والتسويق',

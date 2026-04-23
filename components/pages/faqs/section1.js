@@ -190,7 +190,7 @@ export default function Section1() {
 											height="0"
 											sizes="100vw"
 											style={{ width: "100%", height: "auto" }}
-											src="/images/section/otel-yonetim-danismanligi.png" alt="Otel danışmanlığı" />
+											src="/images/section/otel-yonetim-danismanligi.jpg" alt="Otel danışmanlığı" />
 									</div>
 									<div className="content">
 										<p className="font-main-2 text-anime-wave">
