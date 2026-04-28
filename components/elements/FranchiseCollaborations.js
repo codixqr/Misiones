@@ -2,14 +2,14 @@
 import Image from 'next/image'
 
 const globalBrands = [
-	{ name: 'Marriott', logo: '/images/brands/marriott.png' },
-	{ name: 'Hilton', logo: '/images/brands/hilton.png' },
+	{ name: 'Marriott', logo: '/images/brands/official/marriott.svg' },
+	{ name: 'Hilton', logo: '/images/brands/official/hilton.svg' },
 	{ name: 'IHG', logo: '/images/brands/official/ihg.svg' },
 	{ name: 'Accor', logo: '/images/brands/official/accor.svg' },
-	{ name: 'Hyatt', logo: '/images/brands/hyatt.png' },
-	{ name: 'Kempinski', logo: '/images/brands/kempinski.png' },
-	{ name: 'Radisson', logo: '/images/brands/radisson.png' },
-	{ name: 'Wyndham', logo: '/images/brands/wyndham.png' },
+	{ name: 'Hyatt', logo: '/images/brands/official/hyatt.svg' },
+	{ name: 'Kempinski', logo: '/images/brands/official/kempinski.svg' },
+	{ name: 'Radisson', logo: '/images/brands/official/radisson.svg' },
+	{ name: 'Wyndham', logo: '/images/brands/official/wyndham.svg' },
 	{ name: 'Ascott', logo: '/images/brands/ascott.png' },
 	{ name: 'Golden Tulip', logo: '/images/brands/golden-tulip.png' },
 	{ name: 'BWH', logo: '/images/brands/bwh.png' },
@@ -38,13 +38,15 @@ export default function FranchiseCollaborations({ topSpacing = '90px' }) {
 						<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px' }}>
 							{globalBrands.map((brand) => (
 								<div key={brand.name} style={{ background: '#fff', border: '1px solid #e5eaf5', borderRadius: '12px', padding: '14px 12px', textAlign: 'center', color: '#1B2F5E', fontWeight: '700' }}>
-									<Image
-										src={brand.logo}
-										alt={`${brand.name} logosu`}
-										width={140}
-										height={56}
-										style={{ width: 'auto', height: '40px', objectFit: 'contain', margin: '0 auto 8px' }}
-									/>
+									<div style={{ height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
+										<Image
+											src={brand.logo}
+											alt={`${brand.name} logosu`}
+											width={180}
+											height={52}
+											style={{ width: '100%', maxWidth: '150px', height: '100%', objectFit: 'contain' }}
+										/>
+									</div>
 									<span style={{ fontSize: '13px' }}>{brand.name}</span>
 								</div>
 							))}
@@ -61,13 +63,15 @@ export default function FranchiseCollaborations({ topSpacing = '90px' }) {
 						<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '12px' }}>
 							{localBrands.map((brand) => (
 								<div key={brand.name} style={{ background: '#fff', border: '1px solid #e5eaf5', borderRadius: '12px', padding: '14px 12px', textAlign: 'center', color: '#1B2F5E', fontWeight: '700' }}>
-									<Image
-										src={brand.logo}
-										alt={`${brand.name} logosu`}
-										width={140}
-										height={56}
-										style={{ width: 'auto', height: '40px', objectFit: 'contain', margin: '0 auto 8px' }}
-									/>
+									<div style={{ height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
+										<Image
+											src={brand.logo}
+											alt={`${brand.name} logosu`}
+											width={180}
+											height={52}
+											style={{ width: '100%', maxWidth: '150px', height: '100%', objectFit: 'contain' }}
+										/>
+									</div>
 									<span style={{ fontSize: '13px' }}>{brand.name}</span>
 								</div>
 							))}
