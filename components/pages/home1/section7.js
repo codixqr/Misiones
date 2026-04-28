@@ -40,6 +40,7 @@ const FAQS = [
 
 export default function Section7() {
 	const [isAccordion, setIsAccordion] = useState(1)
+	const [showFullPerspective, setShowFullPerspective] = useState(false)
 	const { lang, t } = useLanguage()
 	const perspectiveContent = {
 		global: [
@@ -124,16 +125,33 @@ export default function Section7() {
 												</p>
 												<p style={{ marginBottom: '8px', fontWeight: '700', color: '#1B2F5E' }}>Kuresel Perspektif</p>
 												<ul style={{ margin: '0 0 10px 18px', padding: 0 }}>
-													{perspectiveContent.global.map((line, idx) => (
+													{(showFullPerspective ? perspectiveContent.global : perspectiveContent.global.slice(0, 2)).map((line, idx) => (
 														<li key={`g-${idx}`} style={{ marginBottom: '6px' }}>{line}</li>
 													))}
 												</ul>
 												<p style={{ marginBottom: '8px', fontWeight: '700', color: '#1B2F5E' }}>Yerel Perspektif</p>
 												<ul style={{ margin: '0 0 0 18px', padding: 0 }}>
-													{perspectiveContent.local.map((line, idx) => (
+													{(showFullPerspective ? perspectiveContent.local : perspectiveContent.local.slice(0, 2)).map((line, idx) => (
 														<li key={`l-${idx}`} style={{ marginBottom: '6px' }}>{line}</li>
 													))}
 												</ul>
+												<button
+													type="button"
+													onClick={() => setShowFullPerspective(prev => !prev)}
+													style={{
+														marginTop: '10px',
+														border: 'none',
+														background: '#1B2F5E',
+														color: '#fff',
+														padding: '8px 14px',
+														borderRadius: '999px',
+														fontSize: '12px',
+														fontWeight: '700',
+														cursor: 'pointer',
+													}}
+												>
+													{showFullPerspective ? 'Daha Az Goster' : 'Devamini Oku'}
+												</button>
 											</div>
 										) : (
 											<p style={{ color: '#606580', fontSize: '15px', lineHeight: '1.6', margin: 0, opacity: 0.9 }}>

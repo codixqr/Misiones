@@ -6,7 +6,6 @@ import { useLanguage } from '@/utils/LanguageContext'
 
 export default function Section3() {
 	const { t } = useLanguage()
-	const cardImageStyle = { width: "100%", height: "auto", maxHeight: "220px", objectFit: "cover", borderRadius: '10px' }
 	return (
 		<>
 			<section className="s-service tf-spacing-1">
@@ -95,63 +94,7 @@ export default function Section3() {
 								<p className="text" style={{ fontSize: '18px', lineHeight: '1.7' }}>
 									{t('service3Desc')}
 								</p>
-								<div className="image tf-hover mb-20">
-									<div className="hover-1 hover-14">
-										<Image
-											width="0"
-											height="0"
-											sizes="100vw"
-											style={cardImageStyle}
-											src="/images/section/custom/services-revenue-sales.png"
-											alt="Gelir Yönetimi ve Satis Pazarlama"
-											className="lazyload tf-animate-2"
-										/>
-									</div>
-								</div>
 								<Link href="/our-service?cat=gelir" className="tf-btn-readmore style-3">
-									{t('readMore')}
-									<i className="icon-chevron-right" />
-								</Link>
-							</div>
-							<div className="box-icon default tf-hover-icon mb-20 wow fadeInUp" data-wow-delay="0.3s">
-								<div className="icon hover-icon-2">
-									<i className="flaticon-target" />
-								</div>
-								<Link href="/our-service?cat=hip" className="title fw-7" style={{ fontSize: 'clamp(23px, 1.65vw, 30px)', lineHeight: '1.3' }}>
-									{t('service4Title')}
-								</Link>
-								<p className="text" style={{ fontSize: '18px', lineHeight: '1.7' }}>
-									{t('service4Desc')}
-								</p>
-								<div className="image tf-hover mb-20">
-									<div className="hover-1 hover-14">
-										<Image
-											width="0"
-											height="0"
-											sizes="100vw"
-											style={cardImageStyle}
-											src="/images/section/custom/services-hip.png"
-											alt="HIP Otel Gelistirme Plani"
-											className="lazyload tf-animate-2"
-										/>
-									</div>
-								</div>
-								<Link href="/our-service?cat=hip" className="tf-btn-readmore style-3">
-									{t('readMore')}
-									<i className="icon-chevron-right" />
-								</Link>
-							</div>
-							<div className="box-icon default tf-hover-icon mb-20 wow fadeInUp" data-wow-delay="0.4s">
-								<div className="icon hover-icon-2">
-									<i className="flaticon-building" />
-								</div>
-								<Link href="/our-service?cat=broker" className="title fw-7" style={{ fontSize: 'clamp(23px, 1.65vw, 30px)', lineHeight: '1.3' }}>
-									{t('service5Title')}
-								</Link>
-								<p className="text" style={{ fontSize: '18px', lineHeight: '1.7' }}>
-									{t('service5Desc')}
-								</p>
-								<Link href="/our-service?cat=broker" className="tf-btn-readmore style-3">
 									{t('readMore')}
 									<i className="icon-chevron-right" />
 								</Link>
