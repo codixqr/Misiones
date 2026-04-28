@@ -4,8 +4,8 @@ import Image from 'next/image'
 const globalBrands = [
 	{ name: 'Marriott', logo: '/images/brands/marriott.png' },
 	{ name: 'Hilton', logo: '/images/brands/hilton.png' },
-	{ name: 'IHGE', logo: '/images/brands/ihge.png' },
-	{ name: 'Accor', logo: '/images/brands/accor.png' },
+	{ name: 'IHG', logo: '/images/brands/official/ihg.svg' },
+	{ name: 'Accor', logo: '/images/brands/official/accor.svg' },
 	{ name: 'Hyatt', logo: '/images/brands/hyatt.png' },
 	{ name: 'Kempinski', logo: '/images/brands/kempinski.png' },
 	{ name: 'Radisson', logo: '/images/brands/radisson.png' },

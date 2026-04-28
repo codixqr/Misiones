@@ -123,18 +123,26 @@ export default function Section7() {
 												<p style={{ marginBottom: '10px', fontWeight: '700', color: '#1B2F5E' }}>
 													Buyuk vizyonu yerel hikayelerle bulusturmak.
 												</p>
-												<p style={{ marginBottom: '8px', fontWeight: '700', color: '#1B2F5E' }}>Kuresel Perspektif</p>
-												<ul style={{ margin: '0 0 10px 18px', padding: 0 }}>
-													{(showFullPerspective ? perspectiveContent.global : perspectiveContent.global.slice(0, 2)).map((line, idx) => (
-														<li key={`g-${idx}`} style={{ marginBottom: '6px' }}>{line}</li>
-													))}
-												</ul>
-												<p style={{ marginBottom: '8px', fontWeight: '700', color: '#1B2F5E' }}>Yerel Perspektif</p>
-												<ul style={{ margin: '0 0 0 18px', padding: 0 }}>
-													{(showFullPerspective ? perspectiveContent.local : perspectiveContent.local.slice(0, 2)).map((line, idx) => (
-														<li key={`l-${idx}`} style={{ marginBottom: '6px' }}>{line}</li>
-													))}
-												</ul>
+												{showFullPerspective ? (
+													<>
+														<p style={{ marginBottom: '8px', fontWeight: '700', color: '#1B2F5E' }}>Kuresel Perspektif</p>
+														<ul style={{ margin: '0 0 10px 18px', padding: 0 }}>
+															{perspectiveContent.global.map((line, idx) => (
+																<li key={`g-${idx}`} style={{ marginBottom: '6px' }}>{line}</li>
+															))}
+														</ul>
+														<p style={{ marginBottom: '8px', fontWeight: '700', color: '#1B2F5E' }}>Yerel Perspektif</p>
+														<ul style={{ margin: '0 0 0 18px', padding: 0 }}>
+															{perspectiveContent.local.map((line, idx) => (
+																<li key={`l-${idx}`} style={{ marginBottom: '6px' }}>{line}</li>
+															))}
+														</ul>
+													</>
+												) : (
+													<p style={{ margin: 0 }}>
+														Kuresel ve yerel karar perspektifini birlestiren ozet yaklasim.
+													</p>
+												)}
 												<button
 													type="button"
 													onClick={() => setShowFullPerspective(prev => !prev)}
