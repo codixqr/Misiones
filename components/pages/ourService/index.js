@@ -148,7 +148,7 @@ const serviceCategories = [
   {
     id: 'yonetim',
     icon: 'flaticon-chart',
-    image: '/images/section/otel-yonetim-danismanligi.jpg',
+    image: '/images/section/custom/services-management.png',
     titleTr: 'Otel Yönetim Danışmanlığı',
     titleEn: 'Hotel Management Consulting',
     titleAr: 'استشارات إدارة الفنادق',

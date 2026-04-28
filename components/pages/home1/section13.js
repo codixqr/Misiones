@@ -132,7 +132,7 @@ export default function Section13() {
 								height={788}
 								sizes="(max-width: 768px) 100vw, 540px"
 								style={{ width: '100%', height: 'auto', display: 'block' }}
-								src="/images/section/misiones-hip-infographic.png"
+								src="/images/section/custom/services-hip.png"
 								alt={lang === 'tr' ? 'HIP Otel Geliştirme Planı yol haritası' : 'HIP Hotel Improvement Plan roadmap'}
 							/>
 						</div>

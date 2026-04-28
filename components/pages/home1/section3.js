@@ -27,7 +27,7 @@ export default function Section3() {
 											height="0"
 											sizes="100vw"
 											style={{ width: "100%", height: "auto", borderRadius: '12px' }}
-											src="/images/section/otel-yonetim-danismanligi.jpg"
+											src="/images/section/custom/home-investment-management.png"
 											alt="MISIONES otelcilik danışmanlığı"
 											className="lazyload tf-animate-2"
 										/>
@@ -94,6 +94,19 @@ export default function Section3() {
 								<p className="text" style={{ fontSize: '18px', lineHeight: '1.7' }}>
 									{t('service3Desc')}
 								</p>
+								<div className="image tf-hover mb-20">
+									<div className="hover-1 hover-14">
+										<Image
+											width="0"
+											height="0"
+											sizes="100vw"
+											style={{ width: "100%", height: "auto", borderRadius: '10px' }}
+											src="/images/section/custom/services-revenue-sales.png"
+											alt="Gelir Yönetimi ve Satis Pazarlama"
+											className="lazyload tf-animate-2"
+										/>
+									</div>
+								</div>
 								<Link href="/our-service?cat=gelir" className="tf-btn-readmore style-3">
 									{t('readMore')}
 									<i className="icon-chevron-right" />

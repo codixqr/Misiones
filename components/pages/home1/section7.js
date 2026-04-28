@@ -41,6 +41,20 @@ const FAQS = [
 export default function Section7() {
 	const [isAccordion, setIsAccordion] = useState(1)
 	const { lang, t } = useLanguage()
+	const perspectiveContent = {
+		global: [
+			'Trendler ve donusum: Surdurulebilirlik, dijitallesme, yapay zeka destekli operasyonlar, deneyim ekonomisi.',
+			'Benchmarking: Dunya capinda basarili otel zincirlerinden alinan ornekler, KPI karsilastirmalari.',
+			'Risk ve firsatlar: Jeopolitik gelismeler, turizm akimlarindaki degisim, kuresel krizlere hazirlik.',
+			'Marka vizyonu: Uluslararasi misafir beklentilerini karsilayan, kulturler arasi uyumlu kimlik tasarimi.',
+		],
+		local: [
+			'Kulturel dokunus: Bolgenin gastronomisi, mimarisi, misafirperverlik gelenegi.',
+			'Pazar gercekligi: Yerel rekabet, fiyatlandirma dinamikleri, sezonluk dalgalanmalar.',
+			'Insan kaynagi: Calisanlarin egitimi, motivasyonu, yerel is gucunun otelin ruhuna katkisi.',
+			'Toplumsal bag: Otelin bulundugu sehirle kurdugu iliski, sosyal sorumluluk projeleri, yerel halkin gozundeki deger.',
+		]
+	}
 
 	const handleAccordion = (key) => {
 		setIsAccordion(prevState => prevState === key ? null : key)
@@ -103,9 +117,29 @@ export default function Section7() {
 										<h4 style={{ color: '#1B2F5E', fontWeight: '800', fontSize: '18px', marginBottom: '12px', lineHeight: '1.3' }}>
 											{t(item.key + 'Title')}
 										</h4>
-										<p style={{ color: '#606580', fontSize: '15px', lineHeight: '1.6', margin: 0, opacity: 0.9 }}>
-											{t(item.key + 'Desc')}
-										</p>
+										{item.key === 'whyGlobal' && lang === 'tr' ? (
+											<div style={{ color: '#606580', fontSize: '14px', lineHeight: '1.6', margin: 0, opacity: 0.95 }}>
+												<p style={{ marginBottom: '10px', fontWeight: '700', color: '#1B2F5E' }}>
+													Buyuk vizyonu yerel hikayelerle bulusturmak.
+												</p>
+												<p style={{ marginBottom: '8px', fontWeight: '700', color: '#1B2F5E' }}>Kuresel Perspektif</p>
+												<ul style={{ margin: '0 0 10px 18px', padding: 0 }}>
+													{perspectiveContent.global.map((line, idx) => (
+														<li key={`g-${idx}`} style={{ marginBottom: '6px' }}>{line}</li>
+													))}
+												</ul>
+												<p style={{ marginBottom: '8px', fontWeight: '700', color: '#1B2F5E' }}>Yerel Perspektif</p>
+												<ul style={{ margin: '0 0 0 18px', padding: 0 }}>
+													{perspectiveContent.local.map((line, idx) => (
+														<li key={`l-${idx}`} style={{ marginBottom: '6px' }}>{line}</li>
+													))}
+												</ul>
+											</div>
+										) : (
+											<p style={{ color: '#606580', fontSize: '15px', lineHeight: '1.6', margin: 0, opacity: 0.9 }}>
+												{t(item.key + 'Desc')}
+											</p>
+										)}
 									</div>
 								))}
 							</div>
