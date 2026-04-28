@@ -13,7 +13,7 @@ export default function Section1() {
 			desc: lang === 'en' ? 'Every recommendation is tied to measurable business impact.' : lang === 'ar' ? 'كل توصية مرتبطة بتأثير تجاري قابل للقياس.' : lang === 'ru' ? 'Каждая рекомендация связана с измеримым бизнес-эффектом.' : 'Her öneri ölçülebilir iş sonucuna bağlanır.',
 		},
 		{
-			icon: 'flaticon-chart',
+			icon: 'flaticon-data-management',
 			title: lang === 'en' ? 'Data + Field Experience' : lang === 'ar' ? 'البيانات + الخبرة الميدانية' : lang === 'ru' ? 'Данные + полевой опыт' : 'Veri + Saha Deneyimi',
 			desc: lang === 'en' ? 'We combine KPI analysis with real operational know-how.' : lang === 'ar' ? 'نجمع بين تحليل مؤشرات الأداء والخبرة التشغيلية.' : lang === 'ru' ? 'Мы объединяем KPI-анализ с реальным операционным опытом.' : 'KPI analizi ile sahadaki operasyon bilgisini birlikte kullanırız.',
 		},

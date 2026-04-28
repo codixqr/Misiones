@@ -174,7 +174,7 @@ const serviceCategories = [
   {
     id: 'hip',
     icon: 'flaticon-rocket',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80',
+    image: '/images/section/custom/services-hip.png',
     titleTr: 'HIP - Hotel Improvement Plan',
     titleEn: 'HIP - Hotel Improvement Plan',
     titleAr: 'HIP - خطة تحسين الفندق',
@@ -235,7 +235,7 @@ const serviceCategories = [
   {
     id: 'gelir',
     icon: 'flaticon-return-of-investment',
-    image: '/images/section/otel-yonetim-danismanligi.jpg',
+    image: '/images/section/custom/services-revenue-sales.png',
     titleTr: 'Gelir Yönetimi & Satış-Pazarlama Danışmanlığı',
     titleEn: 'Revenue Management & Sales-Marketing Consulting',
     titleAr: 'إدارة الإيرادات واستشارات المبيعات والتسويق',

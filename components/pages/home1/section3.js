@@ -6,6 +6,7 @@ import { useLanguage } from '@/utils/LanguageContext'
 
 export default function Section3() {
 	const { t } = useLanguage()
+	const cardImageStyle = { width: "100%", height: "auto", maxHeight: "220px", objectFit: "cover", borderRadius: '10px' }
 	return (
 		<>
 			<section className="s-service tf-spacing-1">
@@ -100,7 +101,7 @@ export default function Section3() {
 											width="0"
 											height="0"
 											sizes="100vw"
-											style={{ width: "100%", height: "auto", borderRadius: '10px' }}
+											style={cardImageStyle}
 											src="/images/section/custom/services-revenue-sales.png"
 											alt="Gelir Yönetimi ve Satis Pazarlama"
 											className="lazyload tf-animate-2"
@@ -122,6 +123,19 @@ export default function Section3() {
 								<p className="text" style={{ fontSize: '18px', lineHeight: '1.7' }}>
 									{t('service4Desc')}
 								</p>
+								<div className="image tf-hover mb-20">
+									<div className="hover-1 hover-14">
+										<Image
+											width="0"
+											height="0"
+											sizes="100vw"
+											style={cardImageStyle}
+											src="/images/section/custom/services-hip.png"
+											alt="HIP Otel Gelistirme Plani"
+											className="lazyload tf-animate-2"
+										/>
+									</div>
+								</div>
 								<Link href="/our-service?cat=hip" className="tf-btn-readmore style-3">
 									{t('readMore')}
 									<i className="icon-chevron-right" />
