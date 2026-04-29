@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image'
+import { useLanguage } from '@/utils/LanguageContext'
 
 const globalBrands = [
 	{ name: 'Marriott', logo: '/images/brands/official/marriott.svg' },
@@ -24,16 +24,17 @@ const localBrands = [
 ]
 
 export default function FranchiseCollaborations({ topSpacing = '90px' }) {
+	const { t } = useLanguage()
 	return (
 		<div className="row" style={{ marginTop: topSpacing }}>
 			<div className="col-12">
 				<div style={{ background: '#f8f9fd', border: '1px solid #eef2fa', borderRadius: '28px', padding: '34px' }}>
 					<div style={{ marginBottom: '36px' }}>
 						<h3 style={{ color: '#1B2F5E', fontWeight: '900', fontSize: 'clamp(24px, 2.8vw, 34px)', marginBottom: '8px' }}>
-							Global Franchise Isbirliklerimiz
+							{t('franchiseGlobalTitle')}
 						</h3>
 						<p style={{ color: '#606580', marginBottom: '18px', fontSize: '1.05rem' }}>
-							Akredite oldugumuz uluslararasi otel markalari
+							{t('franchiseGlobalDesc')}
 						</p>
 						<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px' }}>
 							{globalBrands.map((brand) => (
@@ -41,7 +42,7 @@ export default function FranchiseCollaborations({ topSpacing = '90px' }) {
 									<div style={{ height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
 										<Image
 											src={brand.logo}
-											alt={`${brand.name} logosu`}
+											alt={`${brand.name} ${t('brandLogoAlt')}`}
 											width={180}
 											height={52}
 											style={{ width: '100%', maxWidth: '150px', height: '100%', objectFit: 'contain' }}
@@ -55,10 +56,10 @@ export default function FranchiseCollaborations({ topSpacing = '90px' }) {
 
 					<div>
 						<h3 style={{ color: '#1B2F5E', fontWeight: '900', fontSize: 'clamp(24px, 2.8vw, 34px)', marginBottom: '8px' }}>
-							Yerel Franchise Isbirliklerimiz
+							{t('franchiseLocalTitle')}
 						</h3>
 						<p style={{ color: '#606580', marginBottom: '18px', fontSize: '1.05rem' }}>
-							Akredite oldugumuz yerel otel markalari
+							{t('franchiseLocalDesc')}
 						</p>
 						<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '12px' }}>
 							{localBrands.map((brand) => (
@@ -66,7 +67,7 @@ export default function FranchiseCollaborations({ topSpacing = '90px' }) {
 									<div style={{ height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '8px' }}>
 										<Image
 											src={brand.logo}
-											alt={`${brand.name} logosu`}
+											alt={`${brand.name} ${t('brandLogoAlt')}`}
 											width={180}
 											height={52}
 											style={{ width: '100%', maxWidth: '150px', height: '100%', objectFit: 'contain' }}

@@ -107,7 +107,7 @@ export default function Section2() {
 											padding: '36px 28px 24px',
 										}}>
 											<p style={{ color: '#C8232C', fontSize: '0.72rem', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '5px' }}>
-												Kurucu & Baş Danışman
+												{t('founderTitle')}
 											</p>
 											<h3 style={{ color: '#fff', fontSize: '1.35rem', fontWeight: '800', margin: '0 0 4px' }}>
 												Nevzat Ahmet Çelebi
