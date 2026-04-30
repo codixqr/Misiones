@@ -1,5 +1,6 @@
 'use client'
 import { useLanguage } from '@/utils/LanguageContext'
+import Image from 'next/image'
 
 const globalBrands = [
 	{ name: 'Marriott', logo: '/images/brands/official/marriott.svg' },
